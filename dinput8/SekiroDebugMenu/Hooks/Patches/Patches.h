@@ -8,4 +8,6 @@ struct SMenuDrawLocation {
 	float f4;
 };
 
+void BeginMenuFrameCapture();
+void EndMenuFrameCapture();
 void DrawMenuHook(uint64_t qUnkClass, SMenuDrawLocation* pLocationData, wchar_t* pwString);

@@ -1,0 +1,13 @@
+{
+  "terminal.integrated.profiles.windows": {
+    "VS BuildTools x64": {
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/k",
+        "D:\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\Tools\\VsDevCmd.bat",
+        "-arch=x64"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "VS BuildTools x64"
+}

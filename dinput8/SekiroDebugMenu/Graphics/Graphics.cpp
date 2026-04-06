@@ -170,7 +170,9 @@ HRESULT CGraphics::D3D11PresentHook(IDXGISwapChain* pSwapChain, UINT SyncInterva
 	ImGui_ImplDX11_NewFrame();
 	ImGui::NewFrame();
 
+	BeginMenuFrameCapture();
 	Graphics->DrawMenu();
+	EndMenuFrameCapture();
 
 	//Wrap Up ImGui
 	ImGui::EndFrame();
