@@ -12,5 +12,9 @@
 4. 把这些文本输入到json里填上对应汉化即可
 
 # tip
-我不打算自己再增加更多的汉化，如果你想为这个项目增加更多的汉化，可以自己fork一个然后提pr，或者自己发布release
+* 我不打算自己再增加更多的汉化，如果你想为这个项目增加更多的汉化，可以自己fork一个然后提pr，或者修改`zh-cn.json`后在自己的仓库发布release
+* 目前的汉化
 
+# credit
+* 原作者：[LukeYui](https://github.com/LukeYui)
+* [阿里巴巴普惠体](https://www.alibabafonts.com/#/home)
