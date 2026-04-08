@@ -23,6 +23,18 @@ namespace {
 		Mixed,
 	};
 
+	enum class EDisplayMode {
+		Full,
+		Mix,
+		Off,
+	};
+
+	enum class EFilterRuleType {
+		Exact,
+		Contains,
+		Prefix,
+	};
+
 	struct SLoggedLine {
 		std::wstring wText;
 		float fX;
@@ -30,10 +42,21 @@ namespace {
 		ELoggedTextCategory eCategory;
 	};
 
+	struct SFilterRule {
+		EFilterRuleType eType;
+		std::wstring wPattern;
+	};
+
+	struct STranslationEntry {
+		std::wstring wFrom;
+		std::wstring wTo;
+	};
+
 	struct SExportConfig {
 		bool bTextOutputEnabled = true;
 		bool bLogOutputEnabled = true;
 		bool bConsoleEnabled = false;
+		EDisplayMode eDisplayMode = EDisplayMode::Full;
 	};
 
 	struct SPageCaptureState {
@@ -48,6 +71,8 @@ namespace {
 		std::wofstream fDebugLog;
 		std::set<std::wstring> sExportedTexts;
 		std::map<std::wstring, std::wstring> mTranslations;
+		std::vector<STranslationEntry> vOrderedTranslations;
+		std::vector<SFilterRule> vFilterRules;
 		SExportConfig sConfig;
 	};
 
@@ -58,10 +83,12 @@ namespace {
 	const wchar_t* kMenuTextFileName = L"menu_text.txt";
 	const wchar_t* kDebugLogFileName = L"dbgmenu.log";
 	const wchar_t* kTranslationFileName = L"zh-cn.json";
+	const wchar_t* kFilterRuleFileName = L"filter_rules.txt";
 	const wchar_t* kIniSectionName = L"TextOutput";
 	const wchar_t* kIniTextOutputKey = L"TextOutput";
 	const wchar_t* kIniLogOutputKey = L"LogOutput";
 	const wchar_t* kIniConsoleKey = L"Console";
+	const wchar_t* kIniDisplayModeKey = L"DisplayMode";
 	const UINT kDefaultCaptureKey = VK_F9;
 
 	std::wstring TrimCopy(const std::wstring& wText) {
@@ -390,6 +417,7 @@ namespace {
 		WritePrivateProfileStringW(kIniSectionName, kIniTextOutputKey, L"on", wIniPath.c_str());
 		WritePrivateProfileStringW(kIniSectionName, kIniLogOutputKey, L"on", wIniPath.c_str());
 		WritePrivateProfileStringW(kIniSectionName, kIniConsoleKey, L"off", wIniPath.c_str());
+		WritePrivateProfileStringW(kIniSectionName, kIniDisplayModeKey, L"full", wIniPath.c_str());
 	}
 
 	void LoadConfig() {
@@ -408,6 +436,16 @@ namespace {
 		std::wstring wConsole = pValue;
 		std::transform(wConsole.begin(), wConsole.end(), wConsole.begin(), towlower);
 		gPageCapture.sConfig.bConsoleEnabled = (wConsole == L"on");
+
+		GetPrivateProfileStringW(kIniSectionName, kIniDisplayModeKey, L"full", pValue, 64, gPageCapture.wIniPath.c_str());
+		std::wstring wDisplayMode = pValue;
+		std::transform(wDisplayMode.begin(), wDisplayMode.end(), wDisplayMode.begin(), towlower);
+		if (wDisplayMode == L"off")
+			gPageCapture.sConfig.eDisplayMode = EDisplayMode::Off;
+		else if (wDisplayMode == L"mix")
+			gPageCapture.sConfig.eDisplayMode = EDisplayMode::Mix;
+		else
+			gPageCapture.sConfig.eDisplayMode = EDisplayMode::Full;
 	}
 
 	std::wstring UnescapeJsonString(const std::wstring& wText) {
@@ -436,8 +474,80 @@ namespace {
 		return wOut;
 	}
 
+	bool ParseFilterRuleLine(const std::wstring& wLine, SFilterRule& sRule) {
+		std::wstring wTrimmed = TrimCopy(wLine);
+		if (wTrimmed.empty())
+			return false;
+		if (StartsWith(wTrimmed, L"#") || StartsWith(wTrimmed, L"//"))
+			return false;
+
+		size_t colonPos = wTrimmed.find(L':');
+		if (colonPos == std::wstring::npos || colonPos == 0 || colonPos + 1 >= wTrimmed.size())
+			return false;
+
+		std::wstring wType = TrimCopy(wTrimmed.substr(0, colonPos));
+		std::wstring wPattern = TrimCopy(wTrimmed.substr(colonPos + 1));
+		std::transform(wType.begin(), wType.end(), wType.begin(), towlower);
+		if (wPattern.empty())
+			return false;
+
+		if (wType == L"exact")
+			sRule.eType = EFilterRuleType::Exact;
+		else if (wType == L"contains")
+			sRule.eType = EFilterRuleType::Contains;
+		else if (wType == L"prefix")
+			sRule.eType = EFilterRuleType::Prefix;
+		else
+			return false;
+
+		sRule.wPattern = wPattern;
+		return true;
+	}
+
+	void LoadFilterRules(const std::wstring& wFilterPath) {
+		gPageCapture.vFilterRules.clear();
+		std::wifstream file(wFilterPath);
+		if (!file.is_open()) {
+			DebugLog(L"[Filter] filter file not found: %s", wFilterPath.c_str());
+			return;
+		}
+		file.imbue(std::locale(std::locale(), new std::codecvt_utf8_utf16<wchar_t>()));
+
+		std::wstring wLine;
+		while (std::getline(file, wLine)) {
+			SFilterRule sRule = {};
+			if (ParseFilterRuleLine(wLine, sRule))
+				gPageCapture.vFilterRules.push_back(sRule);
+		}
+		file.close();
+		DebugLog(L"[Filter] loaded %u rules from %s", static_cast<unsigned>(gPageCapture.vFilterRules.size()), wFilterPath.c_str());
+	}
+
+	bool ShouldFilterText(const std::wstring& wText) {
+		for (std::vector<SFilterRule>::const_iterator it = gPageCapture.vFilterRules.begin(); it != gPageCapture.vFilterRules.end(); ++it) {
+			if (it->wPattern.empty())
+				continue;
+			switch (it->eType) {
+			case EFilterRuleType::Exact:
+				if (wText == it->wPattern)
+					return true;
+				break;
+			case EFilterRuleType::Contains:
+				if (wText.find(it->wPattern) != std::wstring::npos)
+					return true;
+				break;
+			case EFilterRuleType::Prefix:
+				if (StartsWith(wText, it->wPattern))
+					return true;
+				break;
+			}
+		}
+		return false;
+	}
+
 	void LoadTranslations() {
 		gPageCapture.mTranslations.clear();
+		gPageCapture.vOrderedTranslations.clear();
 		std::wifstream file(gPageCapture.wTranslationPath);
 		if (!file.is_open()) {
 			DebugLog(L"[Translation] zh-cn.json not found: %s", gPageCapture.wTranslationPath.c_str());
@@ -476,8 +586,20 @@ namespace {
 			std::wstring wKey = UnescapeJsonString(content.substr(keyStart + 1, keyEnd - keyStart - 1));
 			std::wstring wValue = UnescapeJsonString(content.substr(valueStart + 1, valueEnd - valueStart - 1));
 			gPageCapture.mTranslations[wKey] = wValue;
+			if (!wKey.empty()) {
+				STranslationEntry entry = {};
+				entry.wFrom = wKey;
+				entry.wTo = wValue;
+				gPageCapture.vOrderedTranslations.push_back(entry);
+			}
 			pos = valueEnd + 1;
 		}
+
+		std::sort(gPageCapture.vOrderedTranslations.begin(), gPageCapture.vOrderedTranslations.end(), [](const STranslationEntry& left, const STranslationEntry& right) {
+			if (left.wFrom.size() != right.wFrom.size())
+				return left.wFrom.size() > right.wFrom.size();
+			return left.wFrom < right.wFrom;
+		});
 
 		DebugLog(L"[Translation] loaded %u items from %s", static_cast<unsigned>(gPageCapture.mTranslations.size()), gPageCapture.wTranslationPath.c_str());
 	}
@@ -492,20 +614,31 @@ namespace {
 	}
 
 	std::wstring TranslateDisplayText(const std::wstring& wDisplayText) {
-		std::wstring wResult = wDisplayText;
-		for (std::map<std::wstring, std::wstring>::const_iterator it = gPageCapture.mTranslations.begin(); it != gPageCapture.mTranslations.end(); ++it) {
-			const std::wstring& wFrom = it->first;
-			const std::wstring& wTo = it->second;
+		if (gPageCapture.sConfig.eDisplayMode == EDisplayMode::Off)
+			return wDisplayText;
+
+		std::wstring wTranslated = wDisplayText;
+		for (std::vector<STranslationEntry>::const_iterator it = gPageCapture.vOrderedTranslations.begin(); it != gPageCapture.vOrderedTranslations.end(); ++it) {
+			const std::wstring& wFrom = it->wFrom;
+			const std::wstring& wTo = it->wTo;
 			if (wFrom.empty())
 				continue;
 
 			size_t pos = 0;
-			while ((pos = wResult.find(wFrom, pos)) != std::wstring::npos) {
-				wResult.replace(pos, wFrom.size(), wTo);
+			while ((pos = wTranslated.find(wFrom, pos)) != std::wstring::npos) {
+				wTranslated.replace(pos, wFrom.size(), wTo);
 				pos += wTo.size();
 			}
 		}
-		return wResult;
+
+		if (gPageCapture.sConfig.eDisplayMode == EDisplayMode::Mix && wTranslated != wDisplayText) {
+			std::wstring wTranslatedBase = StripTrailingParenthesizedCount(wTranslated);
+			std::wstring wOriginalBase = StripTrailingParenthesizedCount(wDisplayText);
+			if (wTranslatedBase == wOriginalBase)
+				return wDisplayText;
+			return wTranslatedBase + L" | " + wDisplayText;
+		}
+		return wTranslated;
 	}
 
 	void ExportTextIfNeeded(const std::wstring& wDisplayText) {
@@ -519,6 +652,10 @@ namespace {
 		std::wstring wExportText = BuildExportText(wDisplayText);
 		if (wExportText.empty())
 			return;
+		if (ShouldFilterText(wExportText)) {
+			DebugLog(L"[Export] filtered text: %s", wExportText.c_str());
+			return;
+		}
 		if (gPageCapture.sExportedTexts.find(wExportText) != gPageCapture.sExportedTexts.end())
 			return;
 
@@ -538,6 +675,7 @@ namespace {
 		gPageCapture.wOutputPath = JoinPath(gPageCapture.wDataDirectory, kMenuTextFileName);
 		gPageCapture.wLogPath = JoinPath(gPageCapture.wDataDirectory, kDebugLogFileName);
 		gPageCapture.wTranslationPath = JoinPath(gPageCapture.wDataDirectory, kTranslationFileName);
+		std::wstring wFilterRulePath = JoinPath(gPageCapture.wDataDirectory, kFilterRuleFileName);
 		if (GetFileAttributesW(gPageCapture.wIniPath.c_str()) == INVALID_FILE_ATTRIBUTES)
 			WriteDefaultIni(gPageCapture.wIniPath);
 		LoadConfig();
@@ -547,7 +685,9 @@ namespace {
 		DebugLog(L"[Init] output=%s", gPageCapture.wOutputPath.c_str());
 		DebugLog(L"[Init] log=%s", gPageCapture.wLogPath.c_str());
 		DebugLog(L"[Init] translation=%s", gPageCapture.wTranslationPath.c_str());
-		DebugLog(L"[Init] text_output=%d log_output=%d console=%d", gPageCapture.sConfig.bTextOutputEnabled ? 1 : 0, gPageCapture.sConfig.bLogOutputEnabled ? 1 : 0, gPageCapture.sConfig.bConsoleEnabled ? 1 : 0);
+		DebugLog(L"[Init] filter=%s", wFilterRulePath.c_str());
+		DebugLog(L"[Init] text_output=%d log_output=%d console=%d display_mode=%d", gPageCapture.sConfig.bTextOutputEnabled ? 1 : 0, gPageCapture.sConfig.bLogOutputEnabled ? 1 : 0, gPageCapture.sConfig.bConsoleEnabled ? 1 : 0, static_cast<int>(gPageCapture.sConfig.eDisplayMode));
+		LoadFilterRules(wFilterRulePath);
 		LoadTranslations();
 		gPageCapture.bInitialised = true;
 	}

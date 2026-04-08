@@ -2,8 +2,8 @@ import json
 import re
 from pathlib import Path
 
-TXT_PATH = Path("text/menu_text.txt")
-JSON_PATH = Path("text/zh-cn.json")
+TXT_PATH = Path("dbgmenu_data/menu_text.txt")
+JSON_PATH = Path("dbgmenu_data/zh-cn.json")
 
 BRACKET_PATTERN = re.compile(r"\[(.*?)]")
 

@@ -1,0 +1,11 @@
+# 调试菜单文本导出过滤规则
+# 支持三种格式：
+# exact:完全匹配
+# contains:包含匹配
+# prefix:前缀匹配
+
+# 示例：
+# exact:ON
+# exact:OFF
+# contains:AreaNum:
+# prefix:m11_

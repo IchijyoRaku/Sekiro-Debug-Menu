@@ -1,0 +1,2909 @@
+[Select Chr｜作成キャラ選択]
+[Select Chr Think｜AI思考選択]
+<chr id|キャラID
+【0.000000】<create length|出現距離[m]
+【0.000000】<create height|出現高さ[m]
+【180.000000】<create Angle|出現向き[deg]（0：プレイヤーと同じ向き
+《0》<npc param id|NPCパラムID
+《0》<npc think id|AI思考ID
+以上の情報でキャラ作成(○ボタン)
+最も新しいキャラを削除(○ボタン)
+生成した全キャラの配置データを出力(○ボタン)
+全キャラ計測開始
+================
+[NPCパラメータ選択]
+[AI思考選択]
+キャラID：0
+NPCパラメータID：0
+思考パラメータID：0
+↑のキャラを計測開始
+↑のキャラを計測リストに追加
+[チェックキャラ一覧]
+リストセーブ（capture:/chr_perf/check_list.txt）
+リストロード
+リストのキャラ計測開始
+チェック前
+現在のキャラの計測をスキップ
+No Hit
+No Attack
+No Move
+No Goods Consume 
+No ResourceItem Consume 
+No Update
+Switch Control Player (Push Enter)
+Return Control Player (Push Enter)
+Reset Position at InitPos(Push Enter)
+Move Position to this pos(Push Enter)
+Export MapStudio(Push Enter)
+[Draw]
+[Chr Basic Info|キャラ基本情報]
+No Dead
+No Damage
+No Stamina Consume
+No MP Consume
+HP
+NinsatsuNum
+MP
+Stamina
+[スタミナ管理]
+[Action Request]
+[Animation]
+[Behavior]
+Reload Chr (Push Enter)
+[Havok]
+[Other]
+MODEL:CHR:c0000{GUI○}
+[ReplayRecorder]
+MODEL:CHR:c0000{GUI○}○Open
+[マップBGM関連]
+[Action]
+[移動状態] 移動できる/[旋回状態] 旋回できる
+[SpStayCtrl(特殊待機)]
+[Animation Queue]
+[SuperArmor]
+[強靭度システム]
+UseItem
+UseMagic
+現在のアイテムID -1( <NULL> )
+[SpecialEffect]
+Backread state[実行中 Active] target[実行中 Active] /Respawn:しない
+Disable Event Backread State 
+Debug Hungup デバッグでハング。プログラマの許可なしに使用しないでください (Push Enter)
+[SprjChrThrowModule]
+[Ceremony | 儀式]
+[付属システム]
+[はしご|ChrLadder]
+[マップ視界タイプ]
+[CSChrDockingModule]
+[Pad Manipulator]
+[SPRO]
+[FDP DATA]
+[Dripping]
+[ChrDamageModule]
+アクティベート距離[-1.000]m（0.0以下で無効）
+ディアクティベート距離[-1.000]m（0.0以下で無効）
+m ローカルプレイヤーとの距離（0.0未満で無効値、未計算）
+[HitStop]
+[ChrAsm]
+Create Blood Mark
+Kick Out[ホスト専用]
+PlayerNo [0]
+Eye Scroll Offset
+<LipsyncTest|口パクテスト
+【0.004】<カテゴリスケール頭部
+【0.004】<カテゴリスケール胸部
+【0.004】<カテゴリスケール腹部
+【0.004】<カテゴリスケール右腕部
+【0.004】<カテゴリスケール右脚部
+【0.004】<カテゴリスケール左腕部
+【0.004】<カテゴリスケール左脚部
+[GenderMapper|男女差制御]
+[SwordArts｜剣戟（アーツ）]
+[DamageCalc｜ダメージ計算系]
+[攻撃自動捕捉]
+[RevivableDead|復活待ち死亡]
+[Root]
+[GAME]
+[PERFORMANCE]
+[NETWORK]
+[GRAPHICS]
+[SYSTEM]
+[RESOURCE]
+[SOUND]
+[DEVPATCH_Disable]
+[GAME_PROPERTIES]
+[DbgMapWalkDelayPad]
+[MAP INS]
+[OBJ INS]
+[HIT INS]
+[CHR INS]
+[WORLD SFX]
+[WORLD SOUND]
+[Save Load]
+[アイテム抽選シム]
+[リソースアイテム抽選シム]
+[GAME MAN OPTION]
+[PlayerInitPos]
+[Party Member Info]
+[Event]
+[GameData]
+[Tendency]
+[GameRule]
+[Network]
+[MINI MAP]
+[MapItemMan]
+[ThrowMan]
+[ACT_PAN_MAN]
+[LOCK_TGT_MAN]
+[NetWorldChrSync]
+[WorldChrMan]
+[CHR DBG]
+Player No Dead 【Off】
+Player Exterminate 【Off】
+Player Exterminate Stamina 【Off】
+Player No Goods Consume 【Off】
+Player No ResourceItem Consume 【Off】
+Player No Revival Consume 【Off】
+All No Dead 【Off】
+All No Damage 【Off】
+All No Hit 【Off】
+All No Attack 【Off】
+All No Move 【Off】
+All No Update Ai【Off】
+All No Stamina Consume 【Off】
+All No MP Consume 【Off】
+All No Arrow Consume 【Off】
+All No MagicQty Consume 【Off】
+All No WepProtDurability Damage【Off】
+All No Arts Point Consume【Off】
+All No Goods Consume【Off】
+All No ResourceItem Consume【Off】
+Player Hide【Off】
+Player Silence【Off】
+New KnockBackMode 【On】
+強靭度を表示する【Off】
+All No Dead 【On】
+△
+Force Just Guard Mode｜強制ジャストガードする【Off】
+Force Parry Mode｜強制パリィされる【Off】
+儀式の実行条件チェックを無効化【Off】
+篝火機能有効化【Off】
+敵HPゲージを表示する【Off】
+敵SPゲージを表示する【Off】
+全員停止/再開|Switch All No Update(Push Enter)
+全デバッグ描画機能 【Off】
+All Draw Hit 【Off】
+全員省略モード All Omission Mode 【Off】
+Lv1[ 3 ]/Lv2[ 0 ]/Lv5[ 2 ]Lv30[ 3 ]/None[ 167 ]/Total[ 175 ]
+0006/0013/0175<VisibleNum/ReadyNum/MaxNum
+Lv1更新数 10
+Lv2更新数 15
+【20.00】省略更新レベル判定距離[m]（描画グループ無効 Lv5/30判別）
+【10.00】省略更新レベル判定距離[m]（画面外 Lv5/30判別）
+【50.00】省略更新レベル判定距離[m]（画面内 Lv5/30判別）
+【10.00】省略更新レベル判定距離[m]（前フレーム非描画 Lv2判定）
+【20.00】省略更新レベル判定距離[m]（前フレーム非描画 Lv5判定）
+【40.00】省略更新レベル判定距離[m]（前フレーム非描画 Lv30判定）
+【5.00】省略更新レベル判定距離[m]（ラグドール優先度低下距離）
+更新省略状態を表示(Lv1緑 Lv2青 Lv5赤 Lv30紫 Off白)【Off】
+更新Lv5以上のキャラを非表示に 【Off】
+更新Lv5のキャラをLv30に上書きする 【Off】
+ローカル制御のNPC表示 【Off】
+LODレベル表示 (Lv0緑 Lv1青 Lv2赤)
+影を落とすLODレベル（この値以下なら影を落とす）
+Dead Count[4]
+Clear Dead Count (Push Enter)
+Check Dead Flag (Push Enter)
+デバッグダッシュ切替操作:Off
+デバッグ水泳切替操作:Off
+EzState fix randum integer number -1 (-1:randum)
+[アクションフラグ監視|ActionFlags]
+[▼便利系まとめ▼]
+[位置指定ワープ]
+[▼テスト/実験系をひとまとめ▼]
+[▼デバッグマーカー▼]
+プレイヤリロード【Off】
+[名前表示] 初期床アタリ disp first floor hit 【Off】
+[名前表示] 更新状態 disp update state 【Off】
+[名前表示] 死亡状態 disp dead state 【Off】
+<落下死亡カメラ
+ボタンで全キャラリスポン(リイニット版)
+ボタンで全キャラリロード
+<敵あたり無効化するか
+<キャラプロキシ更新をマルチスレッドで実行するか
+<FootIK更新をマルチスレッドで実行するか
+<HandIK更新をマルチスレッドで実行するか
+<裏スレッドでBehaviorキャラを作成するか
+<裏スレッドでBehaviorキャラを削除するか
+<Havok Behavior マルチスレッド更新を有効にするか
+<FootIKのレイキャストを表示するか
+<FootIkModifierを有効にするか
+integrateの数
+FootIkの数
+HandIkの数
+[TAEデバッグ機能]
+[クロススケール]
+[Sfx]
+[Se]
+[距離ディアクティベート]
+[Test]
+<アニメ移動量を自前で計算する|Calculate AnimExtractedMotion on Title
+<マップスタジオコメントを表示|Draw MapStudio Comment
+AI状態変化履歴記録は無効です。有効にしたい場合はゲームプロパティで設定してください。
+[Create Debug Chr｜デバッグキャラ作成]
+[キャラパフォーマンスチェック]
+[m11_00_00_00]
+[m11_00_00_00プレイヤーから10.0m以内]
+[●c0000]
+[Player Lock Chr|ロック中のキャラ]
+[m11_01_00_00]
+[m11_01_00_00プレイヤーから10.0m以内]
+[m89_00_00_99]
+[m89_00_00_99プレイヤーから10.0m以内]
+[Select Chr｜作成キャラ選択]
+[Select Chr Think｜AI思考選択]
+<chr id|キャラID
+【0.000000】<create length|出現距離[m]
+【0.000000】<create height|出現高さ[m]
+【180.000000】<create Angle|出現向き[deg]（0：プレイヤーと同じ向き
+《0》<npc param id|NPCパラムID
+《0》<npc think id|AI思考ID
+以上の情報でキャラ作成(○ボタン)
+最も新しいキャラを削除(○ボタン)
+生成した全キャラの配置データを出力(○ボタン)
+No Hit: 0
+No Attack: 0
+No Move: 0
+No Goods Consume : 0
+No ResourceItem Consume : 0
+No Update: 0
+Switch Control Player (Push Enter)
+Return Control Player (Push Enter)
+Reset Position at InitPos(Push Enter)
+Move Position to this pos(Push Enter)
+Export MapStudio(Push Enter)
+[Draw]
+[Chr Basic Info|キャラ基本情報]
+No Dead: 0
+No Damage: 0
+No Stamina Consume: 0
+No MP Consume: 0
+HP : [1120 / 1120]
+NinsatsuNum : [0 / 0]
+MP : [0 / 0]
+Stamina : [420 / 420]
+[スタミナ管理]
+[Action Request]
+[Animation]
+No Update: 1
+<DrawGroup|描画グループ
+<DispGroup|表示グループ
+<BackReadGroup
+[Behavior]
+Reload Chr (Push Enter)
+[Havok]
+[Other]
+MODEL:CHR:c0000{GUI○}
+[ReplayRecorder]
+[マップBGM関連]
+[Action]
+MODEL:CHR:c0000{GUI○}○Open
+[移動状態] 移動できる/[旋回状態] 旋回できる
+[SpStayCtrl(特殊待機)]
+[Animation Queue]
+[SuperArmor]
+[強靭度システム]
+UseItem [ ID 60 ](Push Enter)
+UseMagic [ ID 0 ](Push Enter)
+現在のアイテムID -1( <NULL> )
+[SpecialEffect]
+Backread state[実行中 Active] target[実行中 Active] /Respawn:しない
+break :[0]
+SADurability : [0.00 / 0.00]
+ExtraSADurability : [0.00 / 0.00]
+recoverTime :[-0.005]
+強靭度  現在値[100.00] / 基本値[100.00]
+強靭度補正率<1.0000>
+装備&特殊効果 被ダメージ倍率<1.0000>
+TAE 被ダメージ倍率<1.0000>
+被ダメージ倍率<1.0000>
+回復時間<0.0000>
+ブレイクしたか?(回復判定)<Off>
+強靭度ブレイクしたか?<Off>
+強靭度補正率に0が設定されたか?<×>
+強靭度期間か<×>
+強靭度が有効か?<×>
+現在の強靭度ID<-1>
+--------------------------------
+ダメージタイプ差換え特殊効果のベースID【06350】
+ダメージタイプ差換え特殊効果のID <6354>
+ダメージレベルの強靭度閾値《現在のレベル-->特大》
+-> 小 [30.00]
+-> 中 [50.00]
+-> 大 [70.00]
+-> 特大 [100.00]
+ダメージタイプ差換え特殊効果のベースID【0635[0]】(○(A):Inc □(X):Dec △(Y):Reset)
+Disable Event Backread State : 0
+Debug Hungup デバッグでハング。プログラマの許可なしに使用しないでください (Push Enter)
+[SprjChrThrowModule]
+[Ceremony | 儀式]
+[付属システム]
+[はしご|ChrLadder]
+[マップ視界タイプ]
+[CSChrDockingModule]
+[Pad Manipulator]
+[SPRO]
+[FDP DATA]
+[Dripping]
+[ChrDamageModule]
+アクティベート距離[-1.000]m（0.0以下で無効）
+ディアクティベート距離[-1.000]m（0.0以下で無効）
+《0.000》m ローカルプレイヤーとの距離（0.0未満で無効値、未計算）
+[HitStop]
+[ChrAsm]
+Create Blood Mark
+Kick Out[ホスト専用]
+PlayerNo [0]
+Eye Scroll Offset　U[0.000000] V[0.000000]
+<LipsyncTest|口パクテスト
+【0.004】<カテゴリスケール頭部
+【0.004】<カテゴリスケール胸部
+【0.004】<カテゴリスケール腹部
+【0.004】<カテゴリスケール右腕部
+【0.004】<カテゴリスケール右脚部
+【0.004】<カテゴリスケール左腕部
+【0.004】<カテゴリスケール左脚部
+[GenderMapper|男女差制御]
+[SwordArts｜剣戟（アーツ）]
+[DamageCalc｜ダメージ計算系]
+[攻撃自動捕捉]
+[RevivableDead|復活待ち死亡]
+[WireActionModule]
+【0.014】<カテゴリスケール頭部
+【0.024】<カテゴリスケール頭部
+【0.034】<カテゴリスケール頭部
+【0.044】<カテゴリスケール頭部
+【0.054】<カテゴリスケール頭部
+【0.064】<カテゴリスケール頭部
+【0.074】<カテゴリスケール頭部
+【0.084】<カテゴリスケール頭部
+【0.094】<カテゴリスケール頭部
+【0.104】<カテゴリスケール頭部
+【0.114】<カテゴリスケール頭部
+【0.124】<カテゴリスケール頭部
+【0.134】<カテゴリスケール頭部
+【0.144】<カテゴリスケール頭部
+【0.154】<カテゴリスケール頭部
+【0.164】<カテゴリスケール頭部
+【0.174】<カテゴリスケール頭部
+【0.184】<カテゴリスケール頭部
+【0.194】<カテゴリスケール頭部
+【0.204】<カテゴリスケール頭部
+【0.214】<カテゴリスケール頭部
+【0.224】<カテゴリスケール頭部
+【0.234】<カテゴリスケール頭部
+【0.244】<カテゴリスケール頭部
+【0.254】<カテゴリスケール頭部
+【0.264】<カテゴリスケール頭部
+【0.274】<カテゴリスケール頭部
+【0.284】<カテゴリスケール頭部
+【0.294】<カテゴリスケール頭部
+【0.304】<カテゴリスケール頭部
+【0.314】<カテゴリスケール頭部
+【0.324】<カテゴリスケール頭部
+【0.424】<カテゴリスケール頭部
+【0.524】<カテゴリスケール頭部
+【0.624】<カテゴリスケール頭部
+【0.724】<カテゴリスケール頭部
+【0.824】<カテゴリスケール頭部
+【0.924】<カテゴリスケール頭部
+【1.000】<カテゴリスケール頭部
+【0.104】<カテゴリスケール胸部
+【0.204】<カテゴリスケール胸部
+【0.304】<カテゴリスケール胸部
+【0.404】<カテゴリスケール胸部
+【0.504】<カテゴリスケール胸部
+【0.604】<カテゴリスケール胸部
+【0.704】<カテゴリスケール胸部
+【0.804】<カテゴリスケール胸部
+【0.904】<カテゴリスケール胸部
+【1.000】<カテゴリスケール胸部
+【0.104】<カテゴリスケール腹部
+【0.204】<カテゴリスケール腹部
+【0.304】<カテゴリスケール腹部
+【0.404】<カテゴリスケール腹部
+【0.504】<カテゴリスケール腹部
+【0.604】<カテゴリスケール腹部
+【0.704】<カテゴリスケール腹部
+【0.804】<カテゴリスケール腹部
+【0.904】<カテゴリスケール腹部
+【1.000】<カテゴリスケール腹部
+【0.104】<カテゴリスケール右腕部
+【0.204】<カテゴリスケール右腕部
+【0.304】<カテゴリスケール右腕部
+【0.404】<カテゴリスケール右腕部
+【0.504】<カテゴリスケール右腕部
+【0.604】<カテゴリスケール右腕部
+【0.704】<カテゴリスケール右腕部
+【0.804】<カテゴリスケール右腕部
+【0.904】<カテゴリスケール右腕部
+【1.000】<カテゴリスケール右腕部
+【0.014】<カテゴリスケール右脚部
+【0.114】<カテゴリスケール右脚部
+【0.214】<カテゴリスケール右脚部
+【0.314】<カテゴリスケール右脚部
+【0.414】<カテゴリスケール右脚部
+【0.514】<カテゴリスケール右脚部
+【0.614】<カテゴリスケール右脚部
+【0.714】<カテゴリスケール右脚部
+【0.814】<カテゴリスケール右脚部
+【0.914】<カテゴリスケール右脚部
+【1.000】<カテゴリスケール右脚部
+【0.014】<カテゴリスケール左腕部
+【0.114】<カテゴリスケール左腕部
+【0.214】<カテゴリスケール左腕部
+【0.314】<カテゴリスケール左腕部
+【0.414】<カテゴリスケール左腕部
+【0.514】<カテゴリスケール左腕部
+【0.614】<カテゴリスケール左腕部
+【0.714】<カテゴリスケール左腕部
+【0.814】<カテゴリスケール左腕部
+【0.914】<カテゴリスケール左腕部
+【1.000】<カテゴリスケール左腕部
+【0.104】<カテゴリスケール左脚部
+【0.204】<カテゴリスケール左脚部
+【0.304】<カテゴリスケール左脚部
+【0.404】<カテゴリスケール左脚部
+【0.504】<カテゴリスケール左脚部
+【0.604】<カテゴリスケール左脚部
+【0.704】<カテゴリスケール左脚部
+【0.804】<カテゴリスケール左脚部
+【0.904】<カテゴリスケール左脚部
+【1.000】<カテゴリスケール左脚部
+【筋力】使用予約アーツポイントタイプ
+《0》<reserve arts point|使用予約アーツポイント
+《0》<reserve magic point|使用予約MP
+《False》<lower sword arts|ポイント不足時アーツか？
+arts point str｜アーツポイント筋力: 0
+arts point dex｜アーツポイント技量: 20
+arts point magic｜アーツポイント魔法: 0
+arts point miracle｜アーツポイント奇跡: 0
+アーツポイント筋力最大値:0
+アーツポイント技量最大値:20
+アーツポイント魔法最大値:0
+アーツポイント奇跡最大値:0
+【-1】<max arts point [str]|デバッグ調整用アーツポイント最大値【筋力】
+【-1】<max arts point [dex]|デバッグ調整用アーツポイント最大値【技量】
+【-1】<max arts point [magic]|デバッグ調整用アーツポイント最大値【魔法】
+【-1】<max arts point [miracle]|デバッグ調整用アーツポイント最大値【奇跡】
+[LeaveGhost|幻影残しテスト]
+Cur Frame Stamina Add Recover : 2
+Next Frame Stamina Add Recover : 0.536141
+Stamina Recover[point/s] : 105
+スタミナ回復基本速度[point/s] : 105.000000
+スタミナ回復速度変化[point/s] : 0.000000
+スタミナ制御パラメータID ： 0
+現在のスタミナ制御タイプ ： なし
+スタミナ回復率[％] ： なし
+スタミナ上限[％] ： なし
+スタミナ下限[％] ： なし
+[スタミナ変動履歴]
+【0.800000】<ReganableRate|スタミナダメージに対するリゲイン可能量の割合(共通)
+《420》<RegainSp|現在のスタミナリゲイン値
+Next Frame Stamina Add Recover : 0.315796
+Next Frame Stamina Add Recover : 0.095452
+Cur Frame Stamina Add Recover : 1
+Next Frame Stamina Add Recover : 0.875107
+Next Frame Stamina Add Recover : 0.654763
+Next Frame Stamina Add Recover : 0.434419
+Next Frame Stamina Add Recover : 0.214074
+Next Frame Stamina Add Recover : 0.993730
+Next Frame Stamina Add Recover : 0.773385
+Next Frame Stamina Add Recover : 0.553041
+Next Frame Stamina Add Recover : 0.332696
+Next Frame Stamina Add Recover : 0.112352
+Next Frame Stamina Add Recover : 0.892007
+Next Frame Stamina Add Recover : 0.671663
+Next Frame Stamina Add Recover : 0.451319
+Next Frame Stamina Add Recover : 0.230974
+Next Frame Stamina Add Recover : 0.010630
+Next Frame Stamina Add Recover : 0.790285
+Next Frame Stamina Add Recover : 0.569941
+Next Frame Stamina Add Recover : 0.349597
+Next Frame Stamina Add Recover : 0.129252
+Next Frame Stamina Add Recover : 0.908908
+Next Frame Stamina Add Recover : 0.688563
+Next Frame Stamina Add Recover : 0.468219
+Next Frame Stamina Add Recover : 0.247874
+Next Frame Stamina Add Recover : 0.027530
+Next Frame Stamina Add Recover : 0.807185
+Next Frame Stamina Add Recover : 0.586841
+Next Frame Stamina Add Recover : 0.366497
+Next Frame Stamina Add Recover : 0.146152
+Next Frame Stamina Add Recover : 0.925808
+Next Frame Stamina Add Recover : 0.705463
+Next Frame Stamina Add Recover : 0.485119
+Next Frame Stamina Add Recover : 0.264774
+Next Frame Stamina Add Recover : 0.044430
+Next Frame Stamina Add Recover : 0.824085
+Next Frame Stamina Add Recover : 0.603741
+Next Frame Stamina Add Recover : 0.383397
+Next Frame Stamina Add Recover : 0.163052
+Next Frame Stamina Add Recover : 0.942708
+Next Frame Stamina Add Recover : 0.722363
+Next Frame Stamina Add Recover : 0.502019
+Next Frame Stamina Add Recover : 0.281674
+Next Frame Stamina Add Recover : 0.061330
+Next Frame Stamina Add Recover : 0.840985
+Next Frame Stamina Add Recover : 0.620641
+Next Frame Stamina Add Recover : 0.400297
+Next Frame Stamina Add Recover : 0.179952
+Next Frame Stamina Add Recover : 0.959608
+Next Frame Stamina Add Recover : 0.739263
+Next Frame Stamina Add Recover : 0.518919
+Next Frame Stamina Add Recover : 0.298574
+Next Frame Stamina Add Recover : 0.078230
+Next Frame Stamina Add Recover : 0.857885
+Next Frame Stamina Add Recover : 0.637541
+Next Frame Stamina Add Recover : 0.417197
+Next Frame Stamina Add Recover : 0.196852
+Next Frame Stamina Add Recover : 0.976508
+Next Frame Stamina Add Recover : 0.756163
+Next Frame Stamina Add Recover : 0.535819
+Next Frame Stamina Add Recover : 0.315475
+Next Frame Stamina Add Recover : 0.095130
+Next Frame Stamina Add Recover : 0.874786
+Next Frame Stamina Add Recover : 0.654441
+Next Frame Stamina Add Recover : 0.434097
+Next Frame Stamina Add Recover : 0.213752
+Next Frame Stamina Add Recover : 0.993408
+Next Frame Stamina Add Recover : 0.773063
+Next Frame Stamina Add Recover : 0.552719
+Next Frame Stamina Add Recover : 0.332375
+Next Frame Stamina Add Recover : 0.112030
+Next Frame Stamina Add Recover : 0.891686
+Next Frame Stamina Add Recover : 0.671341
+Next Frame Stamina Add Recover : 0.450997
+Next Frame Stamina Add Recover : 0.230652
+Next Frame Stamina Add Recover : 0.010308
+Next Frame Stamina Add Recover : 0.789963
+Next Frame Stamina Add Recover : 0.569619
+Next Frame Stamina Add Recover : 0.349275
+Next Frame Stamina Add Recover : 0.128930
+Next Frame Stamina Add Recover : 0.908586
+Next Frame Stamina Add Recover : 0.688241
+Next Frame Stamina Add Recover : 0.467897
+Next Frame Stamina Add Recover : 0.247552
+Next Frame Stamina Add Recover : 0.027208
+Next Frame Stamina Add Recover : 0.806863
+Next Frame Stamina Add Recover : 0.586519
+Next Frame Stamina Add Recover : 0.366175
+Next Frame Stamina Add Recover : 0.145830
+Next Frame Stamina Add Recover : 0.925486
+Next Frame Stamina Add Recover : 0.705141
+Next Frame Stamina Add Recover : 0.484797
+Next Frame Stamina Add Recover : 0.264452
+Next Frame Stamina Add Recover : 0.044108
+Next Frame Stamina Add Recover : 0.823763
+Next Frame Stamina Add Recover : 0.603419
+Next Frame Stamina Add Recover : 0.383075
+Next Frame Stamina Add Recover : 0.162730
+Next Frame Stamina Add Recover : 0.942386
+Next Frame Stamina Add Recover : 0.722041
+Next Frame Stamina Add Recover : 0.501697
+Next Frame Stamina Add Recover : 0.281353
+Next Frame Stamina Add Recover : 0.061008
+Next Frame Stamina Add Recover : 0.840664
+Next Frame Stamina Add Recover : 0.620319
+Next Frame Stamina Add Recover : 0.399975
+Next Frame Stamina Add Recover : 0.179630
+Next Frame Stamina Add Recover : 0.959286
+Next Frame Stamina Add Recover : 0.738941
+Next Frame Stamina Add Recover : 0.518597
+Next Frame Stamina Add Recover : 0.298253
+Next Frame Stamina Add Recover : 0.077908
+Next Frame Stamina Add Recover : 0.857564
+Next Frame Stamina Add Recover : 0.637219
+Next Frame Stamina Add Recover : 0.417260
+Next Frame Stamina Add Recover : 0.197300
+Next Frame Stamina Add Recover : 0.977341
+Next Frame Stamina Add Recover : 0.756996
+Next Frame Stamina Add Recover : 0.536652
+Next Frame Stamina Add Recover : 0.316308
+Next Frame Stamina Add Recover : 0.096446
+Next Frame Stamina Add Recover : 0.876585
+Next Frame Stamina Add Recover : 0.656723
+Next Frame Stamina Add Recover : 0.436379
+Next Frame Stamina Add Recover : 0.216034
+Next Frame Stamina Add Recover : 0.995690
+Next Frame Stamina Add Recover : 0.775346
+Next Frame Stamina Add Recover : 0.555001
+Next Frame Stamina Add Recover : 0.334657
+Next Frame Stamina Add Recover : 0.114312
+Next Frame Stamina Add Recover : 0.893968
+Next Frame Stamina Add Recover : 0.673623
+Next Frame Stamina Add Recover : 0.453279
+Next Frame Stamina Add Recover : 0.232934
+Next Frame Stamina Add Recover : 0.012590
+Next Frame Stamina Add Recover : 0.792246
+Next Frame Stamina Add Recover : 0.571901
+Next Frame Stamina Add Recover : 0.351557
+Next Frame Stamina Add Recover : 0.131212
+Next Frame Stamina Add Recover : 0.910868
+Next Frame Stamina Add Recover : 0.690523
+Next Frame Stamina Add Recover : 0.470179
+Next Frame Stamina Add Recover : 0.249835
+Next Frame Stamina Add Recover : 0.029490
+Next Frame Stamina Add Recover : 0.809146
+Next Frame Stamina Add Recover : 0.588801
+Next Frame Stamina Add Recover : 0.368457
+Next Frame Stamina Add Recover : 0.148112
+Next Frame Stamina Add Recover : 0.927768
+Next Frame Stamina Add Recover : 0.707423
+Next Frame Stamina Add Recover : 0.487079
+Next Frame Stamina Add Recover : 0.266735
+Next Frame Stamina Add Recover : 0.046390
+Next Frame Stamina Add Recover : 0.826046
+Next Frame Stamina Add Recover : 0.605701
+Next Frame Stamina Add Recover : 0.385357
+Next Frame Stamina Add Recover : 0.165012
+Next Frame Stamina Add Recover : 0.944668
+Next Frame Stamina Add Recover : 0.724324
+Next Frame Stamina Add Recover : 0.503979
+Next Frame Stamina Add Recover : 0.283635
+Next Frame Stamina Add Recover : 0.063290
+Next Frame Stamina Add Recover : 0.842946
+Next Frame Stamina Add Recover : 0.622601
+Next Frame Stamina Add Recover : 0.402257
+Next Frame Stamina Add Recover : 0.181912
+Next Frame Stamina Add Recover : 0.961568
+Next Frame Stamina Add Recover : 0.741224
+Next Frame Stamina Add Recover : 0.520879
+Next Frame Stamina Add Recover : 0.300535
+Next Frame Stamina Add Recover : 0.080190
+Next Frame Stamina Add Recover : 0.861641
+Next Frame Stamina Add Recover : 0.643092
+Next Frame Stamina Add Recover : 0.424543
+Next Frame Stamina Add Recover : 0.204199
+Next Frame Stamina Add Recover : 0.983854
+Next Frame Stamina Add Recover : 0.763510
+Next Frame Stamina Add Recover : 0.543166
+Next Frame Stamina Add Recover : 0.322821
+Next Frame Stamina Add Recover : 0.102477
+Next Frame Stamina Add Recover : 0.882132
+Next Frame Stamina Add Recover : 0.661788
+Next Frame Stamina Add Recover : 0.441443
+Next Frame Stamina Add Recover : 0.221099
+Next Frame Stamina Add Recover : 0.000754
+Next Frame Stamina Add Recover : 0.780410
+Next Frame Stamina Add Recover : 0.560066
+Next Frame Stamina Add Recover : 0.339721
+Next Frame Stamina Add Recover : 0.119377
+Next Frame Stamina Add Recover : 0.899032
+Next Frame Stamina Add Recover : 0.678688
+Next Frame Stamina Add Recover : 0.458344
+Next Frame Stamina Add Recover : 0.237999
+Next Frame Stamina Add Recover : 0.017654
+Next Frame Stamina Add Recover : 0.797310
+Next Frame Stamina Add Recover : 0.576966
+Next Frame Stamina Add Recover : 0.356621
+Next Frame Stamina Add Recover : 0.136277
+Next Frame Stamina Add Recover : 0.915932
+Next Frame Stamina Add Recover : 0.695588
+Next Frame Stamina Add Recover : 0.475244
+Next Frame Stamina Add Recover : 0.254899
+Next Frame Stamina Add Recover : 0.034554
+Next Frame Stamina Add Recover : 0.814210
+Next Frame Stamina Add Recover : 0.593866
+Next Frame Stamina Add Recover : 0.373521
+Next Frame Stamina Add Recover : 0.153177
+Next Frame Stamina Add Recover : 0.932832
+Next Frame Stamina Add Recover : 0.712488
+Next Frame Stamina Add Recover : 0.492144
+Next Frame Stamina Add Recover : 0.271799
+Next Frame Stamina Add Recover : 0.051455
+Next Frame Stamina Add Recover : 0.831110
+Next Frame Stamina Add Recover : 0.610766
+Next Frame Stamina Add Recover : 0.390421
+Next Frame Stamina Add Recover : 0.170077
+Next Frame Stamina Add Recover : 0.949732
+Next Frame Stamina Add Recover : 0.729388
+Next Frame Stamina Add Recover : 0.509044
+Next Frame Stamina Add Recover : 0.288699
+Next Frame Stamina Add Recover : 0.068355
+Next Frame Stamina Add Recover : 0.848010
+Next Frame Stamina Add Recover : 0.627666
+Next Frame Stamina Add Recover : 0.407321
+Next Frame Stamina Add Recover : 0.186977
+Next Frame Stamina Add Recover : 0.966632
+Next Frame Stamina Add Recover : 0.746288
+Next Frame Stamina Add Recover : 0.525944
+Next Frame Stamina Add Recover : 0.305599
+Next Frame Stamina Add Recover : 0.085255
+Next Frame Stamina Add Recover : 0.864910
+Next Frame Stamina Add Recover : 0.644566
+Next Frame Stamina Add Recover : 0.424222
+Next Frame Stamina Add Recover : 0.203877
+Next Frame Stamina Add Recover : 0.983533
+Next Frame Stamina Add Recover : 0.763188
+Next Frame Stamina Add Recover : 0.542844
+Next Frame Stamina Add Recover : 0.322499
+Next Frame Stamina Add Recover : 0.102155
+Next Frame Stamina Add Recover : 0.881810
+Next Frame Stamina Add Recover : 0.661466
+Next Frame Stamina Add Recover : 0.441122
+Next Frame Stamina Add Recover : 0.220777
+Next Frame Stamina Add Recover : 0.000432
+Next Frame Stamina Add Recover : 0.780088
+Next Frame Stamina Add Recover : 0.559744
+Next Frame Stamina Add Recover : 0.339399
+Next Frame Stamina Add Recover : 0.119055
+Next Frame Stamina Add Recover : 0.898710
+Next Frame Stamina Add Recover : 0.678366
+Next Frame Stamina Add Recover : 0.458022
+Next Frame Stamina Add Recover : 0.237677
+Next Frame Stamina Add Recover : 0.017333
+Next Frame Stamina Add Recover : 0.796988
+Next Frame Stamina Add Recover : 0.576644
+Next Frame Stamina Add Recover : 0.356299
+Next Frame Stamina Add Recover : 0.135955
+Next Frame Stamina Add Recover : 0.915610
+Next Frame Stamina Add Recover : 0.695266
+Next Frame Stamina Add Recover : 0.474922
+Next Frame Stamina Add Recover : 0.254577
+Next Frame Stamina Add Recover : 0.034233
+Next Frame Stamina Add Recover : 0.813888
+Next Frame Stamina Add Recover : 0.593544
+Next Frame Stamina Add Recover : 0.373199
+Next Frame Stamina Add Recover : 0.152855
+Next Frame Stamina Add Recover : 0.932510
+Next Frame Stamina Add Recover : 0.712166
+Next Frame Stamina Add Recover : 0.491822
+Next Frame Stamina Add Recover : 0.271477
+Next Frame Stamina Add Recover : 0.051133
+Next Frame Stamina Add Recover : 0.830788
+Next Frame Stamina Add Recover : 0.610444
+Next Frame Stamina Add Recover : 0.390100
+Next Frame Stamina Add Recover : 0.169755
+Next Frame Stamina Add Recover : 0.949411
+Next Frame Stamina Add Recover : 0.729066
+Next Frame Stamina Add Recover : 0.508722
+Next Frame Stamina Add Recover : 0.288377
+Next Frame Stamina Add Recover : 0.068033
+Next Frame Stamina Add Recover : 0.847688
+Next Frame Stamina Add Recover : 0.627344
+Next Frame Stamina Add Recover : 0.407000
+Next Frame Stamina Add Recover : 0.186655
+Next Frame Stamina Add Recover : 0.966311
+Next Frame Stamina Add Recover : 0.745966
+Next Frame Stamina Add Recover : 0.525622
+Next Frame Stamina Add Recover : 0.305277
+Next Frame Stamina Add Recover : 0.084933
+Next Frame Stamina Add Recover : 0.864588
+Next Frame Stamina Add Recover : 0.644244
+Next Frame Stamina Add Recover : 0.423900
+Next Frame Stamina Add Recover : 0.203555
+Next Frame Stamina Add Recover : 0.983211
+Next Frame Stamina Add Recover : 0.762866
+Next Frame Stamina Add Recover : 0.542522
+Next Frame Stamina Add Recover : 0.322177
+Next Frame Stamina Add Recover : 0.101833
+Next Frame Stamina Add Recover : 0.881488
+Next Frame Stamina Add Recover : 0.661144
+Next Frame Stamina Add Recover : 0.440800
+Next Frame Stamina Add Recover : 0.220455
+Next Frame Stamina Add Recover : 0.000111
+Next Frame Stamina Add Recover : 0.779766
+Next Frame Stamina Add Recover : 0.559422
+Next Frame Stamina Add Recover : 0.339077
+Next Frame Stamina Add Recover : 0.118733
+Next Frame Stamina Add Recover : 0.898389
+Next Frame Stamina Add Recover : 0.678044
+Next Frame Stamina Add Recover : 0.457700
+Next Frame Stamina Add Recover : 0.237355
+Next Frame Stamina Add Recover : 0.017011
+Next Frame Stamina Add Recover : 0.796666
+Next Frame Stamina Add Recover : 0.576322
+Next Frame Stamina Add Recover : 0.355978
+Next Frame Stamina Add Recover : 0.135633
+Next Frame Stamina Add Recover : 0.915289
+Next Frame Stamina Add Recover : 0.694944
+Next Frame Stamina Add Recover : 0.474600
+Next Frame Stamina Add Recover : 0.254255
+Next Frame Stamina Add Recover : 0.117543
+Next Frame Stamina Add Recover : 0.980832
+Next Frame Stamina Add Recover : 0.884051
+Next Frame Stamina Add Recover : 0.703638
+Next Frame Stamina Add Recover : 0.523225
+Next Frame Stamina Add Recover : 0.324000
+Next Frame Stamina Add Recover : 0.124774
+Next Frame Stamina Add Recover : 0.925549
+Next Frame Stamina Add Recover : 0.705204
+Next Frame Stamina Add Recover : 0.484860
+Next Frame Stamina Add Recover : 0.264515
+Next Frame Stamina Add Recover : 0.044171
+Next Frame Stamina Add Recover : 0.823826
+Next Frame Stamina Add Recover : 0.603482
+Next Frame Stamina Add Recover : 0.383138
+Next Frame Stamina Add Recover : 0.162793
+Next Frame Stamina Add Recover : 0.942449
+Next Frame Stamina Add Recover : 0.722104
+Next Frame Stamina Add Recover : 0.501760
+Next Frame Stamina Add Recover : 0.281415
+Next Frame Stamina Add Recover : 0.061071
+Next Frame Stamina Add Recover : 0.840726
+Next Frame Stamina Add Recover : 0.620382
+Next Frame Stamina Add Recover : 0.400038
+Next Frame Stamina Add Recover : 0.179693
+Next Frame Stamina Add Recover : 0.959349
+Next Frame Stamina Add Recover : 0.739004
+Next Frame Stamina Add Recover : 0.518660
+Next Frame Stamina Add Recover : 0.298316
+Next Frame Stamina Add Recover : 0.077971
+Next Frame Stamina Add Recover : 0.857627
+Next Frame Stamina Add Recover : 0.637282
+Next Frame Stamina Add Recover : 0.416938
+Next Frame Stamina Add Recover : 0.196593
+Next Frame Stamina Add Recover : 0.976249
+Next Frame Stamina Add Recover : 0.755904
+Next Frame Stamina Add Recover : 0.535560
+Next Frame Stamina Add Recover : 0.315216
+Next Frame Stamina Add Recover : 0.094871
+Next Frame Stamina Add Recover : 0.874527
+Next Frame Stamina Add Recover : 0.654182
+Next Frame Stamina Add Recover : 0.433838
+Next Frame Stamina Add Recover : 0.213493
+Next Frame Stamina Add Recover : 0.993149
+Next Frame Stamina Add Recover : 0.772804
+Next Frame Stamina Add Recover : 0.552460
+Next Frame Stamina Add Recover : 0.332116
+Next Frame Stamina Add Recover : 0.111771
+Next Frame Stamina Add Recover : 0.891427
+Next Frame Stamina Add Recover : 0.671082
+Next Frame Stamina Add Recover : 0.450738
+Next Frame Stamina Add Recover : 0.230393
+Next Frame Stamina Add Recover : 0.010049
+Next Frame Stamina Add Recover : 0.789704
+Next Frame Stamina Add Recover : 0.569360
+Next Frame Stamina Add Recover : 0.349016
+Next Frame Stamina Add Recover : 0.128671
+Next Frame Stamina Add Recover : 0.908327
+Next Frame Stamina Add Recover : 0.687982
+Next Frame Stamina Add Recover : 0.467638
+Next Frame Stamina Add Recover : 0.247293
+Next Frame Stamina Add Recover : 0.026949
+Next Frame Stamina Add Recover : 0.806605
+Next Frame Stamina Add Recover : 0.586260
+Next Frame Stamina Add Recover : 0.365916
+Next Frame Stamina Add Recover : 0.145571
+Next Frame Stamina Add Recover : 0.925227
+Next Frame Stamina Add Recover : 0.704882
+Next Frame Stamina Add Recover : 0.484538
+Next Frame Stamina Add Recover : 0.264194
+Next Frame Stamina Add Recover : 0.043849
+Next Frame Stamina Add Recover : 0.823505
+Next Frame Stamina Add Recover : 0.603160
+Next Frame Stamina Add Recover : 0.382816
+Next Frame Stamina Add Recover : 0.162471
+Next Frame Stamina Add Recover : 0.942127
+Next Frame Stamina Add Recover : 0.721782
+Next Frame Stamina Add Recover : 0.501438
+Next Frame Stamina Add Recover : 0.281094
+Next Frame Stamina Add Recover : 0.060749
+現在のスタミナ制御タイプ ： タイプ000
+スタミナ回復率[％] ： 0
+スタミナ上限[％] ： 100
+スタミナ下限[％] ： 0
+Cur Frame Stamina Add Recover : 0
+Stamina Recover[point/s] : 0
+現在のスタミナ制御タイプ ： タイプ010
+スタミナ回復率[％] ： 200
+Cur Frame Stamina Add Recover : 3
+Next Frame Stamina Add Recover : 0.620060
+Stamina Recover[point/s] : 210
+Cur Frame Stamina Add Recover : 4
+Next Frame Stamina Add Recover : 0.179371
+Next Frame Stamina Add Recover : 0.738683
+Next Frame Stamina Add Recover : 0.297994
+Next Frame Stamina Add Recover : 0.857305
+Next Frame Stamina Add Recover : 0.416616
+Next Frame Stamina Add Recover : 0.975927
+Next Frame Stamina Add Recover : 0.535238
+Next Frame Stamina Add Recover : 0.094549
+Next Frame Stamina Add Recover : 0.653860
+Next Frame Stamina Add Recover : 0.213171
+Next Frame Stamina Add Recover : 0.772483
+Next Frame Stamina Add Recover : 0.331794
+Next Frame Stamina Add Recover : 0.891105
+Next Frame Stamina Add Recover : 0.450416
+Next Frame Stamina Add Recover : 0.009727
+Next Frame Stamina Add Recover : 0.569039
+Next Frame Stamina Add Recover : 0.128350
+Next Frame Stamina Add Recover : 0.687661
+Next Frame Stamina Add Recover : 0.246972
+Next Frame Stamina Add Recover : 0.806283
+Next Frame Stamina Add Recover : 0.365594
+Next Frame Stamina Add Recover : 0.924906
+Next Frame Stamina Add Recover : 0.484217
+Next Frame Stamina Add Recover : 0.043528
+Next Frame Stamina Add Recover : 0.602839
+Next Frame Stamina Add Recover : 0.162150
+Next Frame Stamina Add Recover : 0.721461
+Next Frame Stamina Add Recover : 0.280772
+Next Frame Stamina Add Recover : 0.840083
+Next Frame Stamina Add Recover : 0.399395
+Next Frame Stamina Add Recover : 0.958706
+Next Frame Stamina Add Recover : 0.518017
+Next Frame Stamina Add Recover : 0.077328
+Next Frame Stamina Add Recover : 0.636639
+Next Frame Stamina Add Recover : 0.195950
+Next Frame Stamina Add Recover : 0.755261
+Next Frame Stamina Add Recover : 0.314572
+Next Frame Stamina Add Recover : 0.873883
+Next Frame Stamina Add Recover : 0.433195
+Next Frame Stamina Add Recover : 0.992506
+Next Frame Stamina Add Recover : 0.551817
+Next Frame Stamina Add Recover : 0.111128
+Next Frame Stamina Add Recover : 0.670439
+Next Frame Stamina Add Recover : 0.229750
+Next Frame Stamina Add Recover : 0.789061
+Next Frame Stamina Add Recover : 0.348372
+Next Frame Stamina Add Recover : 0.907684
+Next Frame Stamina Add Recover : 0.466995
+Next Frame Stamina Add Recover : 0.026306
+Next Frame Stamina Add Recover : 0.585617
+Next Frame Stamina Add Recover : 0.144928
+Next Frame Stamina Add Recover : 0.704240
+Next Frame Stamina Add Recover : 0.263551
+Next Frame Stamina Add Recover : 0.822862
+Next Frame Stamina Add Recover : 0.382173
+Next Frame Stamina Add Recover : 0.941484
+Next Frame Stamina Add Recover : 0.500795
+Next Frame Stamina Add Recover : 0.060106
+Next Frame Stamina Add Recover : 0.619417
+Next Frame Stamina Add Recover : 0.178729
+Next Frame Stamina Add Recover : 0.738040
+Next Frame Stamina Add Recover : 0.297351
+Next Frame Stamina Add Recover : 0.856662
+Next Frame Stamina Add Recover : 0.415973
+Next Frame Stamina Add Recover : 0.975284
+Next Frame Stamina Add Recover : 0.534595
+Next Frame Stamina Add Recover : 0.093906
+Next Frame Stamina Add Recover : 0.653218
+Next Frame Stamina Add Recover : 0.212529
+Next Frame Stamina Add Recover : 0.771840
+Next Frame Stamina Add Recover : 0.331151
+Next Frame Stamina Add Recover : 0.890462
+Next Frame Stamina Add Recover : 0.449773
+Next Frame Stamina Add Recover : 0.009085
+Next Frame Stamina Add Recover : 0.568396
+Next Frame Stamina Add Recover : 0.127707
+Next Frame Stamina Add Recover : 0.687018
+Next Frame Stamina Add Recover : 0.246329
+Next Frame Stamina Add Recover : 0.805640
+Next Frame Stamina Add Recover : 0.364952
+Next Frame Stamina Add Recover : 0.924263
+Next Frame Stamina Add Recover : 0.483574
+Next Frame Stamina Add Recover : 0.042885
+Next Frame Stamina Add Recover : 0.602196
+Next Frame Stamina Add Recover : 0.161507
+Next Frame Stamina Add Recover : 0.720818
+Next Frame Stamina Add Recover : 0.280129
+Next Frame Stamina Add Recover : 0.839441
+Next Frame Stamina Add Recover : 0.398752
+Next Frame Stamina Add Recover : 0.958063
+Next Frame Stamina Add Recover : 0.517374
+Next Frame Stamina Add Recover : 0.076685
+Next Frame Stamina Add Recover : 0.635996
+Next Frame Stamina Add Recover : 0.195307
+Next Frame Stamina Add Recover : 0.754618
+Next Frame Stamina Add Recover : 0.313930
+Next Frame Stamina Add Recover : 0.873241
+Next Frame Stamina Add Recover : 0.432552
+Next Frame Stamina Add Recover : 0.991863
+Next Frame Stamina Add Recover : 0.551174
+Next Frame Stamina Add Recover : 0.110485
+Next Frame Stamina Add Recover : 0.669796
+Next Frame Stamina Add Recover : 0.229107
+Next Frame Stamina Add Recover : 0.788419
+Next Frame Stamina Add Recover : 0.347730
+Next Frame Stamina Add Recover : 0.907041
+Next Frame Stamina Add Recover : 0.466352
+Next Frame Stamina Add Recover : 0.025663
+Next Frame Stamina Add Recover : 0.584975
+Next Frame Stamina Add Recover : 0.144286
+Next Frame Stamina Add Recover : 0.703597
+Next Frame Stamina Add Recover : 0.262908
+Next Frame Stamina Add Recover : 0.822219
+Next Frame Stamina Add Recover : 0.381929
+Next Frame Stamina Add Recover : 0.941639
+Next Frame Stamina Add Recover : 0.501349
+Next Frame Stamina Add Recover : 0.060660
+Next Frame Stamina Add Recover : 0.619972
+Next Frame Stamina Add Recover : 0.179283
+Next Frame Stamina Add Recover : 0.738594
+Next Frame Stamina Add Recover : 0.297905
+Next Frame Stamina Add Recover : 0.857216
+Next Frame Stamina Add Recover : 0.416527
+Next Frame Stamina Add Recover : 0.196183
+Next Frame Stamina Add Recover : 0.975838
+Next Frame Stamina Add Recover : 0.755494
+Next Frame Stamina Add Recover : 0.535150
+Next Frame Stamina Add Recover : 0.314805
+Next Frame Stamina Add Recover : 0.094460
+Next Frame Stamina Add Recover : 0.874116
+Next Frame Stamina Add Recover : 0.653772
+Next Frame Stamina Add Recover : 0.433427
+Next Frame Stamina Add Recover : 0.213083
+Next Frame Stamina Add Recover : 0.992738
+Next Frame Stamina Add Recover : 0.772394
+Next Frame Stamina Add Recover : 0.552050
+Next Frame Stamina Add Recover : 0.331705
+Next Frame Stamina Add Recover : 0.111361
+Next Frame Stamina Add Recover : 0.891016
+Next Frame Stamina Add Recover : 0.670672
+Next Frame Stamina Add Recover : 0.450327
+Next Frame Stamina Add Recover : 0.229983
+Next Frame Stamina Add Recover : 0.009638
+Next Frame Stamina Add Recover : 0.789294
+Next Frame Stamina Add Recover : 0.568949
+Next Frame Stamina Add Recover : 0.348605
+Next Frame Stamina Add Recover : 0.128261
+Next Frame Stamina Add Recover : 0.907916
+Next Frame Stamina Add Recover : 0.687572
+Next Frame Stamina Add Recover : 0.467227
+Next Frame Stamina Add Recover : 0.246883
+Next Frame Stamina Add Recover : 0.026538
+Next Frame Stamina Add Recover : 0.806194
+Next Frame Stamina Add Recover : 0.585850
+Next Frame Stamina Add Recover : 0.365505
+Next Frame Stamina Add Recover : 0.145161
+Next Frame Stamina Add Recover : 0.924816
+Next Frame Stamina Add Recover : 0.704472
+Next Frame Stamina Add Recover : 0.484128
+Next Frame Stamina Add Recover : 0.263783
+Next Frame Stamina Add Recover : 0.043438
+Next Frame Stamina Add Recover : 0.823094
+Next Frame Stamina Add Recover : 0.602750
+Next Frame Stamina Add Recover : 0.382405
+Next Frame Stamina Add Recover : 0.162061
+Next Frame Stamina Add Recover : 0.941716
+Next Frame Stamina Add Recover : 0.721372
+Next Frame Stamina Add Recover : 0.501028
+Next Frame Stamina Add Recover : 0.280683
+Next Frame Stamina Add Recover : 0.060338
+Next Frame Stamina Add Recover : 0.839994
+Next Frame Stamina Add Recover : 0.619650
+Next Frame Stamina Add Recover : 0.399305
+Next Frame Stamina Add Recover : 0.178961
+Next Frame Stamina Add Recover : 0.958616
+Next Frame Stamina Add Recover : 0.738272
+Next Frame Stamina Add Recover : 0.517928
+Next Frame Stamina Add Recover : 0.297583
+Next Frame Stamina Add Recover : 0.077239
+Next Frame Stamina Add Recover : 0.856894
+Next Frame Stamina Add Recover : 0.636550
+Next Frame Stamina Add Recover : 0.416205
+Next Frame Stamina Add Recover : 0.195861
+Next Frame Stamina Add Recover : 0.975516
+Next Frame Stamina Add Recover : 0.755172
+Next Frame Stamina Add Recover : 0.534828
+Next Frame Stamina Add Recover : 0.314483
+Next Frame Stamina Add Recover : 0.094139
+Next Frame Stamina Add Recover : 0.873794
+Next Frame Stamina Add Recover : 0.653450
+Next Frame Stamina Add Recover : 0.433105
+Next Frame Stamina Add Recover : 0.212761
+Next Frame Stamina Add Recover : 0.992417
+Next Frame Stamina Add Recover : 0.772072
+Next Frame Stamina Add Recover : 0.551728
+Next Frame Stamina Add Recover : 0.331383
+Next Frame Stamina Add Recover : 0.111039
+Next Frame Stamina Add Recover : 0.890694
+Next Frame Stamina Add Recover : 0.670350
+Next Frame Stamina Add Recover : 0.450006
+Next Frame Stamina Add Recover : 0.229661
+Next Frame Stamina Add Recover : 0.009316
+Next Frame Stamina Add Recover : 0.788972
+Next Frame Stamina Add Recover : 0.568628
+Next Frame Stamina Add Recover : 0.348283
+Next Frame Stamina Add Recover : 0.127939
+Next Frame Stamina Add Recover : 0.907594
+Next Frame Stamina Add Recover : 0.687250
+Next Frame Stamina Add Recover : 0.466906
+Next Frame Stamina Add Recover : 0.246561
+Next Frame Stamina Add Recover : 0.026217
+Next Frame Stamina Add Recover : 0.805872
+Next Frame Stamina Add Recover : 0.585528
+Next Frame Stamina Add Recover : 0.365183
+Next Frame Stamina Add Recover : 0.144839
+Next Frame Stamina Add Recover : 0.924494
+Next Frame Stamina Add Recover : 0.704150
+Next Frame Stamina Add Recover : 0.483806
+Next Frame Stamina Add Recover : 0.263461
+Next Frame Stamina Add Recover : 0.043117
+Next Frame Stamina Add Recover : 0.822772
+Next Frame Stamina Add Recover : 0.602428
+Next Frame Stamina Add Recover : 0.382335
+Next Frame Stamina Add Recover : 0.162243
+Next Frame Stamina Add Recover : 0.388555
+Next Frame Stamina Add Recover : 0.947866
+Next Frame Stamina Add Recover : 0.507177
+Next Frame Stamina Add Recover : 0.066488
+Next Frame Stamina Add Recover : 0.625799
+Next Frame Stamina Add Recover : 0.185111
+Next Frame Stamina Add Recover : 0.744422
+Next Frame Stamina Add Recover : 0.303733
+Next Frame Stamina Add Recover : 0.863044
+Next Frame Stamina Add Recover : 0.422355
+Next Frame Stamina Add Recover : 0.981666
+Next Frame Stamina Add Recover : 0.540977
+Next Frame Stamina Add Recover : 0.100288
+Next Frame Stamina Add Recover : 0.659600
+Next Frame Stamina Add Recover : 0.218911
+Next Frame Stamina Add Recover : 0.778222
+Next Frame Stamina Add Recover : 0.337533
+Next Frame Stamina Add Recover : 0.896844
+Next Frame Stamina Add Recover : 0.456155
+Next Frame Stamina Add Recover : 0.015467
+Next Frame Stamina Add Recover : 0.574778
+Next Frame Stamina Add Recover : 0.134089
+Next Frame Stamina Add Recover : 0.693400
+Next Frame Stamina Add Recover : 0.252711
+Next Frame Stamina Add Recover : 0.812022
+Next Frame Stamina Add Recover : 0.371334
+Next Frame Stamina Add Recover : 0.930645
+Next Frame Stamina Add Recover : 0.489956
+Next Frame Stamina Add Recover : 0.049267
+Next Frame Stamina Add Recover : 0.608578
+Next Frame Stamina Add Recover : 0.167889
+Next Frame Stamina Add Recover : 0.727200
+Next Frame Stamina Add Recover : 0.286511
+Next Frame Stamina Add Recover : 0.845823
+Next Frame Stamina Add Recover : 0.405134
+Next Frame Stamina Add Recover : 0.964445
+Next Frame Stamina Add Recover : 0.523756
+Next Frame Stamina Add Recover : 0.083067
+Next Frame Stamina Add Recover : 0.642378
+Next Frame Stamina Add Recover : 0.201689
+Next Frame Stamina Add Recover : 0.761000
+Next Frame Stamina Add Recover : 0.320312
+Next Frame Stamina Add Recover : 0.879623
+Next Frame Stamina Add Recover : 0.438934
+Next Frame Stamina Add Recover : 0.998245
+Next Frame Stamina Add Recover : 0.557556
+Next Frame Stamina Add Recover : 0.116867
+Next Frame Stamina Add Recover : 0.676178
+Next Frame Stamina Add Recover : 0.235489
+Next Frame Stamina Add Recover : 0.794801
+Next Frame Stamina Add Recover : 0.354112
+Next Frame Stamina Add Recover : 0.913423
+Next Frame Stamina Add Recover : 0.472734
+Next Frame Stamina Add Recover : 0.032045
+Next Frame Stamina Add Recover : 0.591357
+Next Frame Stamina Add Recover : 0.150668
+Next Frame Stamina Add Recover : 0.709979
+Next Frame Stamina Add Recover : 0.269290
+Next Frame Stamina Add Recover : 0.828601
+Next Frame Stamina Add Recover : 0.387912
+Next Frame Stamina Add Recover : 0.947223
+Next Frame Stamina Add Recover : 0.506535
+Next Frame Stamina Add Recover : 0.065845
+Next Frame Stamina Add Recover : 0.625157
+Next Frame Stamina Add Recover : 0.184468
+Next Frame Stamina Add Recover : 0.743779
+Next Frame Stamina Add Recover : 0.303090
+Next Frame Stamina Add Recover : 0.862401
+Next Frame Stamina Add Recover : 0.421712
+Next Frame Stamina Add Recover : 0.981024
+Next Frame Stamina Add Recover : 0.540335
+Next Frame Stamina Add Recover : 0.099646
+Next Frame Stamina Add Recover : 0.658957
+Next Frame Stamina Add Recover : 0.218268
+Next Frame Stamina Add Recover : 0.777579
+Next Frame Stamina Add Recover : 0.336890
+Next Frame Stamina Add Recover : 0.896201
+Next Frame Stamina Add Recover : 0.455513
+Next Frame Stamina Add Recover : 0.014824
+Next Frame Stamina Add Recover : 0.574135
+Next Frame Stamina Add Recover : 0.133446
+Next Frame Stamina Add Recover : 0.692757
+Next Frame Stamina Add Recover : 0.252069
+Next Frame Stamina Add Recover : 0.811380
+Next Frame Stamina Add Recover : 0.370691
+Next Frame Stamina Add Recover : 0.930002
+Next Frame Stamina Add Recover : 0.489313
+Next Frame Stamina Add Recover : 0.048624
+Next Frame Stamina Add Recover : 0.607935
+Next Frame Stamina Add Recover : 0.167246
+Next Frame Stamina Add Recover : 0.726557
+Next Frame Stamina Add Recover : 0.285869
+Next Frame Stamina Add Recover : 0.845180
+Next Frame Stamina Add Recover : 0.404491
+Next Frame Stamina Add Recover : 0.963802
+Next Frame Stamina Add Recover : 0.523113
+Next Frame Stamina Add Recover : 0.082424
+Next Frame Stamina Add Recover : 0.641735
+Next Frame Stamina Add Recover : 0.201046
+Next Frame Stamina Add Recover : 0.760358
+Next Frame Stamina Add Recover : 0.319669
+Next Frame Stamina Add Recover : 0.878980
+Next Frame Stamina Add Recover : 0.438291
+Next Frame Stamina Add Recover : 0.997602
+Next Frame Stamina Add Recover : 0.556913
+Next Frame Stamina Add Recover : 0.116224
+Next Frame Stamina Add Recover : 0.675535
+Next Frame Stamina Add Recover : 0.234847
+Next Frame Stamina Add Recover : 0.794158
+Next Frame Stamina Add Recover : 0.353469
+Next Frame Stamina Add Recover : 0.133124
+Next Frame Stamina Add Recover : 0.912780
+Next Frame Stamina Add Recover : 0.692436
+Next Frame Stamina Add Recover : 0.472091
+Next Frame Stamina Add Recover : 0.251747
+Next Frame Stamina Add Recover : 0.031402
+Next Frame Stamina Add Recover : 0.811058
+Next Frame Stamina Add Recover : 0.590713
+Next Frame Stamina Add Recover : 0.370369
+Next Frame Stamina Add Recover : 0.150024
+Next Frame Stamina Add Recover : 0.929680
+Next Frame Stamina Add Recover : 0.709336
+Next Frame Stamina Add Recover : 0.488991
+Next Frame Stamina Add Recover : 0.268647
+Next Frame Stamina Add Recover : 0.048302
+Next Frame Stamina Add Recover : 0.827958
+Next Frame Stamina Add Recover : 0.607613
+Next Frame Stamina Add Recover : 0.387269
+Next Frame Stamina Add Recover : 0.166924
+Next Frame Stamina Add Recover : 0.946580
+Next Frame Stamina Add Recover : 0.726236
+Next Frame Stamina Add Recover : 0.505891
+Next Frame Stamina Add Recover : 0.285547
+Next Frame Stamina Add Recover : 0.065202
+Next Frame Stamina Add Recover : 0.844858
+Next Frame Stamina Add Recover : 0.624513
+Next Frame Stamina Add Recover : 0.404169
+Next Frame Stamina Add Recover : 0.183825
+Next Frame Stamina Add Recover : 0.963519
+Next Frame Stamina Add Recover : 0.743213
+Next Frame Stamina Add Recover : 0.522907
+Next Frame Stamina Add Recover : 0.302562
+Next Frame Stamina Add Recover : 0.082218
+Next Frame Stamina Add Recover : 0.861873
+Next Frame Stamina Add Recover : 0.641529
+Next Frame Stamina Add Recover : 0.421185
+Next Frame Stamina Add Recover : 0.200840
+Next Frame Stamina Add Recover : 0.980496
+Next Frame Stamina Add Recover : 0.760151
+Next Frame Stamina Add Recover : 0.539807
+Next Frame Stamina Add Recover : 0.319462
+Next Frame Stamina Add Recover : 0.099118
+Next Frame Stamina Add Recover : 0.878773
+Next Frame Stamina Add Recover : 0.658429
+Next Frame Stamina Add Recover : 0.438085
+Next Frame Stamina Add Recover : 0.217740
+Next Frame Stamina Add Recover : 0.997396
+Next Frame Stamina Add Recover : 0.777051
+Next Frame Stamina Add Recover : 0.556707
+Next Frame Stamina Add Recover : 0.336362
+Next Frame Stamina Add Recover : 0.116018
+Next Frame Stamina Add Recover : 0.895673
+Next Frame Stamina Add Recover : 0.675329
+Next Frame Stamina Add Recover : 0.454985
+Next Frame Stamina Add Recover : 0.234640
+Next Frame Stamina Add Recover : 0.014296
+Next Frame Stamina Add Recover : 0.793951
+Next Frame Stamina Add Recover : 0.573607
+Next Frame Stamina Add Recover : 0.353262
+Next Frame Stamina Add Recover : 0.132918
+Next Frame Stamina Add Recover : 0.912573
+Next Frame Stamina Add Recover : 0.692229
+Next Frame Stamina Add Recover : 0.471885
+Next Frame Stamina Add Recover : 0.251540
+Next Frame Stamina Add Recover : 0.031196
+Next Frame Stamina Add Recover : 0.810851
+Next Frame Stamina Add Recover : 0.590507
+Next Frame Stamina Add Recover : 0.370162
+Next Frame Stamina Add Recover : 0.149818
+Next Frame Stamina Add Recover : 0.929474
+Next Frame Stamina Add Recover : 0.709129
+Next Frame Stamina Add Recover : 0.488785
+Next Frame Stamina Add Recover : 0.268440
+Next Frame Stamina Add Recover : 0.048096
+Next Frame Stamina Add Recover : 0.827751
+Next Frame Stamina Add Recover : 0.607407
+Next Frame Stamina Add Recover : 0.387063
+Next Frame Stamina Add Recover : 0.166718
+Next Frame Stamina Add Recover : 0.946374
+Next Frame Stamina Add Recover : 0.726029
+Next Frame Stamina Add Recover : 0.505685
+Next Frame Stamina Add Recover : 0.285340
+Next Frame Stamina Add Recover : 0.064996
+Next Frame Stamina Add Recover : 0.844651
+Next Frame Stamina Add Recover : 0.624307
+Next Frame Stamina Add Recover : 0.403963
+Next Frame Stamina Add Recover : 0.183618
+Next Frame Stamina Add Recover : 0.963274
+Next Frame Stamina Add Recover : 0.742929
+Next Frame Stamina Add Recover : 0.522585
+Next Frame Stamina Add Recover : 0.302240
+Next Frame Stamina Add Recover : 0.081896
+Next Frame Stamina Add Recover : 0.861551
+Next Frame Stamina Add Recover : 0.641207
+Next Frame Stamina Add Recover : 0.420863
+Next Frame Stamina Add Recover : 0.200518
+Next Frame Stamina Add Recover : 0.980174
+Next Frame Stamina Add Recover : 0.759829
+Next Frame Stamina Add Recover : 0.539485
+Next Frame Stamina Add Recover : 0.319140
+Next Frame Stamina Add Recover : 0.098796
+Next Frame Stamina Add Recover : 0.878451
+Next Frame Stamina Add Recover : 0.658107
+Next Frame Stamina Add Recover : 0.437763
+Next Frame Stamina Add Recover : 0.217418
+Next Frame Stamina Add Recover : 0.997074
+Next Frame Stamina Add Recover : 0.776729
+Next Frame Stamina Add Recover : 0.556385
+Next Frame Stamina Add Recover : 0.336040
+Next Frame Stamina Add Recover : 0.115696
+Next Frame Stamina Add Recover : 0.895352
+Next Frame Stamina Add Recover : 0.675007
+Next Frame Stamina Add Recover : 0.454663
+Next Frame Stamina Add Recover : 0.234318
+Next Frame Stamina Add Recover : 0.013974
+Next Frame Stamina Add Recover : 0.793629
+Next Frame Stamina Add Recover : 0.573285
+Next Frame Stamina Add Recover : 0.352941
+Next Frame Stamina Add Recover : 0.132596
+Next Frame Stamina Add Recover : 0.912252
+Next Frame Stamina Add Recover : 0.691907
+Next Frame Stamina Add Recover : 0.471563
+Next Frame Stamina Add Recover : 0.335544
+Next Frame Stamina Add Recover : 0.199525
+Next Frame Stamina Add Recover : 0.063506
+Next Frame Stamina Add Recover : 0.843161
+Next Frame Stamina Add Recover : 0.622817
+Next Frame Stamina Add Recover : 0.402472
+Next Frame Stamina Add Recover : 0.182128
+Next Frame Stamina Add Recover : 0.961784
+Next Frame Stamina Add Recover : 0.741439
+Next Frame Stamina Add Recover : 0.521095
+Next Frame Stamina Add Recover : 0.300750
+Next Frame Stamina Add Recover : 0.080406
+Next Frame Stamina Add Recover : 0.860061
+Next Frame Stamina Add Recover : 0.639717
+Next Frame Stamina Add Recover : 0.419373
+Next Frame Stamina Add Recover : 0.199028
+Next Frame Stamina Add Recover : 0.978684
+Next Frame Stamina Add Recover : 0.758339
+Next Frame Stamina Add Recover : 0.537995
+Next Frame Stamina Add Recover : 0.317650
+Next Frame Stamina Add Recover : 0.097306
+Next Frame Stamina Add Recover : 0.876961
+Next Frame Stamina Add Recover : 0.656617
+Next Frame Stamina Add Recover : 0.436273
+Next Frame Stamina Add Recover : 0.215928
+Next Frame Stamina Add Recover : 0.995584
+Next Frame Stamina Add Recover : 0.775239
+Next Frame Stamina Add Recover : 0.554895
+Next Frame Stamina Add Recover : 0.334550
+Next Frame Stamina Add Recover : 0.114206
+Next Frame Stamina Add Recover : 0.893861
+Next Frame Stamina Add Recover : 0.673517
+Next Frame Stamina Add Recover : 0.453173
+Next Frame Stamina Add Recover : 0.232828
+Next Frame Stamina Add Recover : 0.013082
+Next Frame Stamina Add Recover : 0.793336
+Next Frame Stamina Add Recover : 0.573590
+Next Frame Stamina Add Recover : 0.353246
+Next Frame Stamina Add Recover : 0.132901
+Next Frame Stamina Add Recover : 0.912557
+Next Frame Stamina Add Recover : 0.692212
+Next Frame Stamina Add Recover : 0.471868
+Next Frame Stamina Add Recover : 0.251523
+Next Frame Stamina Add Recover : 0.031179
+Next Frame Stamina Add Recover : 0.810835
+Next Frame Stamina Add Recover : 0.590490
+Next Frame Stamina Add Recover : 0.370146
+Next Frame Stamina Add Recover : 0.149801
+Next Frame Stamina Add Recover : 0.929457
+Next Frame Stamina Add Recover : 0.709112
+Next Frame Stamina Add Recover : 0.488768
+Next Frame Stamina Add Recover : 0.268424
+Next Frame Stamina Add Recover : 0.048079
+Next Frame Stamina Add Recover : 0.827735
+Next Frame Stamina Add Recover : 0.607390
+Next Frame Stamina Add Recover : 0.387046
+Next Frame Stamina Add Recover : 0.166701
+Next Frame Stamina Add Recover : 0.946357
+Next Frame Stamina Add Recover : 0.726012
+Next Frame Stamina Add Recover : 0.505668
+Next Frame Stamina Add Recover : 0.285324
+Next Frame Stamina Add Recover : 0.064979
+Next Frame Stamina Add Recover : 0.844635
+Next Frame Stamina Add Recover : 0.624290
+Next Frame Stamina Add Recover : 0.403946
+Next Frame Stamina Add Recover : 0.183601
+Next Frame Stamina Add Recover : 0.963257
+Next Frame Stamina Add Recover : 0.742913
+Next Frame Stamina Add Recover : 0.522568
+Next Frame Stamina Add Recover : 0.302224
+Next Frame Stamina Add Recover : 0.081879
+Next Frame Stamina Add Recover : 0.861535
+Next Frame Stamina Add Recover : 0.641194
+Next Frame Stamina Add Recover : 0.421147
+Next Frame Stamina Add Recover : 0.201100
+Next Frame Stamina Add Recover : 0.981049
+Next Frame Stamina Add Recover : 0.760705
+Next Frame Stamina Add Recover : 0.540360
+Next Frame Stamina Add Recover : 0.320016
+Next Frame Stamina Add Recover : 0.099671
+Next Frame Stamina Add Recover : 0.879327
+Next Frame Stamina Add Recover : 0.658983
+Next Frame Stamina Add Recover : 0.438638
+Next Frame Stamina Add Recover : 0.218294
+Next Frame Stamina Add Recover : 0.997949
+Next Frame Stamina Add Recover : 0.777605
+Next Frame Stamina Add Recover : 0.557261
+Next Frame Stamina Add Recover : 0.336916
+Next Frame Stamina Add Recover : 0.116571
+Next Frame Stamina Add Recover : 0.896227
+Next Frame Stamina Add Recover : 0.675883
+Next Frame Stamina Add Recover : 0.455538
+Next Frame Stamina Add Recover : 0.235194
+Next Frame Stamina Add Recover : 0.014849
+Next Frame Stamina Add Recover : 0.794505
+Next Frame Stamina Add Recover : 0.574160
+Next Frame Stamina Add Recover : 0.353816
+Next Frame Stamina Add Recover : 0.133471
+Next Frame Stamina Add Recover : 0.913127
+Next Frame Stamina Add Recover : 0.692783
+Next Frame Stamina Add Recover : 0.472438
+Next Frame Stamina Add Recover : 0.252094
+Next Frame Stamina Add Recover : 0.031749
+Next Frame Stamina Add Recover : 0.811405
+Next Frame Stamina Add Recover : 0.591060
+Next Frame Stamina Add Recover : 0.370716
+Next Frame Stamina Add Recover : 0.150372
+Next Frame Stamina Add Recover : 0.930027
+Next Frame Stamina Add Recover : 0.709683
+Next Frame Stamina Add Recover : 0.489338
+Next Frame Stamina Add Recover : 0.268994
+Next Frame Stamina Add Recover : 0.048649
+Next Frame Stamina Add Recover : 0.828305
+Next Frame Stamina Add Recover : 0.607960
+Next Frame Stamina Add Recover : 0.387616
+Next Frame Stamina Add Recover : 0.167272
+Next Frame Stamina Add Recover : 0.946927
+Next Frame Stamina Add Recover : 0.726583
+Next Frame Stamina Add Recover : 0.506238
+Next Frame Stamina Add Recover : 0.285894
+Next Frame Stamina Add Recover : 0.065549
+Next Frame Stamina Add Recover : 0.845205
+Next Frame Stamina Add Recover : 0.624861
+Next Frame Stamina Add Recover : 0.404516
+Next Frame Stamina Add Recover : 0.184172
+Next Frame Stamina Add Recover : 0.963827
+Next Frame Stamina Add Recover : 0.743483
+Next Frame Stamina Add Recover : 0.523139
+Next Frame Stamina Add Recover : 0.302794
+Next Frame Stamina Add Recover : 0.082449
+Next Frame Stamina Add Recover : 0.862105
+Next Frame Stamina Add Recover : 0.641761
+Next Frame Stamina Add Recover : 0.421416
+Next Frame Stamina Add Recover : 0.202479
+Next Frame Stamina Add Recover : 0.983541
+Next Frame Stamina Add Recover : 0.764604
+Next Frame Stamina Add Recover : 0.544260
+Next Frame Stamina Add Recover : 0.323915
+Next Frame Stamina Add Recover : 0.103570
+Next Frame Stamina Add Recover : 0.883226
+Next Frame Stamina Add Recover : 0.662882
+Next Frame Stamina Add Recover : 0.442554
+Next Frame Stamina Add Recover : 0.222228
+Next Frame Stamina Add Recover : 0.001901
+Next Frame Stamina Add Recover : 0.781556
+Next Frame Stamina Add Recover : 0.561212
+Next Frame Stamina Add Recover : 0.340868
+Next Frame Stamina Add Recover : 0.120523
+Next Frame Stamina Add Recover : 0.900179
+Next Frame Stamina Add Recover : 0.679834
+Next Frame Stamina Add Recover : 0.459490
+Next Frame Stamina Add Recover : 0.239145
+Next Frame Stamina Add Recover : 0.018801
+Next Frame Stamina Add Recover : 0.798456
+Next Frame Stamina Add Recover : 0.578112
+Next Frame Stamina Add Recover : 0.357768
+Next Frame Stamina Add Recover : 0.137423
+Next Frame Stamina Add Recover : 0.917079
+Next Frame Stamina Add Recover : 0.696734
+Next Frame Stamina Add Recover : 0.478210
+Next Frame Stamina Add Recover : 0.259685
+Next Frame Stamina Add Recover : 0.041161
+Next Frame Stamina Add Recover : 0.820816
+Next Frame Stamina Add Recover : 0.600472
+Next Frame Stamina Add Recover : 0.380127
+Next Frame Stamina Add Recover : 0.159783
+Next Frame Stamina Add Recover : 0.939438
+Next Frame Stamina Add Recover : 0.719094
+Next Frame Stamina Add Recover : 0.498750
+Next Frame Stamina Add Recover : 0.278405
+Next Frame Stamina Add Recover : 0.058061
+Next Frame Stamina Add Recover : 0.837716
+Next Frame Stamina Add Recover : 0.617372
+Next Frame Stamina Add Recover : 0.397027
+Next Frame Stamina Add Recover : 0.176683
+Next Frame Stamina Add Recover : 0.956339
+Next Frame Stamina Add Recover : 0.735994
+Next Frame Stamina Add Recover : 0.515650
+Next Frame Stamina Add Recover : 0.295305
+Next Frame Stamina Add Recover : 0.075034
+Next Frame Stamina Add Recover : 0.854764
+Next Frame Stamina Add Recover : 0.634493
+Next Frame Stamina Add Recover : 0.414148
+Next Frame Stamina Add Recover : 0.193804
+Next Frame Stamina Add Recover : 0.973459
+Next Frame Stamina Add Recover : 0.753115
+Next Frame Stamina Add Recover : 0.532771
+Next Frame Stamina Add Recover : 0.312426
+Next Frame Stamina Add Recover : 0.092082
+Next Frame Stamina Add Recover : 0.871737
+Next Frame Stamina Add Recover : 0.651393
+Next Frame Stamina Add Recover : 0.431048
+Next Frame Stamina Add Recover : 0.210704
+Next Frame Stamina Add Recover : 0.990359
+Next Frame Stamina Add Recover : 0.770015
+Next Frame Stamina Add Recover : 0.549671
+Next Frame Stamina Add Recover : 0.329326
+Next Frame Stamina Add Recover : 0.108982
+Next Frame Stamina Add Recover : 0.888637
+Next Frame Stamina Add Recover : 0.668293
+Next Frame Stamina Add Recover : 0.447948
+Next Frame Stamina Add Recover : 0.227604
+Next Frame Stamina Add Recover : 0.007259
+Next Frame Stamina Add Recover : 0.786915
+Next Frame Stamina Add Recover : 0.566571
+Next Frame Stamina Add Recover : 0.346226
+Next Frame Stamina Add Recover : 0.125882
+Next Frame Stamina Add Recover : 0.905537
+Next Frame Stamina Add Recover : 0.685193
+Next Frame Stamina Add Recover : 0.464849
+Next Frame Stamina Add Recover : 0.244504
+Next Frame Stamina Add Recover : 0.024159
+Next Frame Stamina Add Recover : 0.803815
+Next Frame Stamina Add Recover : 0.583471
+Next Frame Stamina Add Recover : 0.363126
+Next Frame Stamina Add Recover : 0.142782
+Next Frame Stamina Add Recover : 0.922437
+Next Frame Stamina Add Recover : 0.702093
+Next Frame Stamina Add Recover : 0.481749
+Next Frame Stamina Add Recover : 0.261404
+Next Frame Stamina Add Recover : 0.041059
+Next Frame Stamina Add Recover : 0.820715
+Next Frame Stamina Add Recover : 0.600371
+Next Frame Stamina Add Recover : 0.380026
+Next Frame Stamina Add Recover : 0.159682
+Next Frame Stamina Add Recover : 0.939337
+Next Frame Stamina Add Recover : 0.718993
+Next Frame Stamina Add Recover : 0.498649
+Next Frame Stamina Add Recover : 0.278304
+Next Frame Stamina Add Recover : 0.057960
+Next Frame Stamina Add Recover : 0.837615
+Next Frame Stamina Add Recover : 0.617271
+Next Frame Stamina Add Recover : 0.396926
+Next Frame Stamina Add Recover : 0.176582
+Next Frame Stamina Add Recover : 0.956237
+Next Frame Stamina Add Recover : 0.735893
+Next Frame Stamina Add Recover : 0.515549
+Next Frame Stamina Add Recover : 0.295204
+Next Frame Stamina Add Recover : 0.074860
+Next Frame Stamina Add Recover : 0.854515
+Next Frame Stamina Add Recover : 0.634171
+Next Frame Stamina Add Recover : 0.413826
+Next Frame Stamina Add Recover : 0.193482
+Next Frame Stamina Add Recover : 0.973137
+Next Frame Stamina Add Recover : 0.752793
+Next Frame Stamina Add Recover : 0.532449
+Next Frame Stamina Add Recover : 0.312104
+Next Frame Stamina Add Recover : 0.091760
+Next Frame Stamina Add Recover : 0.871415
+Next Frame Stamina Add Recover : 0.651071
+Next Frame Stamina Add Recover : 0.430727
+Next Frame Stamina Add Recover : 0.210382
+Next Frame Stamina Add Recover : 0.990038
+Next Frame Stamina Add Recover : 0.769693
+Next Frame Stamina Add Recover : 0.549349
+Next Frame Stamina Add Recover : 0.329004
+Next Frame Stamina Add Recover : 0.108660
+Next Frame Stamina Add Recover : 0.667971
+Next Frame Stamina Add Recover : 0.227282
+Next Frame Stamina Add Recover : 0.786593
+Next Frame Stamina Add Recover : 0.345904
+Next Frame Stamina Add Recover : 0.905216
+Next Frame Stamina Add Recover : 0.464527
+Next Frame Stamina Add Recover : 0.023838
+Next Frame Stamina Add Recover : 0.583149
+Next Frame Stamina Add Recover : 0.142460
+Next Frame Stamina Add Recover : 0.701771
+Next Frame Stamina Add Recover : 0.261083
+Next Frame Stamina Add Recover : 0.820394
+Next Frame Stamina Add Recover : 0.379705
+Next Frame Stamina Add Recover : 0.939016
+Next Frame Stamina Add Recover : 0.498327
+Next Frame Stamina Add Recover : 0.057638
+Next Frame Stamina Add Recover : 0.616949
+Next Frame Stamina Add Recover : 0.176260
+Next Frame Stamina Add Recover : 0.735572
+Next Frame Stamina Add Recover : 0.294883
+Next Frame Stamina Add Recover : 0.854194
+Next Frame Stamina Add Recover : 0.413505
+Next Frame Stamina Add Recover : 0.972816
+Next Frame Stamina Add Recover : 0.532127
+Next Frame Stamina Add Recover : 0.091438
+Next Frame Stamina Add Recover : 0.650749
+Next Frame Stamina Add Recover : 0.210061
+Next Frame Stamina Add Recover : 0.769372
+Next Frame Stamina Add Recover : 0.328683
+Next Frame Stamina Add Recover : 0.887994
+Next Frame Stamina Add Recover : 0.447305
+Next Frame Stamina Add Recover : 0.006617
+Next Frame Stamina Add Recover : 0.565928
+Next Frame Stamina Add Recover : 0.125239
+Next Frame Stamina Add Recover : 0.684550
+Next Frame Stamina Add Recover : 0.243861
+Next Frame Stamina Add Recover : 0.803172
+Next Frame Stamina Add Recover : 0.362484
+Next Frame Stamina Add Recover : 0.921795
+Next Frame Stamina Add Recover : 0.481106
+Next Frame Stamina Add Recover : 0.040417
+Next Frame Stamina Add Recover : 0.599728
+Next Frame Stamina Add Recover : 0.159039
+Next Frame Stamina Add Recover : 0.718350
+Next Frame Stamina Add Recover : 0.277661
+Next Frame Stamina Add Recover : 0.836972
+Next Frame Stamina Add Recover : 0.396284
+Next Frame Stamina Add Recover : 0.955595
+Next Frame Stamina Add Recover : 0.514906
+Next Frame Stamina Add Recover : 0.074217
+Next Frame Stamina Add Recover : 0.633528
+Next Frame Stamina Add Recover : 0.192839
+Next Frame Stamina Add Recover : 0.752150
+Next Frame Stamina Add Recover : 0.311461
+Next Frame Stamina Add Recover : 0.870773
+Next Frame Stamina Add Recover : 0.430084
+Next Frame Stamina Add Recover : 0.989822
+Next Frame Stamina Add Recover : 0.549560
+Next Frame Stamina Add Recover : 0.109298
+Next Frame Stamina Add Recover : 0.668609
+Next Frame Stamina Add Recover : 0.227921
+Next Frame Stamina Add Recover : 0.787232
+Next Frame Stamina Add Recover : 0.346543
+Next Frame Stamina Add Recover : 0.905854
+Next Frame Stamina Add Recover : 0.465165
+Next Frame Stamina Add Recover : 0.024476
+Next Frame Stamina Add Recover : 0.583787
+Next Frame Stamina Add Recover : 0.143098
+Next Frame Stamina Add Recover : 0.702410
+Next Frame Stamina Add Recover : 0.261721
+Next Frame Stamina Add Recover : 0.821032
+Next Frame Stamina Add Recover : 0.380343
+Next Frame Stamina Add Recover : 0.939654
+Next Frame Stamina Add Recover : 0.498965
+Next Frame Stamina Add Recover : 0.058276
+Next Frame Stamina Add Recover : 0.617587
+Next Frame Stamina Add Recover : 0.176898
+Next Frame Stamina Add Recover : 0.736210
+Next Frame Stamina Add Recover : 0.295521
+Next Frame Stamina Add Recover : 0.854832
+Next Frame Stamina Add Recover : 0.414143
+Next Frame Stamina Add Recover : 0.973454
+Next Frame Stamina Add Recover : 0.532765
+Next Frame Stamina Add Recover : 0.092076
+Next Frame Stamina Add Recover : 0.651387
+Next Frame Stamina Add Recover : 0.210699
+Next Frame Stamina Add Recover : 0.770010
+Next Frame Stamina Add Recover : 0.329321
+Next Frame Stamina Add Recover : 0.888632
+Next Frame Stamina Add Recover : 0.447943
+Next Frame Stamina Add Recover : 0.007255
+Next Frame Stamina Add Recover : 0.566566
+Next Frame Stamina Add Recover : 0.125877
+Next Frame Stamina Add Recover : 0.685188
+Next Frame Stamina Add Recover : 0.244499
+Next Frame Stamina Add Recover : 0.803810
+Next Frame Stamina Add Recover : 0.363122
+Next Frame Stamina Add Recover : 0.922433
+Next Frame Stamina Add Recover : 0.481744
+Next Frame Stamina Add Recover : 0.041055
+Next Frame Stamina Add Recover : 0.600366
+Next Frame Stamina Add Recover : 0.159677
+Next Frame Stamina Add Recover : 0.718988
+Next Frame Stamina Add Recover : 0.278299
+Next Frame Stamina Add Recover : 0.837610
+Next Frame Stamina Add Recover : 0.396922
+Next Frame Stamina Add Recover : 0.956233
+Next Frame Stamina Add Recover : 0.515544
+Next Frame Stamina Add Recover : 0.295199
+Next Frame Stamina Add Recover : 0.074855
+Next Frame Stamina Add Recover : 0.854510
+Next Frame Stamina Add Recover : 0.634166
+Next Frame Stamina Add Recover : 0.413822
+Next Frame Stamina Add Recover : 0.193477
+Next Frame Stamina Add Recover : 0.973133
+Next Frame Stamina Add Recover : 0.752788
+Next Frame Stamina Add Recover : 0.532444
+Next Frame Stamina Add Recover : 0.312099
+Next Frame Stamina Add Recover : 0.092483
+Next Frame Stamina Add Recover : 0.872867
+Next Frame Stamina Add Recover : 0.653250
+Next Frame Stamina Add Recover : 0.432906
+Next Frame Stamina Add Recover : 0.212561
+Next Frame Stamina Add Recover : 0.992217
+Next Frame Stamina Add Recover : 0.771872
+Next Frame Stamina Add Recover : 0.551528
+Next Frame Stamina Add Recover : 0.331183
+Next Frame Stamina Add Recover : 0.110839
+Next Frame Stamina Add Recover : 0.890494
+Next Frame Stamina Add Recover : 0.670150
+Next Frame Stamina Add Recover : 0.449806
+Next Frame Stamina Add Recover : 0.229461
+Next Frame Stamina Add Recover : 0.009117
+Next Frame Stamina Add Recover : 0.788772
+Next Frame Stamina Add Recover : 0.568428
+Next Frame Stamina Add Recover : 0.348083
+Next Frame Stamina Add Recover : 0.127739
+Next Frame Stamina Add Recover : 0.907395
+Next Frame Stamina Add Recover : 0.687050
+Next Frame Stamina Add Recover : 0.466706
+Next Frame Stamina Add Recover : 0.246361
+Next Frame Stamina Add Recover : 0.026017
+Next Frame Stamina Add Recover : 0.805672
+Next Frame Stamina Add Recover : 0.585328
+Next Frame Stamina Add Recover : 0.364984
+Next Frame Stamina Add Recover : 0.144639
+Next Frame Stamina Add Recover : 0.924295
+Next Frame Stamina Add Recover : 0.703950
+Next Frame Stamina Add Recover : 0.483606
+Next Frame Stamina Add Recover : 0.263261
+Next Frame Stamina Add Recover : 0.042917
+Next Frame Stamina Add Recover : 0.822572
+Next Frame Stamina Add Recover : 0.602228
+Next Frame Stamina Add Recover : 0.381884
+Next Frame Stamina Add Recover : 0.161539
+Next Frame Stamina Add Recover : 0.941195
+Next Frame Stamina Add Recover : 0.720850
+Next Frame Stamina Add Recover : 0.500506
+Next Frame Stamina Add Recover : 0.280161
+Next Frame Stamina Add Recover : 0.059817
+Next Frame Stamina Add Recover : 0.839472
+Next Frame Stamina Add Recover : 0.619128
+Next Frame Stamina Add Recover : 0.398784
+Next Frame Stamina Add Recover : 0.178439
+Next Frame Stamina Add Recover : 0.958095
+Next Frame Stamina Add Recover : 0.737750
+Next Frame Stamina Add Recover : 0.517406
+Next Frame Stamina Add Recover : 0.297061
+Next Frame Stamina Add Recover : 0.076717
+Next Frame Stamina Add Recover : 0.856372
+Next Frame Stamina Add Recover : 0.636028
+Next Frame Stamina Add Recover : 0.415684
+Next Frame Stamina Add Recover : 0.195339
+Next Frame Stamina Add Recover : 0.974995
+Next Frame Stamina Add Recover : 0.754951
+Next Frame Stamina Add Recover : 0.534908
+Next Frame Stamina Add Recover : 0.314564
+Next Frame Stamina Add Recover : 0.094219
+Next Frame Stamina Add Recover : 0.873875
+Next Frame Stamina Add Recover : 0.653530
+Next Frame Stamina Add Recover : 0.433186
+Next Frame Stamina Add Recover : 0.212842
+Next Frame Stamina Add Recover : 0.992497
+Next Frame Stamina Add Recover : 0.772153
+Next Frame Stamina Add Recover : 0.551808
+Next Frame Stamina Add Recover : 0.331464
+Next Frame Stamina Add Recover : 0.111119
+Next Frame Stamina Add Recover : 0.890775
+Next Frame Stamina Add Recover : 0.670430
+Next Frame Stamina Add Recover : 0.450086
+Next Frame Stamina Add Recover : 0.229742
+Next Frame Stamina Add Recover : 0.009397
+Next Frame Stamina Add Recover : 0.789053
+Next Frame Stamina Add Recover : 0.568708
+Next Frame Stamina Add Recover : 0.348364
+Next Frame Stamina Add Recover : 0.128019
+Next Frame Stamina Add Recover : 0.907675
+Next Frame Stamina Add Recover : 0.687330
+Next Frame Stamina Add Recover : 0.466986
+Next Frame Stamina Add Recover : 0.246642
+Next Frame Stamina Add Recover : 0.026297
+Next Frame Stamina Add Recover : 0.805953
+Next Frame Stamina Add Recover : 0.585608
+Next Frame Stamina Add Recover : 0.365600
+Next Frame Stamina Add Recover : 0.145591
+Next Frame Stamina Add Recover : 0.925583
+Next Frame Stamina Add Recover : 0.705238
+Next Frame Stamina Add Recover : 0.484894
+Next Frame Stamina Add Recover : 0.264549
+Next Frame Stamina Add Recover : 0.044205
+Next Frame Stamina Add Recover : 0.823860
+Next Frame Stamina Add Recover : 0.603516
+Next Frame Stamina Add Recover : 0.383172
+Next Frame Stamina Add Recover : 0.162827
+Next Frame Stamina Add Recover : 0.942483
+Next Frame Stamina Add Recover : 0.722138
+Next Frame Stamina Add Recover : 0.501794
+Next Frame Stamina Add Recover : 0.281449
+Next Frame Stamina Add Recover : 0.061105
+Next Frame Stamina Add Recover : 0.840760
+Next Frame Stamina Add Recover : 0.620416
+Next Frame Stamina Add Recover : 0.400072
+Next Frame Stamina Add Recover : 0.179727
+Next Frame Stamina Add Recover : 0.959383
+Next Frame Stamina Add Recover : 0.518694
+Next Frame Stamina Add Recover : 0.298349
+Next Frame Stamina Add Recover : 0.079657
+Next Frame Stamina Add Recover : 0.860964
+Next Frame Stamina Add Recover : 0.642271
+Next Frame Stamina Add Recover : 0.421927
+Next Frame Stamina Add Recover : 0.201582
+Next Frame Stamina Add Recover : 0.981238
+Next Frame Stamina Add Recover : 0.760894
+Next Frame Stamina Add Recover : 0.540549
+Next Frame Stamina Add Recover : 0.320205
+Next Frame Stamina Add Recover : 0.099860
+Next Frame Stamina Add Recover : 0.879516
+Next Frame Stamina Add Recover : 0.659171
+Next Frame Stamina Add Recover : 0.438827
+Next Frame Stamina Add Recover : 0.218482
+Next Frame Stamina Add Recover : 0.998138
+Next Frame Stamina Add Recover : 0.777794
+Next Frame Stamina Add Recover : 0.557449
+Next Frame Stamina Add Recover : 0.337105
+Next Frame Stamina Add Recover : 0.116760
+Next Frame Stamina Add Recover : 0.896416
+Next Frame Stamina Add Recover : 0.676071
+Next Frame Stamina Add Recover : 0.455727
+Next Frame Stamina Add Recover : 0.235383
+Next Frame Stamina Add Recover : 0.015038
+Next Frame Stamina Add Recover : 0.794694
+Next Frame Stamina Add Recover : 0.574349
+Next Frame Stamina Add Recover : 0.354005
+Next Frame Stamina Add Recover : 0.133660
+Next Frame Stamina Add Recover : 0.913316
+Next Frame Stamina Add Recover : 0.692971
+Next Frame Stamina Add Recover : 0.472627
+Next Frame Stamina Add Recover : 0.252283
+Next Frame Stamina Add Recover : 0.031938
+Next Frame Stamina Add Recover : 0.811594
+Next Frame Stamina Add Recover : 0.591249
+Next Frame Stamina Add Recover : 0.370905
+Next Frame Stamina Add Recover : 0.150560
+Next Frame Stamina Add Recover : 0.930216
+Next Frame Stamina Add Recover : 0.709872
+Next Frame Stamina Add Recover : 0.489527
+Next Frame Stamina Add Recover : 0.269354
+Next Frame Stamina Add Recover : 0.049181
+Next Frame Stamina Add Recover : 0.829009
+Next Frame Stamina Add Recover : 0.608664
+Next Frame Stamina Add Recover : 0.388319
+Next Frame Stamina Add Recover : 0.167975
+Next Frame Stamina Add Recover : 0.947631
+Next Frame Stamina Add Recover : 0.727286
+Next Frame Stamina Add Recover : 0.506942
+Next Frame Stamina Add Recover : 0.286597
+Next Frame Stamina Add Recover : 0.066253
+Next Frame Stamina Add Recover : 0.845908
+Next Frame Stamina Add Recover : 0.625564
+Next Frame Stamina Add Recover : 0.405220
+Next Frame Stamina Add Recover : 0.184875
+Next Frame Stamina Add Recover : 0.964531
+Next Frame Stamina Add Recover : 0.744186
+Next Frame Stamina Add Recover : 0.523842
+Next Frame Stamina Add Recover : 0.303497
+Next Frame Stamina Add Recover : 0.083153
+Next Frame Stamina Add Recover : 0.862808
+Next Frame Stamina Add Recover : 0.642464
+Next Frame Stamina Add Recover : 0.422120
+Next Frame Stamina Add Recover : 0.201775
+Next Frame Stamina Add Recover : 0.981431
+Next Frame Stamina Add Recover : 0.761086
+Next Frame Stamina Add Recover : 0.540742
+Next Frame Stamina Add Recover : 0.320397
+Next Frame Stamina Add Recover : 0.100053
+Next Frame Stamina Add Recover : 0.879708
+Next Frame Stamina Add Recover : 0.659364
+Next Frame Stamina Add Recover : 0.439020
+Next Frame Stamina Add Recover : 0.218675
+Next Frame Stamina Add Recover : 0.998331
+Next Frame Stamina Add Recover : 0.777986
+Next Frame Stamina Add Recover : 0.557642
+Next Frame Stamina Add Recover : 0.337297
+Next Frame Stamina Add Recover : 0.116953
+Next Frame Stamina Add Recover : 0.896608
+Next Frame Stamina Add Recover : 0.676264
+Next Frame Stamina Add Recover : 0.455920
+Next Frame Stamina Add Recover : 0.235575
+Next Frame Stamina Add Recover : 0.015231
+Next Frame Stamina Add Recover : 0.794886
+Next Frame Stamina Add Recover : 0.574542
+Next Frame Stamina Add Recover : 0.354198
+Next Frame Stamina Add Recover : 0.133853
+Next Frame Stamina Add Recover : 0.913509
+Next Frame Stamina Add Recover : 0.693164
+Next Frame Stamina Add Recover : 0.472820
+Next Frame Stamina Add Recover : 0.252475
+Next Frame Stamina Add Recover : 0.032131
+Next Frame Stamina Add Recover : 0.811786
+Next Frame Stamina Add Recover : 0.591442
+Next Frame Stamina Add Recover : 0.371098
+Next Frame Stamina Add Recover : 0.150753
+Next Frame Stamina Add Recover : 0.930409
+Next Frame Stamina Add Recover : 0.710064
+Next Frame Stamina Add Recover : 0.489720
+Next Frame Stamina Add Recover : 0.269375
+Next Frame Stamina Add Recover : 0.049031
+Next Frame Stamina Add Recover : 0.828686
+Next Frame Stamina Add Recover : 0.608342
+Next Frame Stamina Add Recover : 0.387998
+Next Frame Stamina Add Recover : 0.167653
+Next Frame Stamina Add Recover : 0.947309
+Next Frame Stamina Add Recover : 0.726964
+Next Frame Stamina Add Recover : 0.506620
+Next Frame Stamina Add Recover : 0.286275
+Next Frame Stamina Add Recover : 0.065931
+Next Frame Stamina Add Recover : 0.845586
+Next Frame Stamina Add Recover : 0.625242
+Next Frame Stamina Add Recover : 0.404898
+Next Frame Stamina Add Recover : 0.184553
+Next Frame Stamina Add Recover : 0.964209
+Next Frame Stamina Add Recover : 0.743864
+Next Frame Stamina Add Recover : 0.523520
+Next Frame Stamina Add Recover : 0.303175
+Next Frame Stamina Add Recover : 0.082831
+Next Frame Stamina Add Recover : 0.862486
+Next Frame Stamina Add Recover : 0.642142
+Next Frame Stamina Add Recover : 0.421798
+Next Frame Stamina Add Recover : 0.201453
+Next Frame Stamina Add Recover : 0.981109
+Next Frame Stamina Add Recover : 0.760764
+Next Frame Stamina Add Recover : 0.540420
+Next Frame Stamina Add Recover : 0.320076
+Next Frame Stamina Add Recover : 0.099731
+Next Frame Stamina Add Recover : 0.879387
+Next Frame Stamina Add Recover : 0.659042
+Next Frame Stamina Add Recover : 0.438698
+Next Frame Stamina Add Recover : 0.218353
+Next Frame Stamina Add Recover : 0.998009
+Next Frame Stamina Add Recover : 0.777664
+Next Frame Stamina Add Recover : 0.557320
+Next Frame Stamina Add Recover : 0.336976
+Next Frame Stamina Add Recover : 0.116631
+Next Frame Stamina Add Recover : 0.896287
+Next Frame Stamina Add Recover : 0.675942
+Next Frame Stamina Add Recover : 0.455598
+Next Frame Stamina Add Recover : 0.235253
+Next Frame Stamina Add Recover : 0.014909
+Next Frame Stamina Add Recover : 0.794564
+Next Frame Stamina Add Recover : 0.574220
+Next Frame Stamina Add Recover : 0.353876
+Next Frame Stamina Add Recover : 0.133531
+Next Frame Stamina Add Recover : 0.913187
+Next Frame Stamina Add Recover : 0.692842
+Next Frame Stamina Add Recover : 0.472498
+Next Frame Stamina Add Recover : 0.252153
+Next Frame Stamina Add Recover : 0.031809
+Next Frame Stamina Add Recover : 0.811464
+Next Frame Stamina Add Recover : 0.591120
+Next Frame Stamina Add Recover : 0.370776
+Next Frame Stamina Add Recover : 0.150431
+Next Frame Stamina Add Recover : 0.930087
+Next Frame Stamina Add Recover : 0.709742
+Next Frame Stamina Add Recover : 0.489398
+Next Frame Stamina Add Recover : 0.269215
+Next Frame Stamina Add Recover : 0.828848
+Next Frame Stamina Add Recover : 0.608503
+Next Frame Stamina Add Recover : 0.388159
+Next Frame Stamina Add Recover : 0.167814
+Next Frame Stamina Add Recover : 0.947470
+Next Frame Stamina Add Recover : 0.727125
+Next Frame Stamina Add Recover : 0.506781
+Next Frame Stamina Add Recover : 0.286437
+Next Frame Stamina Add Recover : 0.066092
+Next Frame Stamina Add Recover : 0.845748
+Next Frame Stamina Add Recover : 0.625403
+Next Frame Stamina Add Recover : 0.405059
+Next Frame Stamina Add Recover : 0.184714
+Next Frame Stamina Add Recover : 0.964370
+Next Frame Stamina Add Recover : 0.744025
+Next Frame Stamina Add Recover : 0.523681
+Next Frame Stamina Add Recover : 0.303337
+Next Frame Stamina Add Recover : 0.082992
+Next Frame Stamina Add Recover : 0.862648
+Next Frame Stamina Add Recover : 0.642303
+Next Frame Stamina Add Recover : 0.421959
+Next Frame Stamina Add Recover : 0.201614
+Next Frame Stamina Add Recover : 0.981270
+Next Frame Stamina Add Recover : 0.760926
+Next Frame Stamina Add Recover : 0.540581
+Next Frame Stamina Add Recover : 0.320237
+Next Frame Stamina Add Recover : 0.099892
+Next Frame Stamina Add Recover : 0.879548
+Next Frame Stamina Add Recover : 0.659203
+Next Frame Stamina Add Recover : 0.438859
+Next Frame Stamina Add Recover : 0.218514
+Next Frame Stamina Add Recover : 0.998170
+Next Frame Stamina Add Recover : 0.777826
+Next Frame Stamina Add Recover : 0.557481
+Next Frame Stamina Add Recover : 0.337137
+Next Frame Stamina Add Recover : 0.116792
+Next Frame Stamina Add Recover : 0.896448
+Next Frame Stamina Add Recover : 0.676103
+Next Frame Stamina Add Recover : 0.455759
+Next Frame Stamina Add Recover : 0.235415
+Next Frame Stamina Add Recover : 0.015070
+Next Frame Stamina Add Recover : 0.794726
+Next Frame Stamina Add Recover : 0.574381
+Next Frame Stamina Add Recover : 0.354037
+Next Frame Stamina Add Recover : 0.133692
+Next Frame Stamina Add Recover : 0.913348
+Next Frame Stamina Add Recover : 0.693003
+Next Frame Stamina Add Recover : 0.472659
+Next Frame Stamina Add Recover : 0.252315
+Next Frame Stamina Add Recover : 0.031970
+Next Frame Stamina Add Recover : 0.811626
+Next Frame Stamina Add Recover : 0.591281
+Next Frame Stamina Add Recover : 0.370937
+Next Frame Stamina Add Recover : 0.150592
+Next Frame Stamina Add Recover : 0.930248
+Next Frame Stamina Add Recover : 0.709903
+Next Frame Stamina Add Recover : 0.489559
+Next Frame Stamina Add Recover : 0.048870
+Next Frame Stamina Add Recover : 0.828526
+Next Frame Stamina Add Recover : 0.608181
+Next Frame Stamina Add Recover : 0.387837
+Next Frame Stamina Add Recover : 0.167492
+Next Frame Stamina Add Recover : 0.947148
+Next Frame Stamina Add Recover : 0.726804
+Next Frame Stamina Add Recover : 0.506459
+Next Frame Stamina Add Recover : 0.286115
+Next Frame Stamina Add Recover : 0.065770
+Next Frame Stamina Add Recover : 0.845426
+Next Frame Stamina Add Recover : 0.625081
+Next Frame Stamina Add Recover : 0.404737
+Next Frame Stamina Add Recover : 0.184392
+Next Frame Stamina Add Recover : 0.964048
+Next Frame Stamina Add Recover : 0.743704
+Next Frame Stamina Add Recover : 0.523359
+Next Frame Stamina Add Recover : 0.303015
+Next Frame Stamina Add Recover : 0.082873
+Next Frame Stamina Add Recover : 0.862732
+Next Frame Stamina Add Recover : 0.642591
+Next Frame Stamina Add Recover : 0.422246
+Next Frame Stamina Add Recover : 0.427039
+Next Frame Stamina Add Recover : 0.431832
+Next Frame Stamina Add Recover : 0.436625
+Next Frame Stamina Add Recover : 0.216281
+Next Frame Stamina Add Recover : 0.995937
+Next Frame Stamina Add Recover : 0.775592
+Next Frame Stamina Add Recover : 0.555248
+Next Frame Stamina Add Recover : 0.334903
+Next Frame Stamina Add Recover : 0.114559
+Next Frame Stamina Add Recover : 0.894214
+Next Frame Stamina Add Recover : 0.673870
+Next Frame Stamina Add Recover : 0.453526
+Next Frame Stamina Add Recover : 0.233181
+Next Frame Stamina Add Recover : 0.012836
+Next Frame Stamina Add Recover : 0.792492
+Next Frame Stamina Add Recover : 0.572148
+Next Frame Stamina Add Recover : 0.351803
+Next Frame Stamina Add Recover : 0.131459
+Next Frame Stamina Add Recover : 0.911114
+Next Frame Stamina Add Recover : 0.690770
+Next Frame Stamina Add Recover : 0.470426
+Next Frame Stamina Add Recover : 0.250081
+Next Frame Stamina Add Recover : 0.029737
+Next Frame Stamina Add Recover : 0.809392
+Next Frame Stamina Add Recover : 0.589048
+Next Frame Stamina Add Recover : 0.369148
+Next Frame Stamina Add Recover : 0.149248
+Next Frame Stamina Add Recover : 0.929348
+Next Frame Stamina Add Recover : 0.709003
+Next Frame Stamina Add Recover : 0.488659
+Next Frame Stamina Add Recover : 0.268314
+Next Frame Stamina Add Recover : 0.047970
+Next Frame Stamina Add Recover : 0.827625
+Next Frame Stamina Add Recover : 0.607281
+Next Frame Stamina Add Recover : 0.386937
+Next Frame Stamina Add Recover : 0.166592
+Next Frame Stamina Add Recover : 0.946248
+Next Frame Stamina Add Recover : 0.725903
+Next Frame Stamina Add Recover : 0.507925
+Next Frame Stamina Add Recover : 0.289946
+Next Frame Stamina Add Recover : 0.071968
+Next Frame Stamina Add Recover : 0.851623
+Next Frame Stamina Add Recover : 0.631279
+Next Frame Stamina Add Recover : 0.410934
+Next Frame Stamina Add Recover : 0.190590
+Next Frame Stamina Add Recover : 0.970245
+Next Frame Stamina Add Recover : 0.749901
+Next Frame Stamina Add Recover : 0.529557
+Next Frame Stamina Add Recover : 0.309212
+Next Frame Stamina Add Recover : 0.088868
+Next Frame Stamina Add Recover : 0.868523
+Next Frame Stamina Add Recover : 0.648179
+Next Frame Stamina Add Recover : 0.427835
+Next Frame Stamina Add Recover : 0.207490
+Next Frame Stamina Add Recover : 0.987146
+Next Frame Stamina Add Recover : 0.766801
+Next Frame Stamina Add Recover : 0.546457
+Next Frame Stamina Add Recover : 0.326112
+Next Frame Stamina Add Recover : 0.105768
+Next Frame Stamina Add Recover : 0.885423
+Next Frame Stamina Add Recover : 0.665079
+Next Frame Stamina Add Recover : 0.444735
+Next Frame Stamina Add Recover : 0.224390
+Next Frame Stamina Add Recover : 0.004045
+Next Frame Stamina Add Recover : 0.783701
+Next Frame Stamina Add Recover : 0.563357
+Next Frame Stamina Add Recover : 0.343012
+Next Frame Stamina Add Recover : 0.122668
+Next Frame Stamina Add Recover : 0.902323
+Next Frame Stamina Add Recover : 0.681979
+Next Frame Stamina Add Recover : 0.461635
+Next Frame Stamina Add Recover : 0.241290
+Next Frame Stamina Add Recover : 0.020946
+Next Frame Stamina Add Recover : 0.800601
+Next Frame Stamina Add Recover : 0.580257
+Next Frame Stamina Add Recover : 0.359912
+Next Frame Stamina Add Recover : 0.139568
+Next Frame Stamina Add Recover : 0.919223
+Next Frame Stamina Add Recover : 0.698879
+Next Frame Stamina Add Recover : 0.478535
+Next Frame Stamina Add Recover : 0.258190
+Next Frame Stamina Add Recover : 0.037846
+Next Frame Stamina Add Recover : 0.817501
+Next Frame Stamina Add Recover : 0.597157
+Next Frame Stamina Add Recover : 0.376812
+Next Frame Stamina Add Recover : 0.157941
+Next Frame Stamina Add Recover : 0.939070
+Next Frame Stamina Add Recover : 0.720199
+Next Frame Stamina Add Recover : 0.499855
+Next Frame Stamina Add Recover : 0.279510
+Next Frame Stamina Add Recover : 0.059166
+Next Frame Stamina Add Recover : 0.838822
+Next Frame Stamina Add Recover : 0.618477
+Next Frame Stamina Add Recover : 0.398133
+Next Frame Stamina Add Recover : 0.177788
+Next Frame Stamina Add Recover : 0.957444
+Next Frame Stamina Add Recover : 0.737099
+Next Frame Stamina Add Recover : 0.516755
+Next Frame Stamina Add Recover : 0.296411
+Next Frame Stamina Add Recover : 0.076066
+Next Frame Stamina Add Recover : 0.855722
+Next Frame Stamina Add Recover : 0.635377
+Next Frame Stamina Add Recover : 0.415033
+Next Frame Stamina Add Recover : 0.194688
+Next Frame Stamina Add Recover : 0.974344
+Next Frame Stamina Add Recover : 0.753999
+Next Frame Stamina Add Recover : 0.533655
+Next Frame Stamina Add Recover : 0.608686
+Next Frame Stamina Add Recover : 0.683717
+Next Frame Stamina Add Recover : 0.758748
+Next Frame Stamina Add Recover : 0.538404
+Next Frame Stamina Add Recover : 0.318059
+Next Frame Stamina Add Recover : 0.097715
+Next Frame Stamina Add Recover : 0.877370
+Next Frame Stamina Add Recover : 0.657026
+Next Frame Stamina Add Recover : 0.438781
+Next Frame Stamina Add Recover : 0.220537
+Next Frame Stamina Add Recover : 0.002292
+Next Frame Stamina Add Recover : 0.781948
+Next Frame Stamina Add Recover : 0.561604
+Next Frame Stamina Add Recover : 0.341259
+Next Frame Stamina Add Recover : 0.120914
+Next Frame Stamina Add Recover : 0.900570
+Next Frame Stamina Add Recover : 0.680226
+Next Frame Stamina Add Recover : 0.459881
+Next Frame Stamina Add Recover : 0.239537
+Next Frame Stamina Add Recover : 0.019192
+Next Frame Stamina Add Recover : 0.798848
+Next Frame Stamina Add Recover : 0.578503
+Next Frame Stamina Add Recover : 0.358159
+Next Frame Stamina Add Recover : 0.137815
+Next Frame Stamina Add Recover : 0.917470
+Next Frame Stamina Add Recover : 0.697126
+Next Frame Stamina Add Recover : 0.476781
+Next Frame Stamina Add Recover : 0.256437
+Next Frame Stamina Add Recover : 0.036092
+Next Frame Stamina Add Recover : 0.815748
+Next Frame Stamina Add Recover : 0.595403
+Next Frame Stamina Add Recover : 0.375059
+Next Frame Stamina Add Recover : 0.154715
+Next Frame Stamina Add Recover : 0.934370
+Next Frame Stamina Add Recover : 0.714026
+Next Frame Stamina Add Recover : 0.493681
+Next Frame Stamina Add Recover : 0.273337
+Next Frame Stamina Add Recover : 0.052992
+Next Frame Stamina Add Recover : 0.832648
+Next Frame Stamina Add Recover : 0.612303
+Next Frame Stamina Add Recover : 0.391959
+Next Frame Stamina Add Recover : 0.171615
+Next Frame Stamina Add Recover : 0.951270
+Next Frame Stamina Add Recover : 0.730926
+Next Frame Stamina Add Recover : 0.510581
+Next Frame Stamina Add Recover : 0.290237
+Next Frame Stamina Add Recover : 0.069892
+Next Frame Stamina Add Recover : 0.849548
+Next Frame Stamina Add Recover : 0.629204
+Next Frame Stamina Add Recover : 0.408859
+Next Frame Stamina Add Recover : 0.188515
+Next Frame Stamina Add Recover : 0.968170
+Next Frame Stamina Add Recover : 0.747826
+Next Frame Stamina Add Recover : 0.527482
+Next Frame Stamina Add Recover : 0.307137
+Next Frame Stamina Add Recover : 0.086792
+Next Frame Stamina Add Recover : 0.866448
+Next Frame Stamina Add Recover : 0.646104
+Next Frame Stamina Add Recover : 0.425759
+Next Frame Stamina Add Recover : 0.205415
+Next Frame Stamina Add Recover : 0.985070
+Next Frame Stamina Add Recover : 0.764726
+Next Frame Stamina Add Recover : 0.544382
+Next Frame Stamina Add Recover : 0.324037
+Next Frame Stamina Add Recover : 0.103693
+Next Frame Stamina Add Recover : 0.883348
+Next Frame Stamina Add Recover : 0.663004
+Next Frame Stamina Add Recover : 0.442659
+Next Frame Stamina Add Recover : 0.222315
+Next Frame Stamina Add Recover : 0.001970
+Next Frame Stamina Add Recover : 0.781626
+Next Frame Stamina Add Recover : 0.561281
+Next Frame Stamina Add Recover : 0.340937
+Next Frame Stamina Add Recover : 0.120593
+Next Frame Stamina Add Recover : 0.900248
+Next Frame Stamina Add Recover : 0.679904
+Next Frame Stamina Add Recover : 0.459559
+Next Frame Stamina Add Recover : 0.239215
+Next Frame Stamina Add Recover : 0.018870
+Next Frame Stamina Add Recover : 0.798526
+Next Frame Stamina Add Recover : 0.578182
+Next Frame Stamina Add Recover : 0.357837
+Next Frame Stamina Add Recover : 0.137493
+Next Frame Stamina Add Recover : 0.917148
+Next Frame Stamina Add Recover : 0.696804
+Next Frame Stamina Add Recover : 0.476460
+Next Frame Stamina Add Recover : 0.256115
+Next Frame Stamina Add Recover : 0.035770
+Next Frame Stamina Add Recover : 0.815426
+Next Frame Stamina Add Recover : 0.595082
+Next Frame Stamina Add Recover : 0.374737
+Next Frame Stamina Add Recover : 0.154393
+Next Frame Stamina Add Recover : 0.934048
+Next Frame Stamina Add Recover : 0.713704
+Next Frame Stamina Add Recover : 0.493360
+Next Frame Stamina Add Recover : 0.273015
+Next Frame Stamina Add Recover : 0.052670
+Next Frame Stamina Add Recover : 0.832326
+Next Frame Stamina Add Recover : 0.611982
+Next Frame Stamina Add Recover : 0.391637
+Next Frame Stamina Add Recover : 0.171293
+Next Frame Stamina Add Recover : 0.950948
+Next Frame Stamina Add Recover : 0.730604
+Next Frame Stamina Add Recover : 0.510260
+Next Frame Stamina Add Recover : 0.289915
+Next Frame Stamina Add Recover : 0.069571
+Next Frame Stamina Add Recover : 0.849226
+Next Frame Stamina Add Recover : 0.628882
+Next Frame Stamina Add Recover : 0.408537
+Next Frame Stamina Add Recover : 0.188193
+Next Frame Stamina Add Recover : 0.967848
+Next Frame Stamina Add Recover : 0.747504
+Next Frame Stamina Add Recover : 0.527160
+Next Frame Stamina Add Recover : 0.306815
+Next Frame Stamina Add Recover : 0.086471
+Next Frame Stamina Add Recover : 0.866126
+Next Frame Stamina Add Recover : 0.645782
+Next Frame Stamina Add Recover : 0.425437
+Next Frame Stamina Add Recover : 0.205093
+Next Frame Stamina Add Recover : 0.984748
+Next Frame Stamina Add Recover : 0.764404
+Next Frame Stamina Add Recover : 0.544060
+Next Frame Stamina Add Recover : 0.323715
+Next Frame Stamina Add Recover : 0.103371
+Next Frame Stamina Add Recover : 0.883026
+Next Frame Stamina Add Recover : 0.662682
+Next Frame Stamina Add Recover : 0.442338
+Next Frame Stamina Add Recover : 0.221993
+Next Frame Stamina Add Recover : 0.001648
+Next Frame Stamina Add Recover : 0.781304
+Next Frame Stamina Add Recover : 0.560960
+Next Frame Stamina Add Recover : 0.340615
+Next Frame Stamina Add Recover : 0.120271
+Next Frame Stamina Add Recover : 0.899926
+Next Frame Stamina Add Recover : 0.679582
+Next Frame Stamina Add Recover : 0.459238
+Next Frame Stamina Add Recover : 0.238893
+Next Frame Stamina Add Recover : 0.018548
+Next Frame Stamina Add Recover : 0.798204
+Next Frame Stamina Add Recover : 0.577860
+Next Frame Stamina Add Recover : 0.357515
+Next Frame Stamina Add Recover : 0.137171
+Next Frame Stamina Add Recover : 0.916826
+Next Frame Stamina Add Recover : 0.696482
+Next Frame Stamina Add Recover : 0.476138
+Next Frame Stamina Add Recover : 0.255793
+Next Frame Stamina Add Recover : 0.035449
+Next Frame Stamina Add Recover : 0.815104
+Next Frame Stamina Add Recover : 0.594760
+Next Frame Stamina Add Recover : 0.374415
+Next Frame Stamina Add Recover : 0.154071
+Next Frame Stamina Add Recover : 0.933726
+Next Frame Stamina Add Recover : 0.713382
+Next Frame Stamina Add Recover : 0.493038
+Next Frame Stamina Add Recover : 0.272693
+Next Frame Stamina Add Recover : 0.052349
+Next Frame Stamina Add Recover : 0.832004
+Next Frame Stamina Add Recover : 0.611660
+Next Frame Stamina Add Recover : 0.391315
+Next Frame Stamina Add Recover : 0.170971
+Next Frame Stamina Add Recover : 0.950626
+Next Frame Stamina Add Recover : 0.730282
+Next Frame Stamina Add Recover : 0.509938
+Next Frame Stamina Add Recover : 0.289593
+Next Frame Stamina Add Recover : 0.069249
+Next Frame Stamina Add Recover : 0.848904
+Next Frame Stamina Add Recover : 0.628560
+Next Frame Stamina Add Recover : 0.408216
+Next Frame Stamina Add Recover : 0.187871
+Next Frame Stamina Add Recover : 0.967527
+Next Frame Stamina Add Recover : 0.747182
+Next Frame Stamina Add Recover : 0.526838
+Next Frame Stamina Add Recover : 0.306493
+Next Frame Stamina Add Recover : 0.086149
+Next Frame Stamina Add Recover : 0.865804
+Next Frame Stamina Add Recover : 0.645460
+Next Frame Stamina Add Recover : 0.425116
+Next Frame Stamina Add Recover : 0.204771
+Next Frame Stamina Add Recover : 0.984427
+Next Frame Stamina Add Recover : 0.764082
+Next Frame Stamina Add Recover : 0.543738
+Next Frame Stamina Add Recover : 0.323393
+Next Frame Stamina Add Recover : 0.103049
+Next Frame Stamina Add Recover : 0.882704
+Next Frame Stamina Add Recover : 0.662360
+Next Frame Stamina Add Recover : 0.442016
+Next Frame Stamina Add Recover : 0.221671
+Next Frame Stamina Add Recover : 0.001327
+Next Frame Stamina Add Recover : 0.780982
+Next Frame Stamina Add Recover : 0.560638
+Next Frame Stamina Add Recover : 0.340293
+Next Frame Stamina Add Recover : 0.119949
+Next Frame Stamina Add Recover : 0.899604
+Next Frame Stamina Add Recover : 0.679260
+Next Frame Stamina Add Recover : 0.458916
+Next Frame Stamina Add Recover : 0.238571
+Next Frame Stamina Add Recover : 0.019441
+Next Frame Stamina Add Recover : 0.800311
+Next Frame Stamina Add Recover : 0.581181
+Next Frame Stamina Add Recover : 0.360837
+Next Frame Stamina Add Recover : 0.140492
+Next Frame Stamina Add Recover : 0.920148
+Next Frame Stamina Add Recover : 0.699804
+Next Frame Stamina Add Recover : 0.479459
+Next Frame Stamina Add Recover : 0.259115
+Next Frame Stamina Add Recover : 0.038770
+Next Frame Stamina Add Recover : 0.818426
+Next Frame Stamina Add Recover : 0.598081
+Next Frame Stamina Add Recover : 0.377737
+Next Frame Stamina Add Recover : 0.157393
+Next Frame Stamina Add Recover : 0.937048
+Next Frame Stamina Add Recover : 0.716704
+Next Frame Stamina Add Recover : 0.496359
+Next Frame Stamina Add Recover : 0.276015
+Next Frame Stamina Add Recover : 0.055670
+Next Frame Stamina Add Recover : 0.835326
+Next Frame Stamina Add Recover : 0.614981
+Next Frame Stamina Add Recover : 0.394637
+Next Frame Stamina Add Recover : 0.174293
+Next Frame Stamina Add Recover : 0.953948
+Next Frame Stamina Add Recover : 0.733604
+Next Frame Stamina Add Recover : 0.513259
+Next Frame Stamina Add Recover : 0.292915
+Next Frame Stamina Add Recover : 0.072570
+Next Frame Stamina Add Recover : 0.852226
+Next Frame Stamina Add Recover : 0.631881
+Next Frame Stamina Add Recover : 0.411537
+Next Frame Stamina Add Recover : 0.191193
+Next Frame Stamina Add Recover : 0.970848
+Next Frame Stamina Add Recover : 0.753710
+Next Frame Stamina Add Recover : 0.536572
+Next Frame Stamina Add Recover : 0.319433
+Next Frame Stamina Add Recover : 0.099089
+Next Frame Stamina Add Recover : 0.878744
+Next Frame Stamina Add Recover : 0.658400
+Next Frame Stamina Add Recover : 0.438056
+Next Frame Stamina Add Recover : 0.217711
+Next Frame Stamina Add Recover : 0.997367
+Next Frame Stamina Add Recover : 0.777022
+Next Frame Stamina Add Recover : 0.556678
+Next Frame Stamina Add Recover : 0.336333
+Next Frame Stamina Add Recover : 0.115989
+Next Frame Stamina Add Recover : 0.895644
+Next Frame Stamina Add Recover : 0.675300
+Next Frame Stamina Add Recover : 0.454956
+Next Frame Stamina Add Recover : 0.234611
+Next Frame Stamina Add Recover : 0.014266
+Next Frame Stamina Add Recover : 0.794122
+Next Frame Stamina Add Recover : 0.573977
+Next Frame Stamina Add Recover : 0.353832
+Next Frame Stamina Add Recover : 0.133487
+Next Frame Stamina Add Recover : 0.913143
+Next Frame Stamina Add Recover : 0.692798
+Next Frame Stamina Add Recover : 0.472454
+Next Frame Stamina Add Recover : 0.252110
+Next Frame Stamina Add Recover : 0.031765
+Next Frame Stamina Add Recover : 0.811421
+Next Frame Stamina Add Recover : 0.591076
+Next Frame Stamina Add Recover : 0.370732
+Next Frame Stamina Add Recover : 0.150387
+Next Frame Stamina Add Recover : 0.930043
+Next Frame Stamina Add Recover : 0.709698
+Next Frame Stamina Add Recover : 0.489354
+Next Frame Stamina Add Recover : 0.269010
+Next Frame Stamina Add Recover : 0.048665
+Next Frame Stamina Add Recover : 0.828321
+Next Frame Stamina Add Recover : 0.611413
+Next Frame Stamina Add Recover : 0.394506
+Next Frame Stamina Add Recover : 0.177598
+Next Frame Stamina Add Recover : 0.957254
+Next Frame Stamina Add Recover : 0.736909
+Next Frame Stamina Add Recover : 0.516565
+Next Frame Stamina Add Recover : 0.296220
+Next Frame Stamina Add Recover : 0.075876
+Next Frame Stamina Add Recover : 0.855531
+Next Frame Stamina Add Recover : 0.635187
+Next Frame Stamina Add Recover : 0.414843
+Next Frame Stamina Add Recover : 0.194498
+Next Frame Stamina Add Recover : 0.974154
+Next Frame Stamina Add Recover : 0.753809
+Next Frame Stamina Add Recover : 0.533465
+Next Frame Stamina Add Recover : 0.313120
+Next Frame Stamina Add Recover : 0.092776
+Next Frame Stamina Add Recover : 0.872431
+Next Frame Stamina Add Recover : 0.652087
+Next Frame Stamina Add Recover : 0.431743
+Next Frame Stamina Add Recover : 0.211398
+Next Frame Stamina Add Recover : 0.991054
+Next Frame Stamina Add Recover : 0.770709
+Next Frame Stamina Add Recover : 0.550365
+Next Frame Stamina Add Recover : 0.330020
+Next Frame Stamina Add Recover : 0.109676
+Next Frame Stamina Add Recover : 0.889331
+Next Frame Stamina Add Recover : 0.668987
+Next Frame Stamina Add Recover : 0.448643
+Next Frame Stamina Add Recover : 0.228298
+Next Frame Stamina Add Recover : 0.007954
+Next Frame Stamina Add Recover : 0.787609
+Next Frame Stamina Add Recover : 0.567265
+Next Frame Stamina Add Recover : 0.346920
+Next Frame Stamina Add Recover : 0.126576
+Next Frame Stamina Add Recover : 0.906232
+Next Frame Stamina Add Recover : 0.685887
+Next Frame Stamina Add Recover : 0.465543
+Next Frame Stamina Add Recover : 0.245198
+Next Frame Stamina Add Recover : 0.024854
+Next Frame Stamina Add Recover : 0.804509
+Next Frame Stamina Add Recover : 0.584165
+Next Frame Stamina Add Recover : 0.363821
+Next Frame Stamina Add Recover : 0.143476
+Next Frame Stamina Add Recover : 0.923132
+Next Frame Stamina Add Recover : 0.702787
+Next Frame Stamina Add Recover : 0.482443
+Next Frame Stamina Add Recover : 0.262098
+Next Frame Stamina Add Recover : 0.041754
+Next Frame Stamina Add Recover : 0.821409
+Next Frame Stamina Add Recover : 0.601065
+Next Frame Stamina Add Recover : 0.380721
+Next Frame Stamina Add Recover : 0.160376
+Next Frame Stamina Add Recover : 0.940186
+Next Frame Stamina Add Recover : 0.719995
+Next Frame Stamina Add Recover : 0.499805
+Next Frame Stamina Add Recover : 0.279461
+Next Frame Stamina Add Recover : 0.059116
+Next Frame Stamina Add Recover : 0.838772
+Next Frame Stamina Add Recover : 0.618428
+Next Frame Stamina Add Recover : 0.398083
+Next Frame Stamina Add Recover : 0.177739
+Next Frame Stamina Add Recover : 0.959155
+Next Frame Stamina Add Recover : 0.740571
+Next Frame Stamina Add Recover : 0.521986
+Next Frame Stamina Add Recover : 0.301642
+Next Frame Stamina Add Recover : 0.081297
+Next Frame Stamina Add Recover : 0.860953
+Next Frame Stamina Add Recover : 0.640609
+Next Frame Stamina Add Recover : 0.420264
+Next Frame Stamina Add Recover : 0.200099
+Next Frame Stamina Add Recover : 0.979933
+Next Frame Stamina Add Recover : 0.759767
+Next Frame Stamina Add Recover : 0.539423
+Next Frame Stamina Add Recover : 0.319078
+Next Frame Stamina Add Recover : 0.098733
+Next Frame Stamina Add Recover : 0.878389
+Next Frame Stamina Add Recover : 0.658045
+Next Frame Stamina Add Recover : 0.437700
+Next Frame Stamina Add Recover : 0.217356
+Next Frame Stamina Add Recover : 0.997011
+Next Frame Stamina Add Recover : 0.776667
+Next Frame Stamina Add Recover : 0.556323
+Next Frame Stamina Add Recover : 0.335978
+Next Frame Stamina Add Recover : 0.115633
+Next Frame Stamina Add Recover : 0.895289
+Next Frame Stamina Add Recover : 0.674945
+Next Frame Stamina Add Recover : 0.454600
+Next Frame Stamina Add Recover : 0.234256
+Next Frame Stamina Add Recover : 0.013911
+Next Frame Stamina Add Recover : 0.793567
+Next Frame Stamina Add Recover : 0.573222
+Next Frame Stamina Add Recover : 0.352878
+Next Frame Stamina Add Recover : 0.132534
+Next Frame Stamina Add Recover : 0.912189
+Next Frame Stamina Add Recover : 0.691845
+Next Frame Stamina Add Recover : 0.471500
+Next Frame Stamina Add Recover : 0.251156
+Next Frame Stamina Add Recover : 0.030811
+Next Frame Stamina Add Recover : 0.810467
+Next Frame Stamina Add Recover : 0.590122
+Next Frame Stamina Add Recover : 0.369778
+Next Frame Stamina Add Recover : 0.149458
+Next Frame Stamina Add Recover : 0.929138
+Next Frame Stamina Add Recover : 0.708818
+Next Frame Stamina Add Recover : 0.488474
+Next Frame Stamina Add Recover : 0.268129
+Next Frame Stamina Add Recover : 0.047785
+Next Frame Stamina Add Recover : 0.827440
+Next Frame Stamina Add Recover : 0.607096
+Next Frame Stamina Add Recover : 0.386752
+Next Frame Stamina Add Recover : 0.166407
+Next Frame Stamina Add Recover : 0.946063
+Next Frame Stamina Add Recover : 0.725718
+Next Frame Stamina Add Recover : 0.505374
+Next Frame Stamina Add Recover : 0.285029
+Next Frame Stamina Add Recover : 0.064685
+Next Frame Stamina Add Recover : 0.844340
+Next Frame Stamina Add Recover : 0.623996
+Next Frame Stamina Add Recover : 0.403652
+Next Frame Stamina Add Recover : 0.183307
+Next Frame Stamina Add Recover : 0.962963
+Next Frame Stamina Add Recover : 0.742618
+Next Frame Stamina Add Recover : 0.522274
+Next Frame Stamina Add Recover : 0.301929
+Next Frame Stamina Add Recover : 0.081585
+Next Frame Stamina Add Recover : 0.861241
+Next Frame Stamina Add Recover : 0.640896
+Next Frame Stamina Add Recover : 0.420552
+Next Frame Stamina Add Recover : 0.200207
+Next Frame Stamina Add Recover : 0.979863
+Next Frame Stamina Add Recover : 0.759518
+Next Frame Stamina Add Recover : 0.539174
+Next Frame Stamina Add Recover : 0.318830
+Next Frame Stamina Add Recover : 0.098485
+Next Frame Stamina Add Recover : 0.878141
+Next Frame Stamina Add Recover : 0.657796
+Next Frame Stamina Add Recover : 0.437452
+Next Frame Stamina Add Recover : 0.217107
+Next Frame Stamina Add Recover : 0.996763
+Next Frame Stamina Add Recover : 0.776418
+Next Frame Stamina Add Recover : 0.556074
+Next Frame Stamina Add Recover : 0.335730
+Next Frame Stamina Add Recover : 0.115385
+Next Frame Stamina Add Recover : 0.895041
+Next Frame Stamina Add Recover : 0.674696
+Next Frame Stamina Add Recover : 0.454352
+Next Frame Stamina Add Recover : 0.234007
+Next Frame Stamina Add Recover : 0.013663
+Next Frame Stamina Add Recover : 0.793318
+Next Frame Stamina Add Recover : 0.572974
+Next Frame Stamina Add Recover : 0.352630
+Next Frame Stamina Add Recover : 0.132285
+Next Frame Stamina Add Recover : 0.911941
+Next Frame Stamina Add Recover : 0.691596
+Next Frame Stamina Add Recover : 0.471252
+Next Frame Stamina Add Recover : 0.250907
+Next Frame Stamina Add Recover : 0.030563
+Next Frame Stamina Add Recover : 0.810988
+Next Frame Stamina Add Recover : 0.591414
+Next Frame Stamina Add Recover : 0.371840
+Next Frame Stamina Add Recover : 0.151495
+Next Frame Stamina Add Recover : 0.931151
+Next Frame Stamina Add Recover : 0.710806
+Next Frame Stamina Add Recover : 0.490462
+Next Frame Stamina Add Recover : 0.270117
+Next Frame Stamina Add Recover : 0.049773
+Next Frame Stamina Add Recover : 0.829428
+Next Frame Stamina Add Recover : 0.609084
+Next Frame Stamina Add Recover : 0.388740
+Next Frame Stamina Add Recover : 0.168395
+Next Frame Stamina Add Recover : 0.948051
+Next Frame Stamina Add Recover : 0.727706
+Next Frame Stamina Add Recover : 0.507362
+Next Frame Stamina Add Recover : 0.287017
+Next Frame Stamina Add Recover : 0.066673
+Next Frame Stamina Add Recover : 0.846328
+Next Frame Stamina Add Recover : 0.625984
+Next Frame Stamina Add Recover : 0.405640
+Next Frame Stamina Add Recover : 0.185295
+Next Frame Stamina Add Recover : 0.964951
+Next Frame Stamina Add Recover : 0.744662
+Next Frame Stamina Add Recover : 0.524374
+Next Frame Stamina Add Recover : 0.304085
+Next Frame Stamina Add Recover : 0.083741
+Next Frame Stamina Add Recover : 0.863396
+Next Frame Stamina Add Recover : 0.643052
+Next Frame Stamina Add Recover : 0.422708
+Next Frame Stamina Add Recover : 0.202363
+Next Frame Stamina Add Recover : 0.982019
+Next Frame Stamina Add Recover : 0.761674
+Next Frame Stamina Add Recover : 0.541330
+Next Frame Stamina Add Recover : 0.320985
+Next Frame Stamina Add Recover : 0.100641
+Next Frame Stamina Add Recover : 0.880296
+Next Frame Stamina Add Recover : 0.659952
+Next Frame Stamina Add Recover : 0.439608
+Next Frame Stamina Add Recover : 0.219263
+Next Frame Stamina Add Recover : 0.998919
+Next Frame Stamina Add Recover : 0.778574
+Next Frame Stamina Add Recover : 0.558230
+Next Frame Stamina Add Recover : 0.337885
+Next Frame Stamina Add Recover : 0.117541
+Next Frame Stamina Add Recover : 0.897196
+Next Frame Stamina Add Recover : 0.677440
+Next Frame Stamina Add Recover : 0.457683
+Next Frame Stamina Add Recover : 0.237926
+Next Frame Stamina Add Recover : 0.017582
+Next Frame Stamina Add Recover : 0.797238
+Next Frame Stamina Add Recover : 0.576893
+Next Frame Stamina Add Recover : 0.356549
+Next Frame Stamina Add Recover : 0.136204
+Next Frame Stamina Add Recover : 0.915860
+Next Frame Stamina Add Recover : 0.695515
+Next Frame Stamina Add Recover : 0.475171
+Next Frame Stamina Add Recover : 0.254827
+Next Frame Stamina Add Recover : 0.034482
+Next Frame Stamina Add Recover : 0.814138
+Next Frame Stamina Add Recover : 0.593793
+Next Frame Stamina Add Recover : 0.373449
+Next Frame Stamina Add Recover : 0.153104
+Next Frame Stamina Add Recover : 0.932760
+Next Frame Stamina Add Recover : 0.068282
+Next Frame Stamina Add Recover : 0.847938
+Next Frame Stamina Add Recover : 0.627593
+Next Frame Stamina Add Recover : 0.407249
+Next Frame Stamina Add Recover : 0.186904
+Next Frame Stamina Add Recover : 0.966560
+Next Frame Stamina Add Recover : 0.746216
+Next Frame Stamina Add Recover : 0.525871
+Next Frame Stamina Add Recover : 0.305527
+Next Frame Stamina Add Recover : 0.085182
+Next Frame Stamina Add Recover : 0.864838
+Next Frame Stamina Add Recover : 0.644493
+Next Frame Stamina Add Recover : 0.424149
+Next Frame Stamina Add Recover : 0.203804
+Next Frame Stamina Add Recover : 0.983460
+Next Frame Stamina Add Recover : 0.763116
+Next Frame Stamina Add Recover : 0.542771
+Next Frame Stamina Add Recover : 0.322427
+Next Frame Stamina Add Recover : 0.102082
+Next Frame Stamina Add Recover : 0.881738
+Next Frame Stamina Add Recover : 0.661393
+[RagdollIns]
+[BehaviorTurn]
+まったく動かない Off
+No Integrate : 0
+IK Error Height : -0.45
+[高さオフセット補間]
+【Enable】<ChrPhysicsVelocityChange|キャラ物理速度変化
+[CSChrPhysicsVelocityChange]
+[HavokChara]
+[WalkTwist(4方向切り替え)]
+[FootIK Right]
+[FootIK Left]
+unknown
+IKが何にもあたらなかったときの減衰力 0.60
+NPCがプレイヤーを見始める距離 4.000000
+足IKY方向オフセット 0.000000
+足IKの位置調整にキャラプロキシの座標を利用するか【Yes】
+足IK補間タイプ(篝火の座りアニメにのみ対応) (古い機能):【補間する】
+Switch Hit ON/OFF (Push Enter)
+Switch Damage Ragdoll (Push Enter)
+Switch Dead Ragdoll (Push Enter)
+落下した高さ [+0.000000] 接地中　 本当に接地中
+最後に接地した位置 : 188.56 -41.36 -146.61
+Obj Down Impulse : 15.0
+落下した高さ [+0.000004] 接地中　 本当に接地中
+落下した高さ [-0.000004] 接地中　 本当に接地中
+BGM状態【通常状態】
+[デバッグメニュー作成|Delay init debug menu(push enter)]
+[移動状態] 移動できない/[旋回状態] 旋回できない
+EventId:[10000] [NoDead:0] [IsHide:0] [NoGravity:0] [NoDamage:0]
+Hit> : nc□ec□tc□nm□em□tm□al□al□ : ge□bo□Jr□□□□□□
+[OmissionLock:0] [Disable:0] [Invincible:0] [DisableCollection:0]
+発行中のイベント→EzStateへのコマンドID [-1,-1,-1,-1 : -1,-1,-1,-1]
+発行中のEzState→イベントへのメッセージID [-1 : -1]
+イベント→EzStateへのコマンドID（デバッグ設定用）: -1
+イベント→EzStateへのコマンドを発行（↑でID設定して○で発行）
+EventSuperArmor: 0
+IsDisableCollection: 0
+Sfx自動割り当てスロット番号 -1
+[GuardCut｜ガードカット]
+[FallDamage｜落下ダメージ]
+※攻撃ガード時に更新されます
+------------------------------------------------------------------------------------------------
+最終物理カット係数[0.00]％ = 100 - ｛ (物理カット率(武器強化反映)[0.00]+補正値[0.00])×（斬撃カット率[0.00]/100 +1)×損耗度[0.00]×ガード倍率[0.00]×相手側のガードカット無効化倍率[0.00] ｝
+物理カット率補正値[0.00] = 補正値の最大値[0.00]/余剰ステータスの最大値[0.00]×補正グラフ[0.00]×余剰ステータス値[0.00]
+最終魔法カット係数[0.00]％ = 100 - ｛ (魔法カット率(武器強化反映)[0.00]+補正値[0.00])×損耗度[0.00]×ガード倍率[0.00]×相手側のガードカット無効化倍率[0.00] ｝
+魔法カット率補正値[0.00] = 補正値の最大値[0.00]/余剰ステータスの最大値[0.00]×補正グラフ[0.00]×余剰ステータス値[0.00]
+最終炎カット係数[0.00]％ = 100 - ｛ (炎カット率(武器強化反映)[0.00]+補正値[0.00])×損耗度[0.00]×ガード倍率[0.00]×相手側のガードカット無効化倍率[0.00] ｝
+炎カット率補正値[0.00] = 補正値の最大値[0.00]/余剰ステータスの最大値[0.00]×補正グラフ[0.00]×余剰ステータス値[0.00]
+最終電撃カット係数[0.00]％ = 100 - ｛ (電撃カット率(武器強化反映)[0.00]+補正値[0.00])×損耗度[0.00]×ガード倍率[0.00]×相手側のガードカット無効化倍率[0.00] ｝
+電撃カット率補正値[0.00] = 補正値の最大値[0.00]/余剰ステータスの最大値[0.00]×補正グラフ[0.00]×余剰ステータス値[0.00]
+最終闇カット係数[0.00]％ = 100 - ｛ (闇カット率(武器強化反映)[0.00]+補正値[0.00])×損耗度[0.00]×ガード倍率[0.00]×相手側のガードカット無効化倍率[0.00] ｝
+闇カット率補正値[0.00] = 補正値の最大値[0.00]/余剰ステータスの最大値[0.00]×補正グラフ[0.00]×余剰ステータス値[0.00]
+最終毒カット係数[0.00]％ = 100 - (毒カット率(武器強化反映)[0.00]+補正値[0.00])
+毒カット率補正値[0.00] = 補正値の最大値[0.00]/余剰ステータスの最大値[0.00]×補正グラフ[0.00]×余剰ステータス値[0.00]
+最終疫病カット係数[0.00]％ = 100 - (疫病カット率(武器強化反映)[0.00]+補正値[0.00])
+疫病カット率補正値[0.00] = 補正値の最大値[0.00]/余剰ステータスの最大値[0.00]×補正グラフ[0.00]×余剰ステータス値[0.00]
+最終血カット係数[0.00]％ = 100 - (血カット率(武器強化反映)[0.00]+補正値[0.00])
+血カット率補正値[0.00] = 補正値の最大値[0.00]/余剰ステータスの最大値[0.00]×補正グラフ[0.00]×余剰ステータス値[0.00]
+最終呪いカット係数[0.00]％ = 100 - (呪いカット率(武器強化反映)[0.00]+補正値[0.00])
+呪いカット率補正値[0.00] = 補正値の最大値[0.00]/余剰ステータスの最大値[0.00]×補正グラフ[0.00]×余剰ステータス値[0.00]
+最終冷気カット係数[0.00]％ = 100 - (冷気カット率(武器強化反映)[0.00]+補正値[0.00])
+冷気カット率補正値[0.00] = 補正値の最大値[0.00]/余剰ステータスの最大値[0.00]×補正グラフ[0.00]×余剰ステータス値[0.00]
+最終スタミナカット係数[0.00]％ = 100 - スタミナカット率(武器強化反映)[0.00] + ステータス補正値[0.00] + 1)×(1 + ガード時スタミナカット率補正(攻撃パラ)[0.00]/100)×(ガード時スタミナカット倍率(特殊効果)[0.00])
+スタミナカット率補正値[0.00] = 補正値の最大値[0.00]/余剰ステータスの最大値[0.00]×補正グラフ[0.00]×余剰ステータス値[0.00]
+[○c0000]
+落下距離 《0.00m》 《即死落下距離ではない》
+落下ダメージ 《0》
+落下ダメージ倍率 《0.00》
+基本落下倍率《0.20》
+装備重量補正倍率《1.00》
+生命力補正倍率《1.00》
+技量補正倍率《1.00》
+床ヒットマテリアル倍率《1.00》 即死距離《40.00》
+特殊効果倍率《1.00》
+-----ワイヤー移動の軌道上障害物判定用パラメータ-----
+【Enable】< ワイヤー軌道上の障害物判定
+【No】< ワイヤー軌道を描画するかどうか
+【No】< シェイプ/スフィアキャストを描画するか
+【しない】< 障害物との接触点を表示
+【0.200】< スフィアキャスト半径
+【Yes】< ワイヤー軌道を描画するかどうか
+【Yes】< シェイプ/スフィアキャストを描画するか
+【すべて】< 障害物との接触点を表示
+【PC最近点のみ】< 障害物との接触点を表示
+MODEL:CHR:c0000{GUI◎}○Focus/△Close
+[m25_00_00_00]
+[m25_00_00_00プレイヤーから10.0m以内]
+Lv1[ 3 ]/Lv2[ 0 ]/Lv5[ 0 ]Lv30[ 0 ]/None[ 198 ]/Total[ 201 ]
+0006/0010/0201<VisibleNum/ReadyNum/MaxNum
+Dead Count[31]
+[ダメージ管理]
+[TargetBankMan]
+[弾丸管理]
+[GAME REND]
+[ChrCam]
+[WorldBackRead]
+[FIELD AREA]
+[WORLD POINT MAN]
+[ワールドナビメッシュ管理]
+[ActionButtonRegion]
+[WorldAiManager]
+[WorldObjActMan]
+[WorldTalkMan]
+[BloodStainMan]
+[SosSignMan]
+[Create Replay Ghost]
+[MENUMAN]
+[StageDebug]
+[DebugSignboard｜デバッグ看板]
+[Heat Map | ヒートマップ]
+[DebugDistMeasure｜距離測定]
+【Disable】< デバッグ球表示
+【Disable】< デバッグ球表示2
+【Disable】< デバッグ情報表示
+【Disable】< 最遠攻撃到達点を表示
+【Yes】< 武器ダミポリからダメージ発生するか
+【Yes】< 攻撃パラメータ参照してダメージ発生するか
+【Yes】< 回転角が大きいダメージを複数回に分けてシェイプキャストするか
+【0.500000】< 火花出す距離
+【60.000000】< 床で仮定するロウヒットの斜度[角度　０〜180]
+ダメージ数[ SUM:0 / POOL:128 ] [ EM:0 / SUM:0 ]
+履歴使用数[USE:000(+0)/MAX:096] [USE:000(+0)/MAX:096]
+[発生ダメージ一覧]
+【Disable】< 発生ダメージデバッグ表示→プレイヤー
+【Disable】< 発生ダメージデバッグ表示→その他
+【0.000000】< ダメージ遮蔽キャスト表示時間[s]
+【NONE】<ダメージ遅延モード
+【0.000000】<ダメージ遅延時間[秒]
+【1.000000】<ダメージ遅延時間とスローモーションの割合
+【Disable】<BULLET INS DEBUG MENU|弾丸インスタンスのデバッグメニューを有効にするか
+[弾丸エミッタ]
+[弾丸インスタンス]
+弾丸方向描画【Off】
+固定パラメータ調整系
+ダミポリの上から発射用のオフセット値【1.000】
+すべる弾の床ヒット時の速度減衰率【0.9700】
+すべる弾の前回の移動方向の加算率【0.0】
+すべる弾の外力【0.0000】
+メテオ : Raycastオフセット : 10.000000
+アタッチシステム無効化 0
+[アタッチ効果]
+七色石レイキャスト描画※1分間残留します 0
+IsLockMode:【Off】
+---
+<スティック弾きフレーム
+【0.800】<スティック弾き強度
+【90.000】[deg]<スティック弾き範囲
+【Disable】スティック入力方向のみを考慮して切り替えするか
+ダミーポイントの絞り込み:【ロック対象より近いキャラ】
+【10.000】<TgtHeightMax
+【0.800】<TgtHeightRate
+【0.500】<VisibleCheckIntervalTime
+【2.000】[sec]<不可視ロックタイムアウト時間
+【0.000】<LockRangeRadiusBonus
+【0.000】[rad]<ロック範囲半径ボーナス減衰開始角度
+【40.000】[rad]<ロック範囲半径ボーナス減衰終了角度
+【30.000】<ChrLockRangeMaxRadius
+【15.000】<ChrLockRangeMaxRadius_forDark
+【10.000】<ChrLockRangeMaxRadius_forPitchDark
+【0.000】<ChrAllRangeLockRadius
+【30.000】[deg]<ChrFrontRangeLockHalfAng
+【5.000】<ChrFrontRangeLockRadius
+【10.000】<ChrFrontScoreAddBonusMax
+【20.000】<ChrFrontScoreAddBonusMaxEndHalfAng
+【0.000】<CamAllRangeLockRadius
+【60.000】[deg]<CamFrontNearRangeLockHalfAng_Yaw
+【30.000】[deg]<CamFrontNearRangeLockHalfAng_Pitch
+【60.000】[deg]<CamFrontNearRangeLockChangeHalfAng_Yaw
+【30.000】[deg]<CamFrontNearRangeLockChangeHalfAng_Pitch
+【8.000】<CamFrontNearRangeLockRadius
+【45.000】[deg]<CamFrontFarRangeLockHalfAng_Yaw
+【30.000】[deg]<CamFrontFarRangeLockHalfAng_Pitch
+【45.000】[deg]<CamFrontFarRangeLockChangeHalfAng_Yaw
+【30.000】[deg]<CamFrontFarRangeLockChangeHalfAng_Pitch
+【200.000】<CamFrontFarRangeLockRadius
+【25.000】<CamFrontScoreAddBonusMax
+【-1】<ロックカメラパラムID(-1:デフォルト)
+《-1》<マップ指定ロックカメラパラムID(-1:デフォルト)
+【0.100】<ロックカメラパラム補間率(0.0〜1.0)
+ロックオン時計算式:【デフォルト】
+現在のロックオン時計算式:《デフォルト》
+カメラの中心を優先してロックオンする半径【15.00】
+カメラの中心を優先してロックオンする角度（プレイヤから敵への仰俯角）【45.00】
+右スティックを操作しているとみなす猶予時間[s]【1.00】
+ロックオン対象より近いキャラの絞込半径A【2.0】
+ロックオン対象より近いキャラの絞込半径B【1.5】
+LockTgtListNum:《1》
+ロックターゲットデバッグ表示が有効か:【Disable】
+可視判定をしたかデバッグ表示が有効か:【Disable】
+キャラごとのロック角度表示が有効か【Disable】
+デバッグ表示が有効か:【Disable】
+ロックモードが有効か:【Enable】
+プレイヤロックが有効か:【Enable】
+カメラロックが有効か:【Enable】
+会話キャラを強制ロックが有効か:【Disable】
+手動ロック変更が有効か:【Enable】
+弾きターゲット切替を使うか:【No】
+オートロック変更が有効か:【Enable】
+オートロック変更制限が有効か:【Enable】
+ロック範囲半径ボーナス減衰が有効か:【Enable】
+ロック中ターゲットの可視判定でのタイムアウトが有効か:【Enable】
+カメラの当たらないヒットにロックも当たらないテストが有効か:【Disable】
+召喚魔法用ロックターゲットデバッグ表示が有効か:【Disable】
+可視判定をしたかデバッグ表示が有効か:【Enable】
+ロックターゲットデバッグ表示が有効か:【Enable】
+LockTgtListNum:《2》
+LockTgtListNum:《3》
+キャラごとのロック角度表示が有効か【Enable】
+c5000_0000 Yaw:1.91 Pitch:12.67 Old:12.80
+c5000_0000 Yaw:1.86 Pitch:7.55 Old:7.77
+デバッグ表示が有効か:【Enable】
