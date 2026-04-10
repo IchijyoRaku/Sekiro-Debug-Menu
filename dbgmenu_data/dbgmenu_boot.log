@@ -1,0 +1,565 @@
+[InitChain] Begin enter: mHinstDLL=0x7FFB89380000
+[InitChain] import[0]=DirectInput8Create addr=0x7FFB89382230
+[InitChain] import[1]=GetdfDIJoystick addr=0x7FFB8938A1C0
+[InitChain] import[2]=DllCanUnloadNow addr=0x7FFB89395220
+[InitChain] import[3]=DllGetClassObject addr=0x7FFB89395330
+[InitChain] import[4]=DllRegisterServer addr=0x7FFB893A4740
+[InitChain] import[5]=DllUnregisterServer addr=0x7FFB893A49C0
+[InitChain] Initialise enter
+[InitChain] CSekiroDebugMenu allocated: 0x26E49E0
+[InitChain] Hooks=0x4E4790 Signature=0x26E4740 Graphics=0x28B4FD0
+[InitChain] calling Hooks->Patch()
+[HookInit] Patch start: bIsMHActive=0
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] sActivateDebugMenu found at 0x141187587
+[HookInit] qActivateDebugMenu patched address = 0x141187590
+[HookTweak] write site=0x141187590 len=2 restore=1
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x0
+[HookInit] waiting for hook sites
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x14262D15E
+[HookSite] qMenuDrawHook final = 0x14262D186
+[HookInit] hook sites ready: qMenuDrawHook=0x14262D186 qMissingParamHook1=0x142650400 qMissingParamHook2=0x14261E660
+[HookInit] other sites: qDisableRemnantMenuHook=0x140A7667E qDisableDebugFeature1=0x142619690 qEnableFreezeCam=0x14083BEBC qEnablePanCam=0x14083BE69
+[HookInit] feature sites: qEnableDebugFeature1=0x1409791C0 qEnableDebugFeature2=0x1409791D0 qEnableDebugFeature3=0x1409791E0
+[HookCall] MH_CreateHook site=0x14262D186 detour=0x7FFB98170D00 status=0
+[HookCall] MH_EnableHook site=0x14262D186 status=0
+[HookTweak] write site=0x14262D186 len=1 restore=1
+[HookTweak] write site=0x142650400 len=1 restore=1
+[HookTweak] write site=0x14261E660 len=1 restore=1
+[HookTweak] write site=0x140A7667E len=2 restore=1
+[HookTweak] write site=0x1409791C0 len=2 restore=1
+[HookTweak] write site=0x1409791D0 len=2 restore=1
+[HookTweak] write site=0x1409791E0 len=2 restore=1
+[HookTweak] write site=0x142619690 len=1 restore=1
+[HookTweak] write site=0x14083BEBC len=31 restore=1
+[HookTweak] write site=0x14083BE69 len=5 restore=1
+[InitChain] Hooks->Patch() result=1
+[InitChain] calling Graphics->HookD3D11Present()
+[InitChain] Graphics->HookD3D11Present() result=1
+[InitChain] Initialise success
+[InitChain] Begin Initialise() result=1
+[InitChain] Begin enter: mHinstDLL=0x7FF901050000
+[InitChain] import[0]=DirectInput8Create addr=0x7FF901052230
+[InitChain] import[1]=GetdfDIJoystick addr=0x7FF90105A1C0
+[InitChain] import[2]=DllCanUnloadNow addr=0x7FF901065220
+[InitChain] import[3]=DllGetClassObject addr=0x7FF901065330
+[InitChain] import[4]=DllRegisterServer addr=0x7FF901074740
+[InitChain] import[5]=DllUnregisterServer addr=0x7FF9010749C0
+[InitChain] Initialise enter
+[InitChain] CSekiroDebugMenu allocated: 0x524860
+[InitChain] Hooks=0x52CD70 Signature=0x524D40 Graphics=0x2844D20
+[InitChain] calling Hooks->Patch()
+[HookInit] Patch start: bIsMHActive=0
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] sActivateDebugMenu found at 0x141187587
+[HookInit] qActivateDebugMenu patched address = 0x141187590
+[HookTweak] write site=0x141187590 len=2 restore=1
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x0
+[HookInit] waiting for hook sites
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x14262D15E
+[HookSite] qMenuDrawHook final = 0x14262D186
+[HookInit] hook sites ready: qMenuDrawHook=0x14262D186 qMissingParamHook1=0x142650400 qMissingParamHook2=0x14261E660
+[HookInit] other sites: qDisableRemnantMenuHook=0x140A7667E qDisableDebugFeature1=0x142619690 qEnableFreezeCam=0x14083BEBC qEnablePanCam=0x14083BE69
+[HookInit] feature sites: qEnableDebugFeature1=0x1409791C0 qEnableDebugFeature2=0x1409791D0 qEnableDebugFeature3=0x1409791E0
+[HookCall] MH_CreateHook site=0x14262D186 detour=0x7FF8FAB50CD0 status=0
+[HookCall] MH_EnableHook site=0x14262D186 status=0
+[HookTweak] write site=0x14262D186 len=1 restore=1
+[HookTweak] write site=0x142650400 len=1 restore=1
+[HookTweak] write site=0x14261E660 len=1 restore=1
+[HookTweak] write site=0x140A7667E len=2 restore=1
+[HookTweak] write site=0x1409791C0 len=2 restore=1
+[HookTweak] write site=0x1409791D0 len=2 restore=1
+[HookTweak] write site=0x1409791E0 len=2 restore=1
+[HookTweak] write site=0x142619690 len=1 restore=1
+[HookTweak] write site=0x14083BEBC len=31 restore=1
+[HookTweak] write site=0x14083BE69 len=5 restore=1
+[InitChain] Hooks->Patch() result=1
+[InitChain] calling Graphics->HookD3D11Present()
+[InitChain] Graphics->HookD3D11Present() result=1
+[InitChain] Initialise success
+[InitChain] Begin Initialise() result=1
+[InitChain] Begin enter: mHinstDLL=0x7FF901050000
+[InitChain] import[0]=DirectInput8Create addr=0x7FF901052230
+[InitChain] import[1]=GetdfDIJoystick addr=0x7FF90105A1C0
+[InitChain] import[2]=DllCanUnloadNow addr=0x7FF901065220
+[InitChain] import[3]=DllGetClassObject addr=0x7FF901065330
+[InitChain] import[4]=DllRegisterServer addr=0x7FF901074740
+[InitChain] import[5]=DllUnregisterServer addr=0x7FF9010749C0
+[InitChain] Initialise enter
+[InitChain] CSekiroDebugMenu allocated: 0x670440
+[InitChain] Hooks=0x6B27E0 Signature=0x6705C0 Graphics=0x27C4F50
+[InitChain] calling Hooks->Patch()
+[HookInit] Patch start: bIsMHActive=0
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] sActivateDebugMenu found at 0x141187587
+[HookInit] qActivateDebugMenu patched address = 0x141187590
+[HookTweak] write site=0x141187590 len=2 restore=1
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x0
+[HookInit] waiting for hook sites
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x14262D15E
+[HookSite] qMenuDrawHook final = 0x14262D186
+[HookInit] hook sites ready: qMenuDrawHook=0x14262D186 qMissingParamHook1=0x142650400 qMissingParamHook2=0x14261E660
+[HookInit] other sites: qDisableRemnantMenuHook=0x140A7667E qDisableDebugFeature1=0x142619690 qEnableFreezeCam=0x14083BEBC qEnablePanCam=0x14083BE69
+[HookInit] feature sites: qEnableDebugFeature1=0x1409791C0 qEnableDebugFeature2=0x1409791D0 qEnableDebugFeature3=0x1409791E0
+[HookCall] MH_CreateHook site=0x14262D186 detour=0x7FF8FAB50D00 status=0
+[HookCall] MH_EnableHook site=0x14262D186 status=0
+[HookTweak] write site=0x14262D186 len=1 restore=1
+[HookTweak] write site=0x142650400 len=1 restore=1
+[HookTweak] write site=0x14261E660 len=1 restore=1
+[HookTweak] write site=0x140A7667E len=2 restore=1
+[HookTweak] write site=0x1409791C0 len=2 restore=1
+[HookTweak] write site=0x1409791D0 len=2 restore=1
+[HookTweak] write site=0x1409791E0 len=2 restore=1
+[HookTweak] write site=0x142619690 len=1 restore=1
+[HookTweak] write site=0x14083BEBC len=31 restore=1
+[HookTweak] write site=0x14083BE69 len=5 restore=1
+[InitChain] Hooks->Patch() result=1
+[InitChain] calling Graphics->HookD3D11Present()
+[InitChain] Graphics->HookD3D11Present() result=1
+[InitChain] Initialise success
+[InitChain] Begin Initialise() result=1
+[InitChain] Begin enter: mHinstDLL=0x7FF901050000
+[InitChain] import[0]=DirectInput8Create addr=0x7FF901052230
+[InitChain] import[1]=GetdfDIJoystick addr=0x7FF90105A1C0
+[InitChain] import[2]=DllCanUnloadNow addr=0x7FF901065220
+[InitChain] import[3]=DllGetClassObject addr=0x7FF901065330
+[InitChain] import[4]=DllRegisterServer addr=0x7FF901074740
+[InitChain] import[5]=DllUnregisterServer addr=0x7FF9010749C0
+[InitChain] Initialise enter
+[InitChain] CSekiroDebugMenu allocated: 0x2804E30
+[InitChain] Hooks=0x5B8310 Signature=0x2804DB0 Graphics=0x2804F50
+[InitChain] calling Hooks->Patch()
+[HookInit] Patch start: bIsMHActive=0
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] sActivateDebugMenu found at 0x141187587
+[HookInit] qActivateDebugMenu patched address = 0x141187590
+[HookTweak] write site=0x141187590 len=2 restore=1
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x0
+[HookInit] waiting for hook sites
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x14262D15E
+[HookSite] qMenuDrawHook final = 0x14262D186
+[HookInit] hook sites ready: qMenuDrawHook=0x14262D186 qMissingParamHook1=0x142650400 qMissingParamHook2=0x14261E660
+[HookInit] other sites: qDisableRemnantMenuHook=0x140A7667E qDisableDebugFeature1=0x142619690 qEnableFreezeCam=0x14083BEBC qEnablePanCam=0x14083BE69
+[HookInit] feature sites: qEnableDebugFeature1=0x1409791C0 qEnableDebugFeature2=0x1409791D0 qEnableDebugFeature3=0x1409791E0
+[HookCall] MH_CreateHook site=0x14262D186 detour=0x7FF8FAB50D00 status=0
+[HookCall] MH_EnableHook site=0x14262D186 status=0
+[HookTweak] write site=0x14262D186 len=1 restore=1
+[HookTweak] write site=0x142650400 len=1 restore=1
+[HookTweak] write site=0x14261E660 len=1 restore=1
+[HookTweak] write site=0x140A7667E len=2 restore=1
+[HookTweak] write site=0x1409791C0 len=2 restore=1
+[HookTweak] write site=0x1409791D0 len=2 restore=1
+[HookTweak] write site=0x1409791E0 len=2 restore=1
+[HookTweak] write site=0x142619690 len=1 restore=1
+[HookTweak] write site=0x14083BEBC len=31 restore=1
+[HookTweak] write site=0x14083BE69 len=5 restore=1
+[InitChain] Hooks->Patch() result=1
+[InitChain] calling Graphics->HookD3D11Present()
+[InitChain] Graphics->HookD3D11Present() result=1
+[InitChain] Initialise success
+[InitChain] Begin Initialise() result=1
+[InitChain] Begin enter: mHinstDLL=0x7FF901050000
+[InitChain] import[0]=DirectInput8Create addr=0x7FF901052230
+[InitChain] import[1]=GetdfDIJoystick addr=0x7FF90105A1C0
+[InitChain] import[2]=DllCanUnloadNow addr=0x7FF901065220
+[InitChain] import[3]=DllGetClassObject addr=0x7FF901065330
+[InitChain] import[4]=DllRegisterServer addr=0x7FF901074740
+[InitChain] import[5]=DllUnregisterServer addr=0x7FF9010749C0
+[InitChain] Initialise enter
+[InitChain] CSekiroDebugMenu allocated: 0x6053A0
+[InitChain] Hooks=0x5D33F0 Signature=0x604F20 Graphics=0x2804F50
+[InitChain] calling Hooks->Patch()
+[HookInit] Patch start: bIsMHActive=0
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] sActivateDebugMenu found at 0x141187587
+[HookInit] qActivateDebugMenu patched address = 0x141187590
+[HookTweak] write site=0x141187590 len=2 restore=1
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x0
+[HookInit] waiting for hook sites
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x14262D15E
+[HookSite] qMenuDrawHook final = 0x14262D186
+[HookInit] hook sites ready: qMenuDrawHook=0x14262D186 qMissingParamHook1=0x142650400 qMissingParamHook2=0x14261E660
+[HookInit] other sites: qDisableRemnantMenuHook=0x140A7667E qDisableDebugFeature1=0x142619690 qEnableFreezeCam=0x14083BEBC qEnablePanCam=0x14083BE69
+[HookInit] feature sites: qEnableDebugFeature1=0x1409791C0 qEnableDebugFeature2=0x1409791D0 qEnableDebugFeature3=0x1409791E0
+[HookCall] MH_CreateHook site=0x14262D186 detour=0x7FF901EF0D00 status=0
+[HookCall] MH_EnableHook site=0x14262D186 status=0
+[HookTweak] write site=0x14262D186 len=1 restore=1
+[HookTweak] write site=0x142650400 len=1 restore=1
+[HookTweak] write site=0x14261E660 len=1 restore=1
+[HookTweak] write site=0x140A7667E len=2 restore=1
+[HookTweak] write site=0x1409791C0 len=2 restore=1
+[HookTweak] write site=0x1409791D0 len=2 restore=1
+[HookTweak] write site=0x1409791E0 len=2 restore=1
+[HookTweak] write site=0x142619690 len=1 restore=1
+[HookTweak] write site=0x14083BEBC len=31 restore=1
+[HookTweak] write site=0x14083BE69 len=5 restore=1
+[InitChain] Hooks->Patch() result=1
+[InitChain] calling Graphics->HookD3D11Present()
+[InitChain] Graphics->HookD3D11Present() result=1
+[InitChain] Initialise success
+[InitChain] Begin Initialise() result=1
+[InitChain] Begin enter: mHinstDLL=0x7FF901050000
+[InitChain] import[0]=DirectInput8Create addr=0x7FF901052230
+[InitChain] import[1]=GetdfDIJoystick addr=0x7FF90105A1C0
+[InitChain] import[2]=DllCanUnloadNow addr=0x7FF901065220
+[InitChain] import[3]=DllGetClassObject addr=0x7FF901065330
+[InitChain] import[4]=DllRegisterServer addr=0x7FF901074740
+[InitChain] import[5]=DllUnregisterServer addr=0x7FF9010749C0
+[InitChain] Initialise enter
+[InitChain] CSekiroDebugMenu allocated: 0x4D8B70
+[InitChain] Hooks=0x4580E0 Signature=0x4D8BB0 Graphics=0x28C4FD0
+[InitChain] calling Hooks->Patch()
+[HookInit] Patch start: bIsMHActive=0
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] sActivateDebugMenu found at 0x141187587
+[HookInit] qActivateDebugMenu patched address = 0x141187590
+[HookTweak] write site=0x141187590 len=2 restore=1
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x0
+[HookInit] waiting for hook sites
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x14262D15E
+[HookSite] qMenuDrawHook final = 0x14262D186
+[HookInit] hook sites ready: qMenuDrawHook=0x14262D186 qMissingParamHook1=0x142650400 qMissingParamHook2=0x14261E660
+[HookInit] other sites: qDisableRemnantMenuHook=0x140A7667E qDisableDebugFeature1=0x142619690 qEnableFreezeCam=0x14083BEBC qEnablePanCam=0x14083BE69
+[HookInit] feature sites: qEnableDebugFeature1=0x1409791C0 qEnableDebugFeature2=0x1409791D0 qEnableDebugFeature3=0x1409791E0
+[HookCall] MH_CreateHook site=0x14262D186 detour=0x7FF8C7A70E70 status=0
+[HookCall] MH_EnableHook site=0x14262D186 status=0
+[HookTweak] write site=0x14262D186 len=1 restore=1
+[HookTweak] write site=0x142650400 len=1 restore=1
+[HookTweak] write site=0x14261E660 len=1 restore=1
+[HookTweak] write site=0x140A7667E len=2 restore=1
+[HookTweak] write site=0x1409791C0 len=2 restore=1
+[HookTweak] write site=0x1409791D0 len=2 restore=1
+[HookTweak] write site=0x1409791E0 len=2 restore=1
+[HookTweak] write site=0x142619690 len=1 restore=1
+[HookTweak] write site=0x14083BEBC len=31 restore=1
+[HookTweak] write site=0x14083BE69 len=5 restore=1
+[InitChain] Hooks->Patch() result=1
+[InitChain] calling Graphics->HookD3D11Present()
+[InitChain] Graphics->HookD3D11Present() result=1
+[InitChain] Initialise success
+[InitChain] Begin Initialise() result=1
+[InitChain] Begin enter: mHinstDLL=0x7FF901050000
+[InitChain] import[0]=DirectInput8Create addr=0x7FF901052230
+[InitChain] import[1]=GetdfDIJoystick addr=0x7FF90105A1C0
+[InitChain] import[2]=DllCanUnloadNow addr=0x7FF901065220
+[InitChain] import[3]=DllGetClassObject addr=0x7FF901065330
+[InitChain] import[4]=DllRegisterServer addr=0x7FF901074740
+[InitChain] import[5]=DllUnregisterServer addr=0x7FF9010749C0
+[InitChain] Initialise enter
+[InitChain] CSekiroDebugMenu allocated: 0x4FD4C0
+[InitChain] Hooks=0x4F1D70 Signature=0x4FD4A0 Graphics=0x2844DF0
+[InitChain] calling Hooks->Patch()
+[HookInit] Patch start: bIsMHActive=0
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] sActivateDebugMenu found at 0x141187587
+[HookInit] qActivateDebugMenu patched address = 0x141187590
+[HookTweak] write site=0x141187590 len=2 restore=1
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x0
+[HookInit] waiting for hook sites
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x14262D15E
+[HookSite] qMenuDrawHook final = 0x14262D186
+[HookInit] hook sites ready: qMenuDrawHook=0x14262D186 qMissingParamHook1=0x142650400 qMissingParamHook2=0x14261E660
+[HookInit] other sites: qDisableRemnantMenuHook=0x140A7667E qDisableDebugFeature1=0x142619690 qEnableFreezeCam=0x14083BEBC qEnablePanCam=0x14083BE69
+[HookInit] feature sites: qEnableDebugFeature1=0x1409791C0 qEnableDebugFeature2=0x1409791D0 qEnableDebugFeature3=0x1409791E0
+[HookCall] MH_CreateHook site=0x14262D186 detour=0x7FF8FE2E0DF0 status=0
+[HookCall] MH_EnableHook site=0x14262D186 status=0
+[HookTweak] write site=0x14262D186 len=1 restore=1
+[HookTweak] write site=0x142650400 len=1 restore=1
+[HookTweak] write site=0x14261E660 len=1 restore=1
+[HookTweak] write site=0x140A7667E len=2 restore=1
+[HookTweak] write site=0x1409791C0 len=2 restore=1
+[HookTweak] write site=0x1409791D0 len=2 restore=1
+[HookTweak] write site=0x1409791E0 len=2 restore=1
+[HookTweak] write site=0x142619690 len=1 restore=1
+[HookTweak] write site=0x14083BEBC len=31 restore=1
+[HookTweak] write site=0x14083BE69 len=5 restore=1
+[InitChain] Hooks->Patch() result=1
+[InitChain] calling Graphics->HookD3D11Present()
+[InitChain] Graphics->HookD3D11Present() result=1
+[InitChain] Initialise success
+[InitChain] Begin Initialise() result=1
+[InitChain] Begin enter: mHinstDLL=0x7FF901050000
+[InitChain] import[0]=DirectInput8Create addr=0x7FF901052230
+[InitChain] import[1]=GetdfDIJoystick addr=0x7FF90105A1C0
+[InitChain] import[2]=DllCanUnloadNow addr=0x7FF901065220
+[InitChain] import[3]=DllGetClassObject addr=0x7FF901065330
+[InitChain] import[4]=DllRegisterServer addr=0x7FF901074740
+[InitChain] import[5]=DllUnregisterServer addr=0x7FF9010749C0
+[InitChain] Initialise enter
+[InitChain] CSekiroDebugMenu allocated: 0x682840
+[InitChain] Hooks=0x67EBA0 Signature=0x682860 Graphics=0x2904FD0
+[InitChain] calling Hooks->Patch()
+[HookInit] Patch start: bIsMHActive=0
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] sActivateDebugMenu found at 0x141187587
+[HookInit] qActivateDebugMenu patched address = 0x141187590
+[HookTweak] write site=0x141187590 len=2 restore=1
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x0
+[HookInit] waiting for hook sites
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x14262D15E
+[HookSite] qMenuDrawHook final = 0x14262D186
+[HookInit] hook sites ready: qMenuDrawHook=0x14262D186 qMissingParamHook1=0x142650400 qMissingParamHook2=0x14261E660
+[HookInit] other sites: qDisableRemnantMenuHook=0x140A7667E qDisableDebugFeature1=0x142619690 qEnableFreezeCam=0x14083BEBC qEnablePanCam=0x14083BE69
+[HookInit] feature sites: qEnableDebugFeature1=0x1409791C0 qEnableDebugFeature2=0x1409791D0 qEnableDebugFeature3=0x1409791E0
+[HookCall] MH_CreateHook site=0x14262D186 detour=0x7FF8FAB50DF0 status=0
+[HookCall] MH_EnableHook site=0x14262D186 status=0
+[HookTweak] write site=0x14262D186 len=1 restore=1
+[HookTweak] write site=0x142650400 len=1 restore=1
+[HookTweak] write site=0x14261E660 len=1 restore=1
+[HookTweak] write site=0x140A7667E len=2 restore=1
+[HookTweak] write site=0x1409791C0 len=2 restore=1
+[HookTweak] write site=0x1409791D0 len=2 restore=1
+[HookTweak] write site=0x1409791E0 len=2 restore=1
+[HookTweak] write site=0x142619690 len=1 restore=1
+[HookTweak] write site=0x14083BEBC len=31 restore=1
+[HookTweak] write site=0x14083BE69 len=5 restore=1
+[InitChain] Hooks->Patch() result=1
+[InitChain] calling Graphics->HookD3D11Present()
+[InitChain] Graphics->HookD3D11Present() result=1
+[InitChain] Initialise success
+[InitChain] Begin Initialise() result=1
+[InitChain] Begin enter: mHinstDLL=0x7FF901050000
+[InitChain] import[0]=DirectInput8Create addr=0x7FF901052230
+[InitChain] import[1]=GetdfDIJoystick addr=0x7FF90105A1C0
+[InitChain] import[2]=DllCanUnloadNow addr=0x7FF901065220
+[InitChain] import[3]=DllGetClassObject addr=0x7FF901065330
+[InitChain] import[4]=DllRegisterServer addr=0x7FF901074740
+[InitChain] import[5]=DllUnregisterServer addr=0x7FF9010749C0
+[InitChain] Initialise enter
+[InitChain] CSekiroDebugMenu allocated: 0x440BA0
+[InitChain] Hooks=0x482080 Signature=0x440A60 Graphics=0x2834DF0
+[InitChain] calling Hooks->Patch()
+[HookInit] Patch start: bIsMHActive=0
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] sActivateDebugMenu found at 0x141187587
+[HookInit] qActivateDebugMenu patched address = 0x141187590
+[HookTweak] write site=0x141187590 len=2 restore=1
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x0
+[HookInit] waiting for hook sites
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x14262D15E
+[HookSite] qMenuDrawHook final = 0x14262D186
+[HookInit] hook sites ready: qMenuDrawHook=0x14262D186 qMissingParamHook1=0x142650400 qMissingParamHook2=0x14261E660
+[HookInit] other sites: qDisableRemnantMenuHook=0x140A7667E qDisableDebugFeature1=0x142619690 qEnableFreezeCam=0x14083BEBC qEnablePanCam=0x14083BE69
+[HookInit] feature sites: qEnableDebugFeature1=0x1409791C0 qEnableDebugFeature2=0x1409791D0 qEnableDebugFeature3=0x1409791E0
+[HookCall] MH_CreateHook site=0x14262D186 detour=0x7FF8FAB50F70 status=0
+[HookCall] MH_EnableHook site=0x14262D186 status=0
+[HookTweak] write site=0x14262D186 len=1 restore=1
+[HookTweak] write site=0x142650400 len=1 restore=1
+[HookTweak] write site=0x14261E660 len=1 restore=1
+[HookTweak] write site=0x140A7667E len=2 restore=1
+[HookTweak] write site=0x1409791C0 len=2 restore=1
+[HookTweak] write site=0x1409791D0 len=2 restore=1
+[HookTweak] write site=0x1409791E0 len=2 restore=1
+[HookTweak] write site=0x142619690 len=1 restore=1
+[HookTweak] write site=0x14083BEBC len=31 restore=1
+[HookTweak] write site=0x14083BE69 len=5 restore=1
+[InitChain] Hooks->Patch() result=1
+[InitChain] calling Graphics->HookD3D11Present()
+[InitChain] Graphics->HookD3D11Present() result=1
+[InitChain] Initialise success
+[InitChain] Begin Initialise() result=1
+[InitChain] Begin enter: mHinstDLL=0x7FF901050000
+[InitChain] import[0]=DirectInput8Create addr=0x7FF901052230
+[InitChain] import[1]=GetdfDIJoystick addr=0x7FF90105A1C0
+[InitChain] import[2]=DllCanUnloadNow addr=0x7FF901065220
+[InitChain] import[3]=DllGetClassObject addr=0x7FF901065330
+[InitChain] import[4]=DllRegisterServer addr=0x7FF901074740
+[InitChain] import[5]=DllUnregisterServer addr=0x7FF9010749C0
+[InitChain] Initialise enter
+[InitChain] CSekiroDebugMenu allocated: 0x4C2670
+[InitChain] Hooks=0x4701B0 Signature=0x4C25F0 Graphics=0x2824DF0
+[InitChain] calling Hooks->Patch()
+[HookInit] Patch start: bIsMHActive=0
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] sActivateDebugMenu found at 0x141187587
+[HookInit] qActivateDebugMenu patched address = 0x141187590
+[HookTweak] write site=0x141187590 len=2 restore=1
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x0
+[HookInit] waiting for hook sites
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x14262D15E
+[HookSite] qMenuDrawHook final = 0x14262D186
+[HookInit] hook sites ready: qMenuDrawHook=0x14262D186 qMissingParamHook1=0x142650400 qMissingParamHook2=0x14261E660
+[HookInit] other sites: qDisableRemnantMenuHook=0x140A7667E qDisableDebugFeature1=0x142619690 qEnableFreezeCam=0x14083BEBC qEnablePanCam=0x14083BE69
+[HookInit] feature sites: qEnableDebugFeature1=0x1409791C0 qEnableDebugFeature2=0x1409791D0 qEnableDebugFeature3=0x1409791E0
+[HookCall] MH_CreateHook site=0x14262D186 detour=0x7FF8FAB50EB0 status=0
+[HookCall] MH_EnableHook site=0x14262D186 status=0
+[HookTweak] write site=0x14262D186 len=1 restore=1
+[HookTweak] write site=0x142650400 len=1 restore=1
+[HookTweak] write site=0x14261E660 len=1 restore=1
+[HookTweak] write site=0x140A7667E len=2 restore=1
+[HookTweak] write site=0x1409791C0 len=2 restore=1
+[HookTweak] write site=0x1409791D0 len=2 restore=1
+[HookTweak] write site=0x1409791E0 len=2 restore=1
+[HookTweak] write site=0x142619690 len=1 restore=1
+[HookTweak] write site=0x14083BEBC len=31 restore=1
+[HookTweak] write site=0x14083BE69 len=5 restore=1
+[InitChain] Hooks->Patch() result=1
+[InitChain] calling Graphics->HookD3D11Present()
+[InitChain] Graphics->HookD3D11Present() result=1
+[InitChain] Initialise success
+[InitChain] Begin Initialise() result=1
+[InitChain] Begin enter: mHinstDLL=0x7FF901050000
+[InitChain] import[0]=DirectInput8Create addr=0x7FF901052230
+[InitChain] import[1]=GetdfDIJoystick addr=0x7FF90105A1C0
+[InitChain] import[2]=DllCanUnloadNow addr=0x7FF901065220
+[InitChain] import[3]=DllGetClassObject addr=0x7FF901065330
+[InitChain] import[4]=DllRegisterServer addr=0x7FF901074740
+[InitChain] import[5]=DllUnregisterServer addr=0x7FF9010749C0
+[InitChain] Initialise enter
+[InitChain] CSekiroDebugMenu allocated: 0x2558530
+[InitChain] Hooks=0x651C70 Signature=0x2558370 Graphics=0x2814DF0
+[InitChain] calling Hooks->Patch()
+[HookInit] Patch start: bIsMHActive=0
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] waiting for sActivateDebugMenu signature
+[HookInit] sActivateDebugMenu found at 0x141187587
+[HookInit] qActivateDebugMenu patched address = 0x141187590
+[HookTweak] write site=0x141187590 len=2 restore=1
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x0
+[HookInit] waiting for hook sites
+[HookSite] GetHookSites start
+[HookSite] sMenuDrawHook raw = 0x14262D15E
+[HookSite] qMenuDrawHook final = 0x14262D186
+[HookInit] hook sites ready: qMenuDrawHook=0x14262D186 qMissingParamHook1=0x142650400 qMissingParamHook2=0x14261E660
+[HookInit] other sites: qDisableRemnantMenuHook=0x140A7667E qDisableDebugFeature1=0x142619690 qEnableFreezeCam=0x14083BEBC qEnablePanCam=0x14083BE69
+[HookInit] feature sites: qEnableDebugFeature1=0x1409791C0 qEnableDebugFeature2=0x1409791D0 qEnableDebugFeature3=0x1409791E0
+[HookCall] MH_CreateHook site=0x14262D186 detour=0x7FF8FAB50EB0 status=0
+[HookCall] MH_EnableHook site=0x14262D186 status=0
+[HookTweak] write site=0x14262D186 len=1 restore=1
+[HookTweak] write site=0x142650400 len=1 restore=1
+[HookTweak] write site=0x14261E660 len=1 restore=1
+[HookTweak] write site=0x140A7667E len=2 restore=1
+[HookTweak] write site=0x1409791C0 len=2 restore=1
+[HookTweak] write site=0x1409791D0 len=2 restore=1
+[HookTweak] write site=0x1409791E0 len=2 restore=1
+[HookTweak] write site=0x142619690 len=1 restore=1
+[HookTweak] write site=0x14083BEBC len=31 restore=1
+[HookTweak] write site=0x14083BE69 len=5 restore=1
+[InitChain] Hooks->Patch() result=1
+[InitChain] calling Graphics->HookD3D11Present()
+[InitChain] Graphics->HookD3D11Present() result=1
+[InitChain] Initialise success
+[InitChain] Begin Initialise() result=1
