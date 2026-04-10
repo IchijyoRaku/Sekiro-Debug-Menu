@@ -52,27 +52,43 @@ namespace {
 		std::wstring wTo;
 	};
 
+	struct SFrameMenuEntry {
+		std::wstring wOriginalText;
+		std::wstring wRenderedText;
+		float fX = 0.0f;
+		float fY = 0.0f;
+	};
+
 	struct SExportConfig {
 		bool bTextOutputEnabled = true;
 		bool bLogOutputEnabled = true;
 		bool bConsoleEnabled = false;
+		bool bPageExportEnabled = true;
 		EDisplayMode eDisplayMode = EDisplayMode::Full;
 	};
 
 	struct SPageCaptureState {
 		bool bInitialised = false;
 		bool bConsoleInitialised = false;
+		bool bPageExportTriggered = false;
+		bool bLastPageExportKeyState = false;
 		std::wstring wDataDirectory;
 		std::wstring wIniPath;
 		std::wstring wOutputPath;
 		std::wstring wLogPath;
 		std::wstring wTranslationPath;
+		std::wstring wPageDumpPath;
 		std::wofstream fMenuTextLog;
 		std::wofstream fDebugLog;
+		std::wofstream fPageDumpLog;
 		std::set<std::wstring> sExportedTexts;
 		std::map<std::wstring, std::wstring> mTranslations;
 		std::vector<STranslationEntry> vOrderedTranslations;
 		std::vector<SFilterRule> vFilterRules;
+		std::vector<SFrameMenuEntry> vCurrentPageEntries;
+		std::vector<SFrameMenuEntry> vExportSnapshotEntries;
+		std::vector<SFrameMenuEntry> vHeaderProbeEntries;
+		std::vector<SFrameMenuEntry> vHeaderBaselineEntries;
 		SExportConfig sConfig;
 	};
 
@@ -82,13 +98,17 @@ namespace {
 	const wchar_t* kIniFileName = L"dbgmenu.ini";
 	const wchar_t* kMenuTextFileName = L"menu_text.txt";
 	const wchar_t* kDebugLogFileName = L"dbgmenu.log";
+	const wchar_t* kBootLogFileName = L"dbgmenu_boot.log";
 	const wchar_t* kTranslationFileName = L"zh-cn.json";
 	const wchar_t* kFilterRuleFileName = L"filter_rules.txt";
+	const wchar_t* kPageDumpFileName = L"page_dump.txt";
 	const wchar_t* kIniSectionName = L"TextOutput";
 	const wchar_t* kIniTextOutputKey = L"TextOutput";
 	const wchar_t* kIniLogOutputKey = L"LogOutput";
 	const wchar_t* kIniConsoleKey = L"Console";
 	const wchar_t* kIniDisplayModeKey = L"DisplayMode";
+	const wchar_t* kIniPageExportKey = L"PageExport";
+	const int kPageExportVirtualKey = 'P';
 	const UINT kDefaultCaptureKey = VK_F9;
 
 	std::wstring TrimCopy(const std::wstring& wText) {
@@ -391,6 +411,23 @@ namespace {
 		}
 	}
 
+	void DebugLogV(const wchar_t* pwFormat, va_list args) {
+		if ((!gPageCapture.sConfig.bLogOutputEnabled || !gPageCapture.fDebugLog.is_open()) && !gPageCapture.sConfig.bConsoleEnabled)
+			return;
+
+		wchar_t pBuffer[1024] = {};
+		vswprintf_s(pBuffer, pwFormat, args);
+		if (gPageCapture.sConfig.bLogOutputEnabled && gPageCapture.fDebugLog.is_open()) {
+			gPageCapture.fDebugLog << pBuffer << L"\n";
+			gPageCapture.fDebugLog.flush();
+		}
+		if (gPageCapture.sConfig.bConsoleEnabled) {
+			EnsureConsoleReady();
+			if (gPageCapture.bConsoleInitialised)
+				wprintf_s(L"%s\n", pBuffer);
+		}
+	}
+
 	UINT ResolveKeyboardVirtualKey(const std::wstring& wKeyName) {
 		std::wstring wUpper = wKeyName;
 		std::transform(wUpper.begin(), wUpper.end(), wUpper.begin(), towupper);
@@ -418,6 +455,7 @@ namespace {
 		WritePrivateProfileStringW(kIniSectionName, kIniLogOutputKey, L"on", wIniPath.c_str());
 		WritePrivateProfileStringW(kIniSectionName, kIniConsoleKey, L"off", wIniPath.c_str());
 		WritePrivateProfileStringW(kIniSectionName, kIniDisplayModeKey, L"full", wIniPath.c_str());
+		WritePrivateProfileStringW(kIniSectionName, kIniPageExportKey, L"on", wIniPath.c_str());
 	}
 
 	void LoadConfig() {
@@ -446,6 +484,11 @@ namespace {
 			gPageCapture.sConfig.eDisplayMode = EDisplayMode::Mix;
 		else
 			gPageCapture.sConfig.eDisplayMode = EDisplayMode::Full;
+
+		GetPrivateProfileStringW(kIniSectionName, kIniPageExportKey, L"on", pValue, 64, gPageCapture.wIniPath.c_str());
+		std::wstring wPageExport = pValue;
+		std::transform(wPageExport.begin(), wPageExport.end(), wPageExport.begin(), towlower);
+		gPageCapture.sConfig.bPageExportEnabled = (wPageExport != L"off");
 	}
 
 	std::wstring UnescapeJsonString(const std::wstring& wText) {
@@ -543,6 +586,67 @@ namespace {
 			}
 		}
 		return false;
+	}
+
+	int ResolvePageExportVirtualKey() {
+		return kPageExportVirtualKey;
+	}
+
+	void ExportCurrentPageSnapshot() {
+		if (!gPageCapture.fPageDumpLog.is_open()) {
+			DebugLog(L"[PageExport] skip: page dump file is not open");
+			return;
+		}
+		if (gPageCapture.vExportSnapshotEntries.empty()) {
+			DebugLog(L"[PageExport] skip: no export snapshot entries");
+			return;
+		}
+
+		std::vector<SFrameMenuEntry> vEntriesToExport;
+		bool bFoundFirstRoot = false;
+		for (std::vector<SFrameMenuEntry>::const_iterator it = gPageCapture.vExportSnapshotEntries.begin(); it != gPageCapture.vExportSnapshotEntries.end(); ++it) {
+			const bool bContainsRoot = (it->wOriginalText.find(L"ROOT") != std::wstring::npos || it->wOriginalText.find(L"Root") != std::wstring::npos);
+			if (!bFoundFirstRoot) {
+				if (!bContainsRoot)
+					continue;
+				bFoundFirstRoot = true;
+			}
+			else if (bContainsRoot) {
+				break;
+			}
+			vEntriesToExport.push_back(*it);
+		}
+
+		if (vEntriesToExport.empty()) {
+			DebugLog(L"[PageExport] skip: no exportable entries after root truncation");
+			return;
+		}
+
+		gPageCapture.fPageDumpLog << L"[PageExport] ----- begin -----\n";
+		for (std::vector<SFrameMenuEntry>::const_iterator it = vEntriesToExport.begin(); it != vEntriesToExport.end(); ++it) {
+			gPageCapture.fPageDumpLog << L"[PageExport] " << it->wOriginalText << L"\n";
+		}
+		gPageCapture.fPageDumpLog << L"[PageExport] ----- end -----\n";
+		gPageCapture.fPageDumpLog.flush();
+		DebugLog(L"[PageExport] wrote %u entries after root truncation", static_cast<unsigned>(vEntriesToExport.size()));
+	}
+
+	void UpdatePageExportTrigger() {
+		if (!gPageCapture.sConfig.bPageExportEnabled) {
+			DebugLog(L"[PageExport] trigger skipped: page export disabled");
+			gPageCapture.bLastPageExportKeyState = false;
+			gPageCapture.bPageExportTriggered = false;
+			return;
+		}
+
+		const int iVirtualKey = ResolvePageExportVirtualKey();
+		const bool bPreviousState = gPageCapture.bLastPageExportKeyState;
+		const bool bState = (GetAsyncKeyState(iVirtualKey) & 0x8000) != 0;
+		gPageCapture.bPageExportTriggered = (bState && !bPreviousState);
+		gPageCapture.bLastPageExportKeyState = bState;
+		DebugLog(L"[PageExport] trigger check: key=%d prev=%d curr=%d triggered=%d", iVirtualKey, bPreviousState ? 1 : 0, bState ? 1 : 0, gPageCapture.bPageExportTriggered ? 1 : 0);
+		if (gPageCapture.bPageExportTriggered)
+			DebugLog(L"[PageExport] trigger key pressed");
 	}
 
 	void LoadTranslations() {
@@ -675,29 +779,82 @@ namespace {
 		gPageCapture.wOutputPath = JoinPath(gPageCapture.wDataDirectory, kMenuTextFileName);
 		gPageCapture.wLogPath = JoinPath(gPageCapture.wDataDirectory, kDebugLogFileName);
 		gPageCapture.wTranslationPath = JoinPath(gPageCapture.wDataDirectory, kTranslationFileName);
+		gPageCapture.wPageDumpPath = JoinPath(gPageCapture.wDataDirectory, kPageDumpFileName);
 		std::wstring wFilterRulePath = JoinPath(gPageCapture.wDataDirectory, kFilterRuleFileName);
 		if (GetFileAttributesW(gPageCapture.wIniPath.c_str()) == INVALID_FILE_ATTRIBUTES)
 			WriteDefaultIni(gPageCapture.wIniPath);
 		LoadConfig();
 		OpenWideAppendFile(gPageCapture.fMenuTextLog, gPageCapture.wOutputPath);
 		OpenWideTruncateFile(gPageCapture.fDebugLog, gPageCapture.wLogPath);
+		OpenWideAppendFile(gPageCapture.fPageDumpLog, gPageCapture.wPageDumpPath);
 		DebugLog(L"[Init] ini=%s", gPageCapture.wIniPath.c_str());
 		DebugLog(L"[Init] output=%s", gPageCapture.wOutputPath.c_str());
 		DebugLog(L"[Init] log=%s", gPageCapture.wLogPath.c_str());
+		DebugLog(L"[Init] page_dump=%s", gPageCapture.wPageDumpPath.c_str());
 		DebugLog(L"[Init] translation=%s", gPageCapture.wTranslationPath.c_str());
 		DebugLog(L"[Init] filter=%s", wFilterRulePath.c_str());
-		DebugLog(L"[Init] text_output=%d log_output=%d console=%d display_mode=%d", gPageCapture.sConfig.bTextOutputEnabled ? 1 : 0, gPageCapture.sConfig.bLogOutputEnabled ? 1 : 0, gPageCapture.sConfig.bConsoleEnabled ? 1 : 0, static_cast<int>(gPageCapture.sConfig.eDisplayMode));
+		DebugLog(L"[Init] text_output=%d log_output=%d console=%d display_mode=%d page_export=%d page_key=P", gPageCapture.sConfig.bTextOutputEnabled ? 1 : 0, gPageCapture.sConfig.bLogOutputEnabled ? 1 : 0, gPageCapture.sConfig.bConsoleEnabled ? 1 : 0, static_cast<int>(gPageCapture.sConfig.eDisplayMode), gPageCapture.sConfig.bPageExportEnabled ? 1 : 0);
 		LoadFilterRules(wFilterRulePath);
 		LoadTranslations();
 		gPageCapture.bInitialised = true;
 	}
 }
 
-void BeginMenuFrameCapture() {
-	InitialiseCapture();
+	void SharedDebugLog(const wchar_t* pwFormat, ...) {
+	va_list args;
+	va_start(args, pwFormat);
+	DebugLogV(pwFormat, args);
+	va_end(args);
 }
 
+void EarlyBootLog(const wchar_t* pwFormat, ...) {
+	wchar_t pPath[MAX_PATH] = {};
+	HMODULE hModule = reinterpret_cast<HMODULE>(&__ImageBase);
+	GetModuleFileNameW(hModule, pPath, MAX_PATH);
+	std::wstring wModulePath(pPath);
+	size_t slashPos = wModulePath.find_last_of(L"\\/");
+	std::wstring wModuleDirectory = (slashPos == std::wstring::npos) ? L"." : wModulePath.substr(0, slashPos);
+	std::wstring wBootLogPath = wModuleDirectory + L"\\dbgmenu_data\\" + kBootLogFileName;
+	CreateDirectoryW((wModuleDirectory + L"\\dbgmenu_data").c_str(), nullptr);
+
+	std::wofstream file(wBootLogPath, std::ios::app);
+	if (!file.is_open())
+		return;
+	file.imbue(std::locale(std::locale(), new std::codecvt_utf8_utf16<wchar_t>()));
+
+	wchar_t pBuffer[1024] = {};
+	va_list args;
+	va_start(args, pwFormat);
+	vswprintf_s(pBuffer, pwFormat, args);
+	va_end(args);
+
+	file << pBuffer << L"\n";
+	file.flush();
+}
+
+void BeginMenuFrameCapture() {
+	InitialiseCapture();
+	DebugLog(L"[Frame] begin: current_entries=%u snapshot_entries=%u probe_entries=%u baseline_entries=%u", static_cast<unsigned>(gPageCapture.vCurrentPageEntries.size()), static_cast<unsigned>(gPageCapture.vExportSnapshotEntries.size()), static_cast<unsigned>(gPageCapture.vHeaderProbeEntries.size()), static_cast<unsigned>(gPageCapture.vHeaderBaselineEntries.size()));
+	gPageCapture.bPageExportTriggered = false;
+}
 void EndMenuFrameCapture() {
+	DebugLog(L"[Frame] end: current_entries=%u snapshot_entries=%u probe_entries=%u baseline_entries=%u", static_cast<unsigned>(gPageCapture.vCurrentPageEntries.size()), static_cast<unsigned>(gPageCapture.vExportSnapshotEntries.size()), static_cast<unsigned>(gPageCapture.vHeaderProbeEntries.size()), static_cast<unsigned>(gPageCapture.vHeaderBaselineEntries.size()));
+}
+
+void ProcessPageExportTrigger() {
+	DebugLog(L"[PageExport] process enter: snapshot_entries=%u current_entries=%u", static_cast<unsigned>(gPageCapture.vExportSnapshotEntries.size()), static_cast<unsigned>(gPageCapture.vCurrentPageEntries.size()));
+	if (gPageCapture.vExportSnapshotEntries.empty()) {
+		DebugLog(L"[PageExport] process skipped: export snapshot entries empty");
+		gPageCapture.bLastPageExportKeyState = false;
+		gPageCapture.bPageExportTriggered = false;
+		return;
+	}
+
+	UpdatePageExportTrigger();
+	if (gPageCapture.bPageExportTriggered)
+		ExportCurrentPageSnapshot();
+	else
+		DebugLog(L"[PageExport] process completed: no trigger");
 }
 
 void DrawMenuHook(uint64_t qUnkClass, SMenuDrawLocation* pLocationData, wchar_t* pwString) {
@@ -713,6 +870,31 @@ void DrawMenuHook(uint64_t qUnkClass, SMenuDrawLocation* pLocationData, wchar_t*
 	std::wstring wTranslatedText = TranslateDisplayText(wDisplayText);
 	DebugLog(L"[Text] original=%s translated=%s", wDisplayText.c_str(), wTranslatedText.c_str());
 	ExportTextIfNeeded(wDisplayText);
+
+	SFrameMenuEntry sEntry = {};
+	sEntry.wOriginalText = wDisplayText;
+	sEntry.wRenderedText = wTranslatedText;
+	sEntry.fX = pLocationData->f1;
+	sEntry.fY = pLocationData->f2;
+
+	const bool bContainsRoot = (wDisplayText.find(L"ROOT") != std::wstring::npos || wDisplayText.find(L"Root") != std::wstring::npos);
+	if (bContainsRoot && !gPageCapture.vCurrentPageEntries.empty()) {
+		DebugLog(L"[PageExport] root detected while current page already has entries, finalizing previous page with %u entries", static_cast<unsigned>(gPageCapture.vCurrentPageEntries.size()));
+		gPageCapture.vExportSnapshotEntries = gPageCapture.vCurrentPageEntries;
+		gPageCapture.vCurrentPageEntries.clear();
+		gPageCapture.vHeaderProbeEntries.clear();
+		gPageCapture.vHeaderBaselineEntries.clear();
+	}
+
+	gPageCapture.vCurrentPageEntries.push_back(sEntry);
+	gPageCapture.vHeaderProbeEntries.push_back(sEntry);
+	if (gPageCapture.vHeaderProbeEntries.size() > 8)
+		gPageCapture.vHeaderProbeEntries.erase(gPageCapture.vHeaderProbeEntries.begin());
+	if (gPageCapture.vHeaderBaselineEntries.empty() && gPageCapture.vHeaderProbeEntries.size() == 8) {
+		gPageCapture.vHeaderBaselineEntries = gPageCapture.vHeaderProbeEntries;
+		DebugLog(L"[PageExport] header baseline initialized size=%u", static_cast<unsigned>(gPageCapture.vHeaderBaselineEntries.size()));
+	}
+	DebugLog(L"[PageExport] capture push: current_index=%u x=%.2f y=%.2f original=%s probe_size=%u baseline_size=%u", static_cast<unsigned>(gPageCapture.vCurrentPageEntries.size()), sEntry.fX, sEntry.fY, sEntry.wOriginalText.c_str(), static_cast<unsigned>(gPageCapture.vHeaderProbeEntries.size()), static_cast<unsigned>(gPageCapture.vHeaderBaselineEntries.size()));
 
 	int iArraySize = Graphics->GetDebugPrintArraySize();
 	SDebugPrintStruct* pStruct = Graphics->GetDebugPrintArrayStart();

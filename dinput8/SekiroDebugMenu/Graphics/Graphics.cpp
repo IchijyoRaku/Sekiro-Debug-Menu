@@ -193,8 +193,10 @@ void CGraphics::DrawMenu() {
 	int iArraySize = GetDebugPrintArraySize();
 	SDebugPrintStruct* pStruct = GetDebugPrintArrayStart();
 
+	bool bHasVisibleEntries = false;
 	for (int i = 0; i < iArraySize; i++, pStruct++) {
 		if (!pStruct->bIsActive) continue;
+		bHasVisibleEntries = true;
 
 		std::wstring wCvt(pStruct->wText);
 		std::string str(wCvt.begin(), wCvt.end());
@@ -205,6 +207,10 @@ void CGraphics::DrawMenu() {
 		ImGui::GetWindowDrawList()->AddText(pMenuFont, 20.0f, ImVec2(pStruct->fX, pStruct->fY), ImColor(255, 255, 255, 255), dest.c_str(), 0, 0.0f, 0);
 		pStruct->bIsActive = false;
 	};
+
+	if (bHasVisibleEntries) {
+		ProcessPageExportTrigger();
+	}
 
 	ImGui::End();
 

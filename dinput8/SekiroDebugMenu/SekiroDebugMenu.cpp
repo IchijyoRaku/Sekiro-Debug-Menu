@@ -7,17 +7,27 @@ CGraphics* Graphics = nullptr;
 
 bool Initialise() {
 
+	EarlyBootLog(L"[InitChain] Initialise enter");
 	SekiroDebugMenu = new CSekiroDebugMenu();
+	EarlyBootLog(L"[InitChain] CSekiroDebugMenu allocated: 0x%llX", (uint64_t)SekiroDebugMenu);
 	Hooks = SekiroDebugMenu->Hooks;
 	Signature = SekiroDebugMenu->Signature;
 	Graphics = SekiroDebugMenu->Graphics;
+	EarlyBootLog(L"[InitChain] Hooks=0x%llX Signature=0x%llX Graphics=0x%llX", (uint64_t)Hooks, (uint64_t)Signature, (uint64_t)Graphics);
 
-	if (!Hooks->Patch())
+	EarlyBootLog(L"[InitChain] calling Hooks->Patch()");
+	const bool bPatchResult = Hooks->Patch();
+	EarlyBootLog(L"[InitChain] Hooks->Patch() result=%d", bPatchResult ? 1 : 0);
+	if (!bPatchResult)
 		return false;
 
-	if (!Graphics->HookD3D11Present())
+	EarlyBootLog(L"[InitChain] calling Graphics->HookD3D11Present()");
+	const bool bPresentHookResult = Graphics->HookD3D11Present();
+	EarlyBootLog(L"[InitChain] Graphics->HookD3D11Present() result=%d", bPresentHookResult ? 1 : 0);
+	if (!bPresentHookResult)
 		return false;
 
+	EarlyBootLog(L"[InitChain] Initialise success");
 	return true;
 };
 
