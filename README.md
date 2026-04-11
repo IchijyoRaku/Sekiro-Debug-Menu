@@ -1,4 +1,5 @@
 # Sekiro-DebugMenu-LangSwitch
+## 简介
 
 对原本的只狼开发者菜单加了自定义汉化功能。
 
@@ -20,28 +21,6 @@
 
 ## debugmenu.ini配置说明
 
----
-
-### 页面导出
-
-如果你想导出“当前页面”的菜单文本快照，请开启 [`PageExport`](dbgmenu_data/dbgmenu.ini:11)。
-
-当前使用方式：
-- 在游戏里打开开发者菜单
-- 停留在你想导出的页面
-- 按固定热键 `P`
-- 页面快照会写入 [`page_dump.txt`](dbgmenu_data/page_dump.txt)
-
-适合场景：
-- 只提取当前页文本，而不是整份 [`menu_text.txt`](dbgmenu_data/menu_text.txt)
-- 快速观察某一页的原始菜单条目
-
-说明：
-- 这个功能当前仍在持续优化页面识别逻辑
-- 如果发现导出的页面快照不符合预期，请查看 [`dbgmenu.log`](dbgmenu_data/dbgmenu.log)
-
----
-
 ### 汉化显示模式
 
 如果你想控制菜单里文字的显示方式，请修改 [`DisplayMode`](dbgmenu_data/dbgmenu.ini:10)。
@@ -50,11 +29,6 @@
 - `full`：只显示汉化文本
 - `mix`：汉化和原文同时显示
 - `off`：关闭汉化，直接显示原文
-
-适合场景：
-- `full`：日常使用
-- `mix`：做术语核对或校正时使用
-- `off`：检查原始文本时使用
 
 ---
 
